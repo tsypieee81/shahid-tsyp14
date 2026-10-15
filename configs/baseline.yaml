@@ -1,0 +1,3 @@
+# Fault-free baseline dataset: development grid, full 2016 profile year, nominal parameters.
+# Regenerate: python -m shahid.scenario configs/baseline.yaml
+events: []

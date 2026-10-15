@@ -1,0 +1,1091 @@
+{
+ "label": "NOT PRE-SPECIFIED, added after results",
+ "transitions": {
+  "C30": {
+   "OUTAGE": {
+    "abstained": {
+     "abstained": 316,
+     "correct": 116,
+     "undetected: observable": 2,
+     "wrong": 2
+    },
+    "correct": {
+     "abstained": 43,
+     "correct": 288,
+     "undetected: observable": 0,
+     "wrong": 0
+    },
+    "undetected: observable": {
+     "abstained": 6,
+     "correct": 0,
+     "undetected: observable": 0,
+     "wrong": 0
+    },
+    "wrong": {
+     "abstained": 3,
+     "correct": 19,
+     "undetected: observable": 0,
+     "wrong": 1
+    }
+   },
+   "COMMS_FAILURE": {
+    "abstained": {
+     "abstained": 315,
+     "correct": 138,
+     "undetected: observable": 3,
+     "wrong": 1
+    },
+    "correct": {
+     "abstained": 55,
+     "correct": 708,
+     "undetected: observable": 0,
+     "wrong": 0
+    },
+    "undetected: observable": {
+     "abstained": 7,
+     "correct": 2,
+     "undetected: observable": 0,
+     "wrong": 0
+    },
+    "wrong": {
+     "abstained": 7,
+     "correct": 7,
+     "undetected: observable": 0,
+     "wrong": 1
+    }
+   }
+  },
+  "C60": {
+   "OUTAGE": {
+    "abstained": {
+     "abstained": 263,
+     "correct": 123,
+     "undetected: observable": 2,
+     "wrong": 2
+    },
+    "correct": {
+     "abstained": 30,
+     "correct": 181,
+     "undetected: observable": 0,
+     "wrong": 0
+    },
+    "undetected: observable": {
+     "abstained": 1,
+     "correct": 0,
+     "undetected: observable": 0,
+     "wrong": 0
+    },
+    "undetected: unobservable": {
+     "abstained": 68,
+     "correct": 91,
+     "undetected: observable": 0,
+     "wrong": 1
+    },
+    "wrong": {
+     "abstained": 6,
+     "correct": 28,
+     "undetected: observable": 0,
+     "wrong": 0
+    }
+   },
+   "COMMS_FAILURE": {
+    "abstained": {
+     "abstained": 247,
+     "correct": 118,
+     "undetected: observable": 2,
+     "wrong": 2
+    },
+    "correct": {
+     "abstained": 37,
+     "correct": 550,
+     "undetected: observable": 0,
+     "wrong": 0
+    },
+    "undetected: observable": {
+     "abstained": 4,
+     "correct": 3,
+     "undetected: observable": 0,
+     "wrong": 0
+    },
+    "undetected: unobservable": {
+     "abstained": 85,
+     "correct": 169,
+     "undetected: observable": 1,
+     "wrong": 0
+    },
+    "wrong": {
+     "abstained": 11,
+     "correct": 15,
+     "undetected: observable": 0,
+     "wrong": 0
+    }
+   }
+  }
+ },
+ "decomposition": {
+  "C30": {
+   "n_eligible": 2040,
+   "coverage_change": -0.07401960784313721,
+   "decided_at_15_lost_to_pp": {
+    "abstained": 0.12598039215686274,
+    "undetected: observable": 0.000980392156862745
+   },
+   "not_decided_at_15_gained_from_pp": {
+    "abstained": 0.052941176470588235
+   },
+   "wrong_share_change": 0.016176470588235292,
+   "correct_share_change": -0.09019607843137256
+  },
+  "C60": {
+   "n_eligible": 2040,
+   "coverage_change": -0.20833333333333331,
+   "decided_at_15_lost_to_pp": {
+    "undetected: unobservable": 0.12794117647058822,
+    "abstained": 0.12009803921568628,
+    "undetected: observable": 0.0014705882352941176
+   },
+   "not_decided_at_15_gained_from_pp": {
+    "abstained": 0.041176470588235294
+   },
+   "wrong_share_change": 0.02696078431372549,
+   "correct_share_change": -0.23529411764705882
+  }
+ },
+ "timing": {
+  "C15": {
+   "COMMS_FAILURE": {
+    "verdict_during_event_share_of_all": {
+     "k": 849,
+     "n": 1244,
+     "rate": 0.682475884244373,
+     "ci95": [
+      0.656078961049398,
+      0.7077492684310105
+     ]
+    },
+    "decided_after_event_share_of_all": {
+     "k": 8,
+     "n": 1244,
+     "rate": 0.006430868167202572,
+     "ci95": [
+      0.0032621268636965055,
+      0.012638609255375017
+     ]
+    },
+    "delay_minus_duration_min_quantiles": {
+     "0.1": -195.0,
+     "0.5": -120.0,
+     "0.9": -45.0
+    }
+   },
+   "OUTAGE": {
+    "verdict_during_event_share_of_all": {
+     "k": 421,
+     "n": 796,
+     "rate": 0.5288944723618091,
+     "ci95": [
+      0.49416166137749357,
+      0.5633497258771828
+     ]
+    },
+    "decided_after_event_share_of_all": {
+     "k": 5,
+     "n": 796,
+     "rate": 0.00628140703517588,
+     "ci95": [
+      0.0026858985413286,
+      0.01461952793311334
+     ]
+    },
+    "delay_minus_duration_min_quantiles": {
+     "0.1": -195.0,
+     "0.5": -120.0,
+     "0.9": -30.0
+    },
+    "human_item_during_event_share_of_all": {
+     "k": 704,
+     "n": 796,
+     "rate": 0.8844221105527639,
+     "ci95": [
+      0.8603414303044213,
+      0.9048100696925782
+     ]
+    }
+   }
+  },
+  "C30": {
+   "COMMS_FAILURE": {
+    "verdict_during_event_share_of_all": {
+     "k": 722,
+     "n": 1244,
+     "rate": 0.5803858520900321,
+     "ci95": [
+      0.552755595830371,
+      0.6075211572446987
+     ]
+    },
+    "decided_after_event_share_of_all": {
+     "k": 56,
+     "n": 1244,
+     "rate": 0.04501607717041801,
+     "ci95": [
+      0.03482758302397977,
+      0.05800599457112525
+     ]
+    },
+    "delay_minus_duration_min_quantiles": {
+     "0.1": -180.0,
+     "0.5": -90.0,
+     "0.9": -15.0
+    }
+   },
+   "OUTAGE": {
+    "verdict_during_event_share_of_all": {
+     "k": 299,
+     "n": 796,
+     "rate": 0.3756281407035176,
+     "ci95": [
+      0.34265763892577944,
+      0.4097933463693089
+     ]
+    },
+    "decided_after_event_share_of_all": {
+     "k": 55,
+     "n": 796,
+     "rate": 0.06909547738693467,
+     "ci95": [
+      0.05346720059283046,
+      0.08886298078308195
+     ]
+    },
+    "delay_minus_duration_min_quantiles": {
+     "0.1": -150.0,
+     "0.5": -75.0,
+     "0.9": 0.0
+    },
+    "human_item_during_event_share_of_all": {
+     "k": 432,
+     "n": 796,
+     "rate": 0.542713567839196,
+     "ci95": [
+      0.5079828160990205,
+      0.5770340172339794
+     ]
+    }
+   }
+  },
+  "C30-K1": {
+   "COMMS_FAILURE": {
+    "verdict_during_event_share_of_all": {
+     "k": 827,
+     "n": 1244,
+     "rate": 0.6647909967845659,
+     "ci95": [
+      0.638086271769442,
+      0.690481072034451
+     ]
+    },
+    "decided_after_event_share_of_all": {
+     "k": 3,
+     "n": 1244,
+     "rate": 0.002411575562700965,
+     "ci95": [
+      0.0008204699922884436,
+      0.007066428473029591
+     ]
+    },
+    "delay_minus_duration_min_quantiles": {
+     "0.1": -195.0,
+     "0.5": -120.0,
+     "0.9": -45.0
+    }
+   },
+   "OUTAGE": {
+    "verdict_during_event_share_of_all": {
+     "k": 454,
+     "n": 796,
+     "rate": 0.5703517587939698,
+     "ci95": [
+      0.5357052583070622,
+      0.6043224671825848
+     ]
+    },
+    "decided_after_event_share_of_all": {
+     "k": 20,
+     "n": 796,
+     "rate": 0.02512562814070352,
+     "ci95": [
+      0.0163227848334334,
+      0.03849006811144969
+     ]
+    },
+    "delay_minus_duration_min_quantiles": {
+     "0.1": -195.0,
+     "0.5": -112.5,
+     "0.9": -30.0
+    },
+    "human_item_during_event_share_of_all": {
+     "k": 235,
+     "n": 796,
+     "rate": 0.2952261306532663,
+     "ci95": [
+      0.2645820335172321,
+      0.32783726550397396
+     ]
+    }
+   }
+  },
+  "C60": {
+   "COMMS_FAILURE": {
+    "verdict_during_event_share_of_all": {
+     "k": 526,
+     "n": 1244,
+     "rate": 0.4228295819935691,
+     "ci95": [
+      0.3956560014758775,
+      0.4504783155720555
+     ]
+    },
+    "decided_after_event_share_of_all": {
+     "k": 87,
+     "n": 1244,
+     "rate": 0.06993569131832797,
+     "ci95": [
+      0.05704704058801386,
+      0.08547233046036276
+     ]
+    },
+    "delay_minus_duration_min_quantiles": {
+     "0.1": -135.0,
+     "0.5": -60.0,
+     "0.9": 0.0
+    }
+   },
+   "OUTAGE": {
+    "verdict_during_event_share_of_all": {
+     "k": 152,
+     "n": 796,
+     "rate": 0.19095477386934673,
+     "ci95": [
+      0.1651587773423808,
+      0.21971942854238433
+     ]
+    },
+    "decided_after_event_share_of_all": {
+     "k": 93,
+     "n": 796,
+     "rate": 0.11683417085427136,
+     "ci95": [
+      0.09633676615367405,
+      0.14101222894735593
+     ]
+    },
+    "delay_minus_duration_min_quantiles": {
+     "0.1": -120.0,
+     "0.5": -30.0,
+     "0.9": 120.0
+    },
+    "human_item_during_event_share_of_all": {
+     "k": 122,
+     "n": 796,
+     "rate": 0.15326633165829145,
+     "ci95": [
+      0.1299100857325145,
+      0.17995326721136834
+     ]
+    }
+   }
+  },
+  "C60-K1": {
+   "COMMS_FAILURE": {
+    "verdict_during_event_share_of_all": {
+     "k": 811,
+     "n": 1244,
+     "rate": 0.6519292604501608,
+     "ci95": [
+      0.6250265917336645,
+      0.6778964715782173
+     ]
+    },
+    "decided_after_event_share_of_all": {
+     "k": 29,
+     "n": 1244,
+     "rate": 0.023311897106109324,
+     "ci95": [
+      0.01627951487030287,
+      0.0332793393945333
+     ]
+    },
+    "delay_minus_duration_min_quantiles": {
+     "0.1": -195.0,
+     "0.5": -105.0,
+     "0.9": -30.0
+    }
+   },
+   "OUTAGE": {
+    "verdict_during_event_share_of_all": {
+     "k": 409,
+     "n": 796,
+     "rate": 0.5138190954773869,
+     "ci95": [
+      0.47911423369113476,
+      0.5483912123871887
+     ]
+    },
+    "decided_after_event_share_of_all": {
+     "k": 59,
+     "n": 796,
+     "rate": 0.07412060301507538,
+     "ci95": [
+      0.05789602767073692,
+      0.09443613409729315
+     ]
+    },
+    "delay_minus_duration_min_quantiles": {
+     "0.1": -195.0,
+     "0.5": -90.0,
+     "0.9": 0.0
+    },
+    "human_item_during_event_share_of_all": {
+     "k": 97,
+     "n": 796,
+     "rate": 0.12185929648241206,
+     "ci95": [
+      0.10093212707957663,
+      0.146418848413571
+     ]
+    }
+   }
+  }
+ },
+ "after_end": {
+  "C15": {
+   "before_end": {
+    "n_decided": 1270,
+    "accuracy": {
+     "k": 1265,
+     "n": 1270,
+     "rate": 0.9960629921259843,
+     "ci95": [
+      0.9908167372943876,
+      0.9983172335227061
+     ]
+    },
+    "false_outage_among_decided_comms": {
+     "k": 2,
+     "n": 849,
+     "rate": 0.002355712603062426,
+     "ci95": [
+      0.000646245722468952,
+      0.00854842770809541
+     ]
+    },
+    "missed_among_decided_outages": {
+     "k": 3,
+     "n": 421,
+     "rate": 0.007125890736342043,
+     "ci95": [
+      0.002426301491937918,
+      0.020739038248803097
+     ]
+    },
+    "own_readings_in_window_share": {
+     "k": 26,
+     "n": 1270,
+     "rate": 0.02047244094488189,
+     "ci95": [
+      0.014008630551553202,
+      0.02982853099192285
+     ]
+    },
+    "own_readings_in_window_comms": {
+     "k": 18,
+     "n": 849,
+     "rate": 0.02120141342756184,
+     "ci95": [
+      0.013452195443633597,
+      0.03326409982151295
+     ]
+    }
+   },
+   "after_end": {
+    "n_decided": 13,
+    "accuracy": {
+     "k": 13,
+     "n": 13,
+     "rate": 1.0,
+     "ci95": [
+      0.7718981569447083,
+      1.0
+     ]
+    },
+    "false_outage_among_decided_comms": {
+     "k": 0,
+     "n": 8,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3244156195108769
+     ]
+    },
+    "missed_among_decided_outages": {
+     "k": 0,
+     "n": 5,
+     "rate": 0.0,
+     "ci95": [
+      -2.7755575615628914e-17,
+      0.43449149475208104
+     ]
+    },
+    "own_readings_in_window_share": {
+     "k": 7,
+     "n": 13,
+     "rate": 0.5384615384615384,
+     "ci95": [
+      0.2914343243183205,
+      0.7679424569851186
+     ]
+    },
+    "own_readings_in_window_comms": {
+     "k": 3,
+     "n": 8,
+     "rate": 0.375,
+     "ci95": [
+      0.13684175946152105,
+      0.6942621454161981
+     ]
+    }
+   },
+   "comms_by_own_readings_in_window": {
+    "False": {
+     "n": 836,
+     "called_outage": {
+      "k": 1,
+      "n": 836,
+      "rate": 0.0011961722488038277,
+      "ci95": [
+       0.00021117955717245328,
+       0.006744417784040462
+      ]
+     },
+     "median_R_over_M": 1.020096883882415
+    },
+    "True": {
+     "n": 21,
+     "called_outage": {
+      "k": 1,
+      "n": 21,
+      "rate": 0.047619047619047616,
+      "ci95": [
+       0.008455769471923294,
+       0.22669816586235464
+      ]
+     },
+     "median_R_over_M": 0.9942410161287601
+    }
+   }
+  },
+  "C30": {
+   "before_end": {
+    "n_decided": 1021,
+    "accuracy": {
+     "k": 996,
+     "n": 1021,
+     "rate": 0.9755142017629774,
+     "ci95": [
+      0.9641029190089848,
+      0.983360571934396
+     ]
+    },
+    "false_outage_among_decided_comms": {
+     "k": 3,
+     "n": 722,
+     "rate": 0.004155124653739612,
+     "ci95": [
+      0.0014140765648062723,
+      0.01214480460155289
+     ]
+    },
+    "missed_among_decided_outages": {
+     "k": 22,
+     "n": 299,
+     "rate": 0.07357859531772576,
+     "ci95": [
+      0.04908895910557607,
+      0.10888669549405625
+     ]
+    },
+    "own_readings_in_window_share": {
+     "k": 19,
+     "n": 1021,
+     "rate": 0.01860920666013712,
+     "ci95": [
+      0.01194526006514949,
+      0.028882122429862427
+     ]
+    },
+    "own_readings_in_window_comms": {
+     "k": 4,
+     "n": 722,
+     "rate": 0.00554016620498615,
+     "ci95": [
+      0.002156474188626096,
+      0.014157829097380108
+     ]
+    }
+   },
+   "after_end": {
+    "n_decided": 111,
+    "accuracy": {
+     "k": 98,
+     "n": 111,
+     "rate": 0.8828828828828829,
+     "ci95": [
+      0.8098841750443868,
+      0.930265735789318
+     ]
+    },
+    "false_outage_among_decided_comms": {
+     "k": 12,
+     "n": 56,
+     "rate": 0.21428571428571427,
+     "ci95": [
+      0.127057803147445,
+      0.33819713656004946
+     ]
+    },
+    "missed_among_decided_outages": {
+     "k": 1,
+     "n": 55,
+     "rate": 0.01818181818181818,
+     "ci95": [
+      0.003216697592252786,
+      0.09606000460483224
+     ]
+    },
+    "own_readings_in_window_share": {
+     "k": 50,
+     "n": 111,
+     "rate": 0.45045045045045046,
+     "ci95": [
+      0.3610945286072419,
+      0.5431213652848669
+     ]
+    },
+    "own_readings_in_window_comms": {
+     "k": 18,
+     "n": 56,
+     "rate": 0.32142857142857145,
+     "ci95": [
+      0.21400827887722298,
+      0.45177605843996116
+     ]
+    }
+   },
+   "comms_by_own_readings_in_window": {
+    "False": {
+     "n": 756,
+     "called_outage": {
+      "k": 2,
+      "n": 756,
+      "rate": 0.0026455026455026454,
+      "ci95": [
+       0.0007257770954319422,
+       0.00959426855618808
+      ]
+     },
+     "median_R_over_M": 1.0193353644274132
+    },
+    "True": {
+     "n": 22,
+     "called_outage": {
+      "k": 13,
+      "n": 22,
+      "rate": 0.5909090909090909,
+      "ci95": [
+       0.38734477382893806,
+       0.7674444033117963
+      ]
+     },
+     "median_R_over_M": 0.11851417038120007
+    }
+   }
+  },
+  "C60": {
+   "before_end": {
+    "n_decided": 678,
+    "accuracy": {
+     "k": 648,
+     "n": 678,
+     "rate": 0.9557522123893806,
+     "ci95": [
+      0.9375363876606714,
+      0.9688324815898995
+     ]
+    },
+    "false_outage_among_decided_comms": {
+     "k": 0,
+     "n": 526,
+     "rate": 0.0,
+     "ci95": [
+      -4.336808689942018e-19,
+      0.007250468819360352
+     ]
+    },
+    "missed_among_decided_outages": {
+     "k": 30,
+     "n": 152,
+     "rate": 0.19736842105263158,
+     "ci95": [
+      0.14189466065483167,
+      0.2677623243863897
+     ]
+    },
+    "own_readings_in_window_share": {
+     "k": 9,
+     "n": 678,
+     "rate": 0.01327433628318584,
+     "ci95": [
+      0.006999029392809209,
+      0.025034217038620032
+     ]
+    },
+    "own_readings_in_window_comms": {
+     "k": 4,
+     "n": 526,
+     "rate": 0.0076045627376425855,
+     "ci95": [
+      0.0029610770585693762,
+      0.01938824394604785
+     ]
+    }
+   },
+   "after_end": {
+    "n_decided": 180,
+    "accuracy": {
+     "k": 150,
+     "n": 180,
+     "rate": 0.8333333333333334,
+     "ci95": [
+      0.7720468899777125,
+      0.8806889434789155
+     ]
+    },
+    "false_outage_among_decided_comms": {
+     "k": 26,
+     "n": 87,
+     "rate": 0.2988505747126437,
+     "ci95": [
+      0.2128395289487208,
+      0.4018744346978905
+     ]
+    },
+    "missed_among_decided_outages": {
+     "k": 4,
+     "n": 93,
+     "rate": 0.043010752688172046,
+     "ci95": [
+      0.016850881320861148,
+      0.10542714795581334
+     ]
+    },
+    "own_readings_in_window_share": {
+     "k": 108,
+     "n": 180,
+     "rate": 0.6,
+     "ci95": [
+      0.5270621817586989,
+      0.6687585682782895
+     ]
+    },
+    "own_readings_in_window_comms": {
+     "k": 35,
+     "n": 87,
+     "rate": 0.40229885057471265,
+     "ci95": [
+      0.3055065555931764,
+      0.5073545124637492
+     ]
+    }
+   },
+   "comms_by_own_readings_in_window": {
+    "False": {
+     "n": 574,
+     "called_outage": {
+      "k": 0,
+      "n": 574,
+      "rate": 0.0,
+      "ci95": [
+       0.0,
+       0.006648188707770434
+      ]
+     },
+     "median_R_over_M": 1.0345845520777042
+    },
+    "True": {
+     "n": 39,
+     "called_outage": {
+      "k": 26,
+      "n": 39,
+      "rate": 0.6666666666666666,
+      "ci95": [
+       0.5097710432024052,
+       0.7936723389308484
+      ]
+     },
+     "median_R_over_M": 0.06957789389039337
+    }
+   }
+  }
+ },
+ "k1_merging": {
+  "C15": {
+   "n_eligible": 2040,
+   "group_at_onset_overlap_below_0.5": {
+    "k": 2,
+    "n": 2040,
+    "rate": 0.000980392156862745,
+    "ci95": [
+     0.0002688944467383362,
+     0.003567802095694306
+    ]
+   },
+   "of_which_with_unrelated_delayed_or_lost_meters": {
+    "k": 2,
+    "n": 2040,
+    "rate": 0.000980392156862745,
+    "ci95": [
+     0.0002688944467383362,
+     0.003567802095694306
+    ]
+   },
+   "no_group_at_onset": {
+    "k": 3,
+    "n": 2040,
+    "rate": 0.0014705882352941176,
+    "ci95": [
+     0.0005002468953730947,
+     0.004314999061065017
+    ]
+   }
+  },
+  "C30": {
+   "n_eligible": 2040,
+   "group_at_onset_overlap_below_0.5": {
+    "k": 8,
+    "n": 2040,
+    "rate": 0.00392156862745098,
+    "ci95": [
+     0.0019884272118585794,
+     0.007719565814606877
+    ]
+   },
+   "of_which_with_unrelated_delayed_or_lost_meters": {
+    "k": 8,
+    "n": 2040,
+    "rate": 0.00392156862745098,
+    "ci95": [
+     0.0019884272118585794,
+     0.007719565814606877
+    ]
+   },
+   "no_group_at_onset": {
+    "k": 7,
+    "n": 2040,
+    "rate": 0.003431372549019608,
+    "ci95": [
+     0.001663127858944789,
+     0.007066315753515198
+    ]
+   }
+  },
+  "C30-K1": {
+   "n_eligible": 2040,
+   "group_at_onset_overlap_below_0.5": {
+    "k": 574,
+    "n": 2040,
+    "rate": 0.28137254901960784,
+    "ci95": [
+     0.26228406138549126,
+     0.3012828999680696
+    ]
+   },
+   "of_which_with_unrelated_delayed_or_lost_meters": {
+    "k": 574,
+    "n": 2040,
+    "rate": 0.28137254901960784,
+    "ci95": [
+     0.26228406138549126,
+     0.3012828999680696
+    ]
+   },
+   "no_group_at_onset": {
+    "k": 0,
+    "n": 2040,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0018795977144217045
+    ]
+   }
+  },
+  "C60": {
+   "n_eligible": 2040,
+   "group_at_onset_overlap_below_0.5": {
+    "k": 155,
+    "n": 2040,
+    "rate": 0.07598039215686274,
+    "ci95": [
+     0.06526230990633171,
+     0.08829244697893766
+    ]
+   },
+   "of_which_with_unrelated_delayed_or_lost_meters": {
+    "k": 62,
+    "n": 2040,
+    "rate": 0.030392156862745098,
+    "ci95": [
+     0.023780300096735915,
+     0.03876936128602486
+    ]
+   },
+   "no_group_at_onset": {
+    "k": 268,
+    "n": 2040,
+    "rate": 0.13137254901960785,
+    "ci95": [
+     0.11740362942005465,
+     0.14672721124783275
+    ]
+   }
+  },
+  "C60-K1": {
+   "n_eligible": 2040,
+   "group_at_onset_overlap_below_0.5": {
+    "k": 595,
+    "n": 2040,
+    "rate": 0.2916666666666667,
+    "ci95": [
+     0.27234853101167256,
+     0.31176796803600315
+    ]
+   },
+   "of_which_with_unrelated_delayed_or_lost_meters": {
+    "k": 595,
+    "n": 2040,
+    "rate": 0.2916666666666667,
+    "ci95": [
+     0.27234853101167256,
+     0.31176796803600315
+    ]
+   },
+   "no_group_at_onset": {
+    "k": 0,
+    "n": 2040,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0018795977144217045
+    ]
+   }
+  }
+ },
+ "exposure": {
+  "C15": {
+   "transformer_years": 2.891170431211499,
+   "false_outage_verdicts": 93,
+   "upper95_if_zero_per_transformer_year": 1.2759121407340102
+  },
+  "C30": {
+   "transformer_years": 2.891170431211499,
+   "false_outage_verdicts": 28,
+   "upper95_if_zero_per_transformer_year": 1.2759121407340102
+  },
+  "C30-K1": {
+   "transformer_years": 2.891170431211499,
+   "false_outage_verdicts": 1057,
+   "upper95_if_zero_per_transformer_year": 1.2759121407340102
+  },
+  "C60": {
+   "transformer_years": 2.891170431211499,
+   "false_outage_verdicts": 9,
+   "upper95_if_zero_per_transformer_year": 1.2759121407340102
+  },
+  "C60-K1": {
+   "transformer_years": 2.891170431211499,
+   "false_outage_verdicts": 469,
+   "upper95_if_zero_per_transformer_year": 1.2759121407340102
+  }
+ },
+ "outage_called_comms_by_start_offset_min": {
+  "C15": {
+   "0": {
+    "k": 3,
+    "n": 796,
+    "rate": 0.0037688442211055275,
+    "ci95": [
+     0.001282534034238612,
+     0.011021902244144507
+    ]
+   }
+  },
+  "C30": {
+   "0": {
+    "k": 1,
+    "n": 398,
+    "rate": 0.002512562814070352,
+    "ci95": [
+     0.00044365539222391854,
+     0.01409341593140211
+    ]
+   },
+   "15": {
+    "k": 22,
+    "n": 398,
+    "rate": 0.05527638190954774,
+    "ci95": [
+     0.03678355414630399,
+     0.08227231264299806
+    ]
+   }
+  },
+  "C60": {
+   "0": {
+    "k": 0,
+    "n": 200,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.018846005918320894
+    ]
+   },
+   "15": {
+    "k": 0,
+    "n": 207,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.018220313258863523
+    ]
+   },
+   "30": {
+    "k": 2,
+    "n": 198,
+    "rate": 0.010101010101010102,
+    "ci95": [
+     0.0027743880346107024,
+     0.03607587870921218
+    ]
+   },
+   "45": {
+    "k": 32,
+    "n": 191,
+    "rate": 0.16753926701570682,
+    "ci95": [
+     0.12124701378054892,
+     0.22694146342349786
+    ]
+   }
+  }
+ }
+}

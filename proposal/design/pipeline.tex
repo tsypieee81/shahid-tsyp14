@@ -1,0 +1,29 @@
+% System pipeline (illustration). Every element is named in the paper text (Sections V to VIII).
+\begin{tikzpicture}[
+  font=\footnotesize, node distance=4mm and 3.2mm,
+  box/.style={draw, rounded corners=1.5pt, align=center, inner sep=3pt, minimum height=11mm, text width=#1},
+  box/.default=21mm,
+  prop/.style={box=#1, dashed, fill=gray!8},
+  prop/.default=21mm,
+  arr/.style={-{Stealth[length=2mm]}, semithick}]
+\node[box=20mm] (meters) {Smart meters and the transformer meter};
+\node[box=22mm, right=of meters] (obs) {Observed data with arrival times (+ static context)};
+\node[box=21mm, right=of obs, yshift=7.5mm, minimum height=9mm] (cons) {Learned consumption model};
+\node[box=21mm, right=of obs, yshift=-7.5mm, minimum height=9mm] (noise) {Learned noise model};
+\node[box=24mm, right=of obs, xshift=26mm] (reason) {Probabilistic reasoning: outage vs communication failure};
+\node[box=25mm, right=of reason] (sel) {Selective prediction: OUTAGE / COMMUNICATION FAILURE / UNCERTAIN};
+\node[box=19mm, below=5mm of sel] (esc) {Escalation table};
+\node[box=19mm, left=of esc] (op) {Operator console (preview)};
+\node[box=22mm, left=of op] (log) {Hash-chained decision log};
+\node[prop=26mm, left=8mm of log] (share) {Shared learning between nodes (PROPOSED; proof of concept measured)};
+\draw[arr] (meters) -- (obs);
+\draw[arr] (obs.east) -- ++(1.5mm,0) |- (cons.west);
+\draw[arr] (obs.east) -- ++(1.5mm,0) |- (noise.west);
+\draw[arr] (cons.east) -- ++(1.5mm,0) |- (reason.west);
+\draw[arr] (noise.east) -- ++(1.5mm,0) |- (reason.west);
+\draw[arr] (reason) -- (sel);
+\draw[arr] (sel) -- (esc);
+\draw[arr] (esc) -- (op);
+\draw[arr] (op) -- (log);
+\draw[arr, dashed] (log) -- (share);  % confirmed outcomes with their evidence numbers (Section 5.4)
+\end{tikzpicture}

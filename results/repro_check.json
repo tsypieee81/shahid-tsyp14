@@ -1,0 +1,38 @@
+{
+ "stamp": {
+  "commit": "dad7813",
+  "config_hash": "55b4919e2695",
+  "config": {
+   "stages": [
+    "cp1_diversity",
+    "cp3_checks",
+    "cp5_gap"
+   ],
+   "tables": [
+    "observed/meter_readings",
+    "observed/transformer",
+    "context/meters",
+    "context/zones",
+    "labels/episodes",
+    "labels/cells"
+   ]
+  },
+  "command": "python -m shahid.verify_repro",
+  "date": "2026-10-07T10:09:44",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "checks": {
+  "cp1_diversity.json": true,
+  "cp3_checks.json": true,
+  "cp5_gap.json": true,
+  "decision_log_demo.jsonl": true,
+  "dataset/baseline_semiurb5/observed/meter_readings": true,
+  "dataset/baseline_semiurb5/observed/transformer": true,
+  "dataset/baseline_semiurb5/context/meters": true,
+  "dataset/baseline_semiurb5/context/zones": true,
+  "dataset/baseline_semiurb5/labels/episodes": true,
+  "dataset/baseline_semiurb5/labels/cells": true
+ },
+ "all_identical": true
+}

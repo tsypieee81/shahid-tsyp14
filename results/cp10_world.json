@@ -1,0 +1,60 @@
+{
+ "stamp": {
+  "commit": "9337beb",
+  "config_hash": "59d0376dabe3",
+  "config": {
+   "weeks": [
+    0,
+    1,
+    2
+   ]
+  },
+  "command": "python -m shahid.cp10_world",
+  "date": "2026-10-07T12:35:12",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "label": "post-hoc descriptive analysis, added after CP7",
+ "worlds": {
+  "0": {
+   "n": 504,
+   "abstention_rate": 0.4007936507936508,
+   "accuracy_when_decided": 0.9899665551839465,
+   "outage_recall": 0.5147679324894515,
+   "comms_recall": 0.651685393258427,
+   "false_outage_rate": 0.0,
+   "missed_outage_rate": 0.012658227848101266,
+   "balanced_correct": 0.5832266628739393
+  },
+  "1": {
+   "n": 504,
+   "abstention_rate": 0.3968253968253968,
+   "accuracy_when_decided": 0.9867109634551495,
+   "outage_recall": 0.48945147679324896,
+   "comms_recall": 0.6779026217228464,
+   "false_outage_rate": 0.0,
+   "missed_outage_rate": 0.016877637130801686,
+   "balanced_correct": 0.5836770492580476
+  },
+  "2": {
+   "n": 504,
+   "abstention_rate": 0.3968253968253968,
+   "accuracy_when_decided": 0.9867109634551495,
+   "outage_recall": 0.4936708860759494,
+   "comms_recall": 0.6741573033707865,
+   "false_outage_rate": 0.0,
+   "missed_outage_rate": 0.016877637130801686,
+   "balanced_correct": 0.583914094723368
+  },
+  "3": {
+   "n": 504,
+   "abstention_rate": 0.3968253968253968,
+   "accuracy_when_decided": 0.9900332225913622,
+   "outage_recall": 0.48945147679324896,
+   "comms_recall": 0.6816479400749064,
+   "false_outage_rate": 0.0,
+   "missed_outage_rate": 0.012658227848101266,
+   "balanced_correct": 0.5855497084340777
+  }
+ }
+}

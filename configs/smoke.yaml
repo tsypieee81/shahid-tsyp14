@@ -1,0 +1,6 @@
+# Walking-skeleton scenario. Day 160 of 2016 = 9 June. 14 days history + 1 event day.
+# All other parameters come from configs/defaults.yaml.
+world: {start_day: 160, days: 15}
+events:
+  - {type: outage, feeder: 1, start_step: 1384, duration_steps: 8}               # day 14, 10:00-12:00
+  - {type: comms_failure, concentrator: 0, start_step: 1416, duration_steps: 8}  # day 14, 18:00-20:00

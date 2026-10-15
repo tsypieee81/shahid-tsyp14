@@ -1,0 +1,19 @@
+\section{Shared Learning Across the Noosphere (G4)}\label{sec:shared}
+\textbf{What is shared, what stays local, and why.} Shared between nodes: dimensionless fitted noise
+parameters, frozen decision thresholds, each site's measured resolution limit, and (PROPOSED)
+anonymous failure signatures such as ``the gap follows the load'' and operator-confirmed outcomes
+stripped of identifiers. Kept local: every meter reading, customer and meter identifiers and network
+topology, because interval consumption is personal data (DESIGN CHOICE).
+
+\textbf{What was tested.} In a proof of concept, a new node received another node's noise-shape
+parameters and fitted only its scale from $d$ days of its own data. The gain was negligible: with one
+day of local data, the nominal interval covered 0.978 of fault-free residuals when fitted locally and
+0.96 with shared parameters, and shared parameters gave more fault-free outage verdicts (9 against 4).
+Local calibration is fast, so sharing noise parameters is the wrong mechanism.
+
+\textbf{What did transfer.} Thresholds frozen on one network kept the false-outage rate at 0.0 on labelled communication failures on the
+networks never used for tuning (Section~\ref{sec:results}). The design (PROPOSED) therefore rests on a
+bulletin of frozen thresholds and anonymous failure signatures: a new node preloads them, abstention
+rules are only ever tightened by shared knowledge, and no raw data leaves a site. A coordinator that
+sees several neighbourhoods go silent at the same moment could also treat them as one upstream event,
+such as a rotating cut.

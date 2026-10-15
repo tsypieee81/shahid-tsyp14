@@ -1,0 +1,146 @@
+{
+ "stamp": {
+  "commit": "7604730",
+  "config_hash": "7bddf3c73074",
+  "config": {
+   "base_config": "configs/baseline.yaml",
+   "episodes": 150,
+   "days": 7,
+   "seed": 8,
+   "faults": {
+    "stuck": [
+     null
+    ],
+    "gain": [
+     0.5,
+     0.8,
+     0.9,
+     1.1,
+     1.2,
+     1.5
+    ],
+    "bias": [
+     -0.05,
+     -0.02,
+     0.02,
+     0.05
+    ],
+    "noise": [
+     0.02,
+     0.05,
+     0.2
+    ]
+   },
+   "fa_target": 0.01,
+   "stuck_run": 8,
+   "own_window": 28,
+   "gap_window": 14
+  },
+  "command": "python -m shahid.cp8_single_meter",
+  "date": "2026-10-07T09:59:03",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "thresholds": {
+  "stuck_run": 8,
+  "own_lo": 0.01134014623131651,
+  "own_hi": 4.022050503683913,
+  "gap_z": 7.661122024718483
+ },
+ "fault_free_false_alarm_rate": {
+  "stuck_rule": 0.0,
+  "own_history": 0.008814102564102564,
+  "balance": 0.027777777777777776
+ },
+ "calibration": {
+  "meter_weeks": 3744,
+  "weeks": 36,
+  "note": "gap thresholds from only this many fault-free weeks"
+ },
+ "results": {
+  "stuck_None": {
+   "stuck_rule": 1.0,
+   "own_history": 0.0,
+   "balance": 0.23333333333333334,
+   "n": 150
+  },
+  "gain_0.5": {
+   "stuck_rule": 0.0,
+   "own_history": 0.006666666666666667,
+   "balance": 0.2,
+   "n": 150
+  },
+  "gain_0.8": {
+   "stuck_rule": 0.0,
+   "own_history": 0.006666666666666667,
+   "balance": 0.07333333333333333,
+   "n": 150
+  },
+  "gain_0.9": {
+   "stuck_rule": 0.0,
+   "own_history": 0.0,
+   "balance": 0.06,
+   "n": 150
+  },
+  "gain_1.1": {
+   "stuck_rule": 0.0,
+   "own_history": 0.006666666666666667,
+   "balance": 0.013333333333333334,
+   "n": 150
+  },
+  "gain_1.2": {
+   "stuck_rule": 0.0,
+   "own_history": 0.006666666666666667,
+   "balance": 0.04,
+   "n": 150
+  },
+  "gain_1.5": {
+   "stuck_rule": 0.0,
+   "own_history": 0.02,
+   "balance": 0.1,
+   "n": 150
+  },
+  "bias_-0.05": {
+   "stuck_rule": 0.0,
+   "own_history": 0.5733333333333334,
+   "balance": 0.14666666666666667,
+   "n": 150
+  },
+  "bias_-0.02": {
+   "stuck_rule": 0.0,
+   "own_history": 0.19333333333333333,
+   "balance": 0.06,
+   "n": 150
+  },
+  "bias_0.02": {
+   "stuck_rule": 0.0,
+   "own_history": 0.013333333333333334,
+   "balance": 0.0,
+   "n": 150
+  },
+  "bias_0.05": {
+   "stuck_rule": 0.0,
+   "own_history": 0.05333333333333334,
+   "balance": 0.0,
+   "n": 150
+  },
+  "noise_0.02": {
+   "stuck_rule": 0.0,
+   "own_history": 0.013333333333333334,
+   "balance": 0.03333333333333333,
+   "n": 150
+  },
+  "noise_0.05": {
+   "stuck_rule": 0.0,
+   "own_history": 0.013333333333333334,
+   "balance": 0.03333333333333333,
+   "n": 150
+  },
+  "noise_0.2": {
+   "stuck_rule": 0.0,
+   "own_history": 0.12666666666666668,
+   "balance": 0.04,
+   "n": 150
+  }
+ }
+}

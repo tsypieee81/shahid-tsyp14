@@ -1,0 +1,122 @@
+{
+ "stamp": {
+  "commit": "5dd66a1",
+  "config_hash": "a60f1613849d",
+  "config": {
+   "protocol": "docs/process/protocols/02_p2_evidence_v2.md",
+   "bands": [
+    0.005,
+    0.01,
+    0.02,
+    0.03,
+    0.05,
+    0.1,
+    0.2
+   ]
+  },
+  "command": "python -m shahid.p2_v2 select",
+  "date": "2026-10-14T08:59:16",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "label": "development, selection data",
+ "sweep": [
+  {
+   "band": 0.005,
+   "missed_outage_rate": 0.044642857142857144,
+   "false_outage_rate": 0.0,
+   "abstention_rate": 0.49242424242424243,
+   "accuracy_when_decided": 0.9770992366412213,
+   "median_delay_min": 90.0,
+   "ff_per_meter_day": 0.0,
+   "ff_k": 0,
+   "feasible": true
+  },
+  {
+   "band": 0.01,
+   "missed_outage_rate": 0.05357142857142857,
+   "false_outage_rate": 0.0,
+   "abstention_rate": 0.4393939393939394,
+   "accuracy_when_decided": 0.9724137931034482,
+   "median_delay_min": 60.0,
+   "ff_per_meter_day": 0.0,
+   "ff_k": 0,
+   "feasible": false
+  },
+  {
+   "band": 0.02,
+   "missed_outage_rate": 0.05357142857142857,
+   "false_outage_rate": 0.0,
+   "abstention_rate": 0.36742424242424243,
+   "accuracy_when_decided": 0.975609756097561,
+   "median_delay_min": 45.0,
+   "ff_per_meter_day": 0.0,
+   "ff_k": 0,
+   "feasible": false
+  },
+  {
+   "band": 0.03,
+   "missed_outage_rate": 0.044642857142857144,
+   "false_outage_rate": 0.0,
+   "abstention_rate": 0.3522727272727273,
+   "accuracy_when_decided": 0.9821428571428571,
+   "median_delay_min": 30.0,
+   "ff_per_meter_day": 0.0,
+   "ff_k": 0,
+   "feasible": true
+  },
+  {
+   "band": 0.05,
+   "missed_outage_rate": 0.05357142857142857,
+   "false_outage_rate": 0.0,
+   "abstention_rate": 0.29545454545454547,
+   "accuracy_when_decided": 0.9781420765027322,
+   "median_delay_min": 30.0,
+   "ff_per_meter_day": 0.0,
+   "ff_k": 0,
+   "feasible": false
+  },
+  {
+   "band": 0.1,
+   "missed_outage_rate": 0.044642857142857144,
+   "false_outage_rate": 0.006578947368421052,
+   "abstention_rate": 0.26515151515151514,
+   "accuracy_when_decided": 0.9790575916230366,
+   "median_delay_min": 30.0,
+   "ff_per_meter_day": 0.00042265426880811494,
+   "ff_k": 4,
+   "feasible": true
+  },
+  {
+   "band": 0.2,
+   "missed_outage_rate": 0.05357142857142857,
+   "false_outage_rate": 0.02631578947368421,
+   "abstention_rate": 0.1553030303030303,
+   "accuracy_when_decided": 0.9636363636363636,
+   "median_delay_min": 30.0,
+   "ff_per_meter_day": 0.00253592561284869,
+   "ff_k": 24,
+   "feasible": false
+  }
+ ],
+ "v1_reference": {
+  "n_outage": 112,
+  "n_comms": 152,
+  "outage_recall": 0.5446428571428571,
+  "comms_recall": 0.7171052631578947,
+  "precision_outage": 1.0,
+  "precision_comms": 0.9819819819819819,
+  "false_outage_rate": 0.0,
+  "missed_outage_rate": 0.03571428571428571,
+  "abstention_rate": 0.3371212121212121,
+  "correct_cause_rate": 0.6439393939393939,
+  "balanced_correct": 0.630874060150376,
+  "accuracy_when_decided": 0.9883720930232558,
+  "latency_median": 2.0,
+  "median_delay_min": 30.0,
+  "ff_per_meter_day": 0.0006339814032121725
+ },
+ "frozen": {
+  "band": 0.1
+ }
+}

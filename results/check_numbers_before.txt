@@ -1,0 +1,43 @@
+docs/results_for_proposal.md:35  0.269  | | diversity d = 1.0 | 0.269 (0.201–0.366) |
+docs/results_for_proposal.md:35  0.201  | | diversity d = 1.0 | 0.269 (0.201–0.366) |
+docs/results_for_proposal.md:36  0.319  | | midday PV × 2 | 0.319 (0.245–0.444) |
+docs/results_for_proposal.md:36  0.444  | | midday PV × 2 | 0.319 (0.245–0.444) |
+docs/results_for_proposal.md:37  0.275  | | 10% packet loss | 0.275 (0.219–0.351) |
+docs/results_for_proposal.md:37  0.219  | | 10% packet loss | 0.275 (0.219–0.351) |
+docs/results_for_proposal.md:37  0.351  | | 10% packet loss | 0.275 (0.219–0.351) |
+docs/results_for_proposal.md:38  0.215  | | transformer gain error sd 2% | 0.215 (0.166–0.290) |
+docs/results_for_proposal.md:38  0.166  | | transformer gain error sd 2% | 0.215 (0.166–0.290) |
+docs/results_for_proposal.md:39  0.435  | | load-shaped unmetered 5 kW | 0.435 (0.302–0.683) |
+docs/results_for_proposal.md:39  0.302  | | load-shaped unmetered 5 kW | 0.435 (0.302–0.683) |
+docs/results_for_proposal.md:39  0.683  | | load-shaped unmetered 5 kW | 0.435 (0.302–0.683) |
+docs/results_for_proposal.md:40  0.569  | | simultaneous outage + comms | 0.569 (0.327–1.072); the isotonic check never reaches 0.90 |
+docs/results_for_proposal.md:40  0.327  | | simultaneous outage + comms | 0.569 (0.327–1.072); the isotonic check never reaches 0.90 |
+docs/results_for_proposal.md:40  1.072  | | simultaneous outage + comms | 0.569 (0.327–1.072); the isotonic check never reaches 0.90 |
+docs/results_for_proposal.md:41  1.047  | | load-shaped unmetered 10 kW | 1.047 (0.559–1.952): beyond any physical share, so effectively never |
+docs/results_for_proposal.md:41  0.559  | | load-shaped unmetered 10 kW | 1.047 (0.559–1.952): beyond any physical share, so effectively never |
+docs/results_for_proposal.md:41  1.952  | | load-shaped unmetered 10 kW | 1.047 (0.559–1.952): beyond any physical share, so effectively never |
+docs/results_for_proposal.md:43  1.4  | - **The share boundary is not fully portable**: on test weeks it is 0.114 on the development grid and 0.083 on
+docs/results_for_proposal.md:68  109  | 109 outage and 155 comms episodes, same episodes and inputs for every method (AU-01, C7-01, C7-04):
+docs/results_for_proposal.md:73  0.994  | | ztest | 0.636 | 0.994 | 0.615 | 0.645 | 0.000 | 0.009 | 0.0002 |
+docs/results_for_proposal.md:73  0.0002  | | ztest | 0.636 | 0.994 | 0.615 | 0.645 | 0.000 | 0.009 | 0.0002 |
+docs/results_for_proposal.md:74  0.963  | | lr | 0.720 | 0.963 | 0.716 | 0.677 | 0.039 | 0.009 | 0.0038 |
+docs/results_for_proposal.md:75  0.774  | | naive baseline | 0.871 | 0.943 | 0.890 | 0.774 | 0.065 | 0.028 | 0.0104 |
+docs/results_for_proposal.md:76  0.682  | | step baseline | 1.000 | 0.682 | 0.752 | 0.632 | 0.368 | 0.248 | 0.0629 |
+docs/results_for_proposal.md:77  0.826  | | count baseline | 1.000 | 0.545 | 0.826 | 0.348 | 0.652 | 0.174 | 0.0039 |
+docs/results_for_proposal.md:77  0.174  | | count baseline | 1.000 | 0.545 | 0.826 | 0.348 | 0.652 | 0.174 | 0.0039 |
+docs/results_for_proposal.md:77  0.0039  | | count baseline | 1.000 | 0.545 | 0.826 | 0.348 | 0.652 | 0.174 | 0.0039 |
+docs/results_for_proposal.md:78  0.765  | | structure baseline | 0.765 | 0.604 | 0.624 | 0.348 | 0.394 | 0.174 | 0.0031 |
+docs/results_for_proposal.md:78  0.604  | | structure baseline | 0.765 | 0.604 | 0.624 | 0.348 | 0.394 | 0.174 | 0.0031 |
+docs/results_for_proposal.md:78  0.624  | | structure baseline | 0.765 | 0.604 | 0.624 | 0.348 | 0.394 | 0.174 | 0.0031 |
+docs/results_for_proposal.md:78  0.174  | | structure baseline | 0.765 | 0.604 | 0.624 | 0.348 | 0.394 | 0.174 | 0.0031 |
+docs/results_for_proposal.md:78  0.0031  | | structure baseline | 0.765 | 0.604 | 0.624 | 0.348 | 0.394 | 0.174 | 0.0031 |
+docs/results_for_proposal.md:91  0.167  | | single connection (CP6 nominal, 58 episodes) | 0.224 | 0.167 | 0.206 | 0.000 |
+docs/results_for_proposal.md:92  415  | | branch (CP6 nominal, 415) | 0.636 | 0.531 | 0.712 | 0.015 |
+docs/results_for_proposal.md:92  0.531  | | branch (CP6 nominal, 415) | 0.636 | 0.531 | 0.712 | 0.015 |
+docs/results_for_proposal.md:93  0.824  | | whole feeder (CP6 nominal, 31) | 0.806 | 0.824 | 0.786 | 0.000 |
+docs/results_for_proposal.md:93  0.786  | | whole feeder (CP6 nominal, 31) | 0.806 | 0.824 | 0.786 | 0.000 |
+docs/results_for_proposal.md:119  0.584  | gives abstention 0.397 against 0.401 on world 0, balanced 0.584–0.586 against 0.583, no false
+docs/results_for_proposal.md:146  702  | - Earlier design figures "100%", "702/702", "16 tests", "48 scenarios" (RETRACTED).
+docs/results_for_proposal.md:146  702  | - Earlier design figures "100%", "702/702", "16 tests", "48 scenarios" (RETRACTED).
+LEVEL 1 (documents -> ledger): checked 911 numbers, unmatched 41
+LEVEL 2 (ledger -> cited result files): checked 318 numbers, unmatched 0

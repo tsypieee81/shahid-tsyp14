@@ -1,0 +1,455 @@
+{
+ "stamp": {
+  "commit": "9cc2d7d",
+  "config_hash": "42d75fa178a6",
+  "config": {
+   "protocol": "docs/process/protocols/02_p2_evidence_v2.md",
+   "seeds": [
+    901,
+    902
+   ]
+  },
+  "command": "python -m shahid.p2_v2 diagnose",
+  "date": "2026-10-14T09:07:03",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "label": "development diagnostics, not used for selection",
+ "band_v2": {
+  "band": 0.1
+ },
+ "v1_15": {
+  "all": {
+   "n_outage": 263,
+   "n_comms": 417,
+   "outage_recall": 0.5057034220532319,
+   "comms_recall": 0.7146282973621103,
+   "precision_outage": 1.0,
+   "precision_comms": 0.9900332225913622,
+   "false_outage_rate": 0.0,
+   "missed_outage_rate": 0.015209125475285171,
+   "abstention_rate": 0.3588235294117647,
+   "correct_cause_rate": 0.6338235294117647,
+   "balanced_correct": 0.6101658597076711,
+   "accuracy_when_decided": 0.9930875576036866,
+   "latency_median": 2.0,
+   "median_delay_min": 30.0
+  },
+  "mid_interval": {
+   "median_delay_min": NaN
+  },
+  "aligned": {
+   "n_outage": 263,
+   "n_comms": 417,
+   "outage_recall": 0.5057034220532319,
+   "comms_recall": 0.7146282973621103,
+   "precision_outage": 1.0,
+   "precision_comms": 0.9900332225913622,
+   "false_outage_rate": 0.0,
+   "missed_outage_rate": 0.015209125475285171,
+   "abstention_rate": 0.3588235294117647,
+   "correct_cause_rate": 0.6338235294117647,
+   "balanced_correct": 0.6101658597076711,
+   "accuracy_when_decided": 0.9930875576036866,
+   "latency_median": 2.0,
+   "median_delay_min": 30.0
+  },
+  "ff": {
+   "k": 28,
+   "meter_days": 38064.0,
+   "per_meter_day": 0.0007356031946195881
+  },
+  "stored_rule_share": 0.0,
+  "outage_verdicts": {
+   "OUTAGE": 133,
+   "UNCERTAIN": 126,
+   "COMMS_FAILURE": 3,
+   "MISSED": 1
+  },
+  "silent_groups": 8944
+ },
+ "v2_15": {
+  "all": {
+   "n_outage": 263,
+   "n_comms": 417,
+   "outage_recall": 0.6730038022813688,
+   "comms_recall": 0.829736211031175,
+   "precision_outage": 0.9516129032258065,
+   "precision_comms": 0.969187675070028,
+   "false_outage_rate": 0.02158273381294964,
+   "missed_outage_rate": 0.045627376425855515,
+   "abstention_rate": 0.19852941176470587,
+   "correct_cause_rate": 0.7691176470588236,
+   "balanced_correct": 0.7513700066562718,
+   "accuracy_when_decided": 0.9631675874769797,
+   "latency_median": 2.0,
+   "median_delay_min": 30.0
+  },
+  "mid_interval": {
+   "median_delay_min": NaN
+  },
+  "aligned": {
+   "n_outage": 263,
+   "n_comms": 417,
+   "outage_recall": 0.6730038022813688,
+   "comms_recall": 0.829736211031175,
+   "precision_outage": 0.9516129032258065,
+   "precision_comms": 0.969187675070028,
+   "false_outage_rate": 0.02158273381294964,
+   "missed_outage_rate": 0.045627376425855515,
+   "abstention_rate": 0.19852941176470587,
+   "correct_cause_rate": 0.7691176470588236,
+   "balanced_correct": 0.7513700066562718,
+   "accuracy_when_decided": 0.9631675874769797,
+   "latency_median": 2.0,
+   "median_delay_min": 30.0
+  },
+  "ff": {
+   "k": 26,
+   "meter_days": 38064.0,
+   "per_meter_day": 0.0006830601092896175
+  },
+  "stored_rule_share": 0.010294117647058823,
+  "outage_verdicts": {
+   "OUTAGE": 177,
+   "UNCERTAIN": 74,
+   "COMMS_FAILURE": 11,
+   "MISSED": 1
+  },
+  "silent_groups": 8944
+ },
+ "v1_30": {
+  "all": {
+   "n_outage": 263,
+   "n_comms": 417,
+   "outage_recall": 0.40304182509505704,
+   "comms_recall": 0.7386091127098321,
+   "precision_outage": 0.9724770642201835,
+   "precision_comms": 0.9625,
+   "false_outage_rate": 0.007194244604316547,
+   "missed_outage_rate": 0.049429657794676805,
+   "abstention_rate": 0.36323529411764705,
+   "correct_cause_rate": 0.6088235294117647,
+   "balanced_correct": 0.5708254689024446,
+   "accuracy_when_decided": 0.965034965034965,
+   "latency_median": 2.0,
+   "median_delay_min": 60.0
+  },
+  "mid_interval": {
+   "n_outage": 132,
+   "n_comms": 199,
+   "outage_recall": 0.3106060606060606,
+   "comms_recall": 0.7286432160804021,
+   "precision_outage": 0.9761904761904762,
+   "precision_comms": 0.9354838709677419,
+   "false_outage_rate": 0.005025125628140704,
+   "missed_outage_rate": 0.08333333333333333,
+   "abstention_rate": 0.3957703927492447,
+   "correct_cause_rate": 0.5619335347432024,
+   "balanced_correct": 0.5196246383432314,
+   "accuracy_when_decided": 0.9441624365482234,
+   "latency_median": 3.0,
+   "median_delay_min": 90.0
+  },
+  "aligned": {
+   "n_outage": 131,
+   "n_comms": 218,
+   "outage_recall": 0.4961832061068702,
+   "comms_recall": 0.7477064220183486,
+   "precision_outage": 0.9701492537313433,
+   "precision_comms": 0.9878787878787879,
+   "false_outage_rate": 0.009174311926605505,
+   "missed_outage_rate": 0.015267175572519083,
+   "abstention_rate": 0.332378223495702,
+   "correct_cause_rate": 0.6532951289398281,
+   "balanced_correct": 0.6219448140626094,
+   "accuracy_when_decided": 0.9827586206896551,
+   "latency_median": 2.0,
+   "median_delay_min": 60.0
+  },
+  "ff": {
+   "k": 10,
+   "meter_days": 38064.0,
+   "per_meter_day": 0.0002627154266498529
+  },
+  "stored_rule_share": 0.0,
+  "outage_verdicts": {
+   "UNCERTAIN": 144,
+   "OUTAGE": 106,
+   "COMMS_FAILURE": 12,
+   "MISSED": 1
+  },
+  "silent_groups": 4829
+ },
+ "v2_30": {
+  "all": {
+   "n_outage": 263,
+   "n_comms": 417,
+   "outage_recall": 0.30038022813688214,
+   "comms_recall": 0.6714628297362111,
+   "precision_outage": 0.9753086419753086,
+   "precision_comms": 0.8668730650154799,
+   "false_outage_rate": 0.004796163069544364,
+   "missed_outage_rate": 0.49809885931558934,
+   "abstention_rate": 0.1264705882352941,
+   "correct_cause_rate": 0.5279411764705882,
+   "balanced_correct": 0.4859215289365466,
+   "accuracy_when_decided": 0.8886138613861386,
+   "latency_median": 2.0,
+   "median_delay_min": 60.0
+  },
+  "mid_interval": {
+   "n_outage": 132,
+   "n_comms": 199,
+   "outage_recall": 0.32575757575757575,
+   "comms_recall": 0.6381909547738693,
+   "precision_outage": 0.9772727272727273,
+   "precision_comms": 0.8639455782312925,
+   "false_outage_rate": 0.005025125628140704,
+   "missed_outage_rate": 0.5,
+   "abstention_rate": 0.12386706948640483,
+   "correct_cause_rate": 0.513595166163142,
+   "balanced_correct": 0.4819742652657225,
+   "accuracy_when_decided": 0.8900523560209425,
+   "latency_median": 2.0,
+   "median_delay_min": 60.0
+  },
+  "aligned": {
+   "n_outage": 131,
+   "n_comms": 218,
+   "outage_recall": 0.2748091603053435,
+   "comms_recall": 0.7018348623853211,
+   "precision_outage": 0.972972972972973,
+   "precision_comms": 0.8693181818181818,
+   "false_outage_rate": 0.0045871559633027525,
+   "missed_outage_rate": 0.4961832061068702,
+   "abstention_rate": 0.12893982808022922,
+   "correct_cause_rate": 0.5415472779369628,
+   "balanced_correct": 0.4883220113453323,
+   "accuracy_when_decided": 0.8873239436619719,
+   "latency_median": 2.0,
+   "median_delay_min": 60.0
+  },
+  "ff": {
+   "k": 135,
+   "meter_days": 38064.0,
+   "per_meter_day": 0.0035466582597730137
+  },
+  "stored_rule_share": 0.0058823529411764705,
+  "outage_verdicts": {
+   "MISSED": 88,
+   "OUTAGE": 79,
+   "UNCERTAIN": 53,
+   "COMMS_FAILURE": 43
+  },
+  "silent_groups": 33205
+ },
+ "v1_60": {
+  "all": {
+   "n_outage": 263,
+   "n_comms": 417,
+   "outage_recall": 0.23193916349809887,
+   "comms_recall": 0.539568345323741,
+   "precision_outage": 0.9104477611940298,
+   "precision_comms": 0.9259259259259259,
+   "false_outage_rate": 0.014388489208633094,
+   "missed_outage_rate": 0.24334600760456274,
+   "abstention_rate": 0.35441176470588237,
+   "correct_cause_rate": 0.42058823529411765,
+   "balanced_correct": 0.3857537544109199,
+   "accuracy_when_decided": 0.9225806451612903,
+   "latency_median": 4.0,
+   "median_delay_min": 240.0
+  },
+  "mid_interval": {
+   "n_outage": 207,
+   "n_comms": 309,
+   "outage_recall": 0.19806763285024154,
+   "comms_recall": 0.56957928802589,
+   "precision_outage": 0.8723404255319149,
+   "precision_comms": 0.9072164948453608,
+   "false_outage_rate": 0.019417475728155338,
+   "missed_outage_rate": 0.2222222222222222,
+   "abstention_rate": 0.37790697674418605,
+   "correct_cause_rate": 0.42054263565891475,
+   "balanced_correct": 0.38382346043806576,
+   "accuracy_when_decided": 0.9004149377593361,
+   "latency_median": 4.0,
+   "median_delay_min": 240.0
+  },
+  "aligned": {
+   "n_outage": 56,
+   "n_comms": 108,
+   "outage_recall": 0.35714285714285715,
+   "comms_recall": 0.4537037037037037,
+   "precision_outage": 1.0,
+   "precision_comms": 1.0,
+   "false_outage_rate": 0.0,
+   "missed_outage_rate": 0.32142857142857145,
+   "abstention_rate": 0.2804878048780488,
+   "correct_cause_rate": 0.42073170731707316,
+   "balanced_correct": 0.40542328042328046,
+   "accuracy_when_decided": 1.0,
+   "latency_median": 2.0,
+   "median_delay_min": 120.0
+  },
+  "ff": {
+   "k": 4,
+   "meter_days": 38064.0,
+   "per_meter_day": 0.00010508617065994115
+  },
+  "stored_rule_share": 0.0,
+  "outage_verdicts": {
+   "UNCERTAIN": 138,
+   "OUTAGE": 61,
+   "MISSED": 46,
+   "COMMS_FAILURE": 18
+  },
+  "silent_groups": 2816
+ },
+ "v2_60": {
+  "all": {
+   "n_outage": 263,
+   "n_comms": 417,
+   "outage_recall": 0.23954372623574144,
+   "comms_recall": 0.5731414868105515,
+   "precision_outage": 0.9692307692307692,
+   "precision_comms": 0.8101694915254237,
+   "false_outage_rate": 0.004796163069544364,
+   "missed_outage_rate": 0.5133079847908745,
+   "abstention_rate": 0.17352941176470588,
+   "correct_cause_rate": 0.4441176470588235,
+   "balanced_correct": 0.40634260652314647,
+   "accuracy_when_decided": 0.8388888888888889,
+   "latency_median": 2.0,
+   "median_delay_min": 120.0
+  },
+  "mid_interval": {
+   "n_outage": 207,
+   "n_comms": 309,
+   "outage_recall": 0.21739130434782608,
+   "comms_recall": 0.5760517799352751,
+   "precision_outage": 0.9782608695652174,
+   "precision_comms": 0.8054298642533937,
+   "false_outage_rate": 0.003236245954692557,
+   "missed_outage_rate": 0.5072463768115942,
+   "abstention_rate": 0.18604651162790697,
+   "correct_cause_rate": 0.4321705426356589,
+   "balanced_correct": 0.3967215421415506,
+   "accuracy_when_decided": 0.8352059925093633,
+   "latency_median": 2.0,
+   "median_delay_min": 120.0
+  },
+  "aligned": {
+   "n_outage": 56,
+   "n_comms": 108,
+   "outage_recall": 0.32142857142857145,
+   "comms_recall": 0.5648148148148148,
+   "precision_outage": 0.9473684210526315,
+   "precision_comms": 0.8243243243243243,
+   "false_outage_rate": 0.009259259259259259,
+   "missed_outage_rate": 0.5357142857142857,
+   "abstention_rate": 0.13414634146341464,
+   "correct_cause_rate": 0.4817073170731707,
+   "balanced_correct": 0.44312169312169314,
+   "accuracy_when_decided": 0.8494623655913979,
+   "latency_median": 2.0,
+   "median_delay_min": 120.0
+  },
+  "ff": {
+   "k": 74,
+   "meter_days": 38064.0,
+   "per_meter_day": 0.0019440941572089114
+  },
+  "stored_rule_share": 0.0058823529411764705,
+  "outage_verdicts": {
+   "MISSED": 79,
+   "UNCERTAIN": 65,
+   "OUTAGE": 63,
+   "COMMS_FAILURE": 56
+  },
+  "silent_groups": 16594
+ },
+ "v1_15_offsets": {
+  "all": {
+   "n_outage": 263,
+   "n_comms": 417,
+   "outage_recall": 0.3650190114068441,
+   "comms_recall": 0.7146282973621103,
+   "precision_outage": 1.0,
+   "precision_comms": 0.93125,
+   "false_outage_rate": 0.0,
+   "missed_outage_rate": 0.08745247148288973,
+   "abstention_rate": 0.38529411764705884,
+   "correct_cause_rate": 0.5794117647058824,
+   "balanced_correct": 0.5398236543844772,
+   "accuracy_when_decided": 0.9471153846153846,
+   "latency_median": 3.0,
+   "median_delay_min": 45.0
+  },
+  "outages": {
+   "n_outage": 263,
+   "n_comms": 0,
+   "outage_recall": 0.3650190114068441,
+   "comms_recall": NaN,
+   "precision_outage": 1.0,
+   "precision_comms": 0.0,
+   "false_outage_rate": NaN,
+   "missed_outage_rate": 0.08745247148288973,
+   "abstention_rate": 0.5475285171102662,
+   "correct_cause_rate": 0.3650190114068441,
+   "balanced_correct": 0.3650190114068441,
+   "accuracy_when_decided": 0.8135593220338984,
+   "latency_median": 6.0,
+   "median_delay_min": 90.0
+  }
+ },
+ "v2_15_offsets": {
+  "all": {
+   "n_outage": 263,
+   "n_comms": 417,
+   "outage_recall": 0.6730038022813688,
+   "comms_recall": 0.829736211031175,
+   "precision_outage": 0.9516129032258065,
+   "precision_comms": 0.969187675070028,
+   "false_outage_rate": 0.02158273381294964,
+   "missed_outage_rate": 0.045627376425855515,
+   "abstention_rate": 0.19852941176470587,
+   "correct_cause_rate": 0.7691176470588236,
+   "balanced_correct": 0.7513700066562718,
+   "accuracy_when_decided": 0.9631675874769797,
+   "latency_median": 2.0,
+   "median_delay_min": 30.0
+  },
+  "outages": {
+   "n_outage": 263,
+   "n_comms": 0,
+   "outage_recall": 0.6730038022813688,
+   "comms_recall": NaN,
+   "precision_outage": 1.0,
+   "precision_comms": 0.0,
+   "false_outage_rate": NaN,
+   "missed_outage_rate": 0.045627376425855515,
+   "abstention_rate": 0.2813688212927757,
+   "correct_cause_rate": 0.6730038022813688,
+   "balanced_correct": 0.6730038022813688,
+   "accuracy_when_decided": 0.9414893617021277,
+   "latency_median": 2.0,
+   "median_delay_min": 30.0
+  }
+ },
+ "m093_case": {
+  "v1": {
+   "n_meters": 38,
+   "verdict": "COMMS_FAILURE",
+   "p_comms": 0.9992272941303737,
+   "reason": ""
+  },
+  "v2": {
+   "n_meters": 38,
+   "verdict": "COMMS_FAILURE",
+   "p_comms": 0.9980075660024597,
+   "reason": ""
+  }
+ }
+}

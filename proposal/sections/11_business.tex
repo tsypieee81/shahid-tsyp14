@@ -1,0 +1,74 @@
+% Sources (checked by shahid.check_numbers): results/business/business.json (its stamp holds
+% configs/business.yaml); ledger BUS-01..05, P2C-04, P2D-02
+\section{Deployment and Business Case}\label{sec:business}
+All money is in Tunisian dinars (TND). No price was invented: a unit cost without a public source is
+shown as a formula (Table~\ref{tab:cost}). The full case and its parameters are in the repository
+(\texttt{docs/BUSINESS\_CASE.md}, \texttt{configs/business.yaml}).
+
+\textbf{Prerequisites.} An LV energy meter at each transformer, read every 15 min, is required; it is a
+costed hardware line wherever absent. A head-end export of readings with arrival times, the line and
+zone register from the geographic information system (GIS), and the concentrator mapping complete the
+inputs.
+
+\textbf{Implementation.} One pilot district the size of the STEG agency of Douz: about 24,400
+customers and 149 transformer substations \cite{managers2026douz}. Phase A replays 90 days of the
+district's history with fits per transformer; Phase B runs in shadow. Go/no-go uses the frozen safety
+limits (missed and false outages at most 0.05, fault-free false outages at most 0.001 per meter-day);
+coverage and operator load are reported for STEG to judge.
+
+\textbf{Production and data protection.} Decision and operator logs are append-only and hash-chained;
+crew dispatch always needs a person. Readings stay inside the utility. Organic Law 2004-63 applies,
+and a draft organic law of 132 articles, heard in parliament in February 2026, names data processing
+by artificial intelligence \cite{businessnews2026loi}.
+
+\textbf{Continuous training.} No labels are needed: each transformer's parameters are refitted on its
+own fault-free data every 90 days and after any topology change (DESIGN CHOICE); thresholds stay
+frozen. The fault-free false-outage rate per meter-day is the drift indicator.
+
+\textbf{Integration.} Inputs from the AMI head-end, the transformer meter and the GIS; outputs to the
+outage-management or ticketing system and to the audit store.
+
+\begin{table*}[!t]
+\caption{Deployment cost for a district of 149 substations (TND; formulas where no public unit cost exists)}\label{tab:cost}
+\centering\tabfont\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\textwidth}{@{}L{0.22\textwidth} Y L{0.33\textwidth}@{}}
+\toprule
+\textbf{Line} & \textbf{Amount (TND)} & \textbf{Size from the simulation (ESTIMATE)} \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{One-off}} \\
+Transformer LV meters & substations without a meter $\times$ (meter unit cost + installation) & share without a meter unknown \\
+Integration & person-days $\times$ engineer day rate & head-end, ticketing and GIS adapters \\
+Operator training & operators $\times$ cost per operator & --- \\
+\multicolumn{3}{@{}l}{\emph{Recurring per year}} \\
+Operator review time (main cost) & at least 120486.23 per district-year (version 1, 5 min per item) & 121.7 hours per day at 5 min per item under version 1 \\
+Hosting & 12 $\times$ monthly hosting cost & one process; 13.36 s of compute for one transformer-year \\
+Storage & stored GB $\times$ price per GB-month & 107.46 MB of readings per 1000 meter-years \\
+Recalibration review & cycles per year $\times$ review days $\times$ day rate & every 90 days \\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Operator review, 1\% data loss, 2 / 5 / 10 min per item: hours per district-day; at least TND per district-year}} \\
+Version 1 & 48.7 / 121.7 / 243.3 h; at least 48194.49 / 120486.23 / 240972.47 & rural never-used network rates \\
+Gate that escalates & 20.6 / 51.5 / 103.1 h; at least 20418.66 / 51046.66 / 102093.31 & no outage closed silently \\
+Gate that closes & 0.1 / 0.1 / 0.3 h; at least 53.75 / 134.38 / 268.76 & lost 16 of 350 outages in development \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\textbf{Deployment cost.} Compute and storage are negligible; operator review time dominates. Under
+version 1 a district would need 121.7 review hours per day at 5 min per item, at least 120486 TND
+per district-year; the gate that escalates cuts it to 51.5 hours, at least 51047 TND. These are
+floors: each hour is priced at the legal minimum wage of 2.713 TND \cite{managers2026smig}, without
+employer charges or the qualification a grid operator needs. In staffing terms, 121.7 hours per day
+is about 15.2 eight-hour operator shifts, and 51.5 hours about 6.4. One operator around the clock
+reviews 288 items per day at 5 min each, that is at most 1.93 human items per transformer-day over
+149 substations; the escalating gate gives 4.15, so the item rate must roughly halve. At 10\% random data loss the load rises several-fold, so STEG's real
+data-loss level decides the budget.
+
+\textbf{Value.} Crew time and service quality: every communication failure called correctly is a truck
+roll not sent, and either gate avoids 14.5 false outage verdicts per transformer-year on the rural
+network. Lost-sales arguments do not apply, because STEG sold electricity at 290.7 millimes per kWh in
+2025 against an average production cost of 456.3 millimes \cite{managers2026prix}. SHAHID does not
+address theft or non-technical losses.
+
+\textbf{To verify with STEG.} Which substations have an LV meter and how fast its data arrive; the
+customer reading interval and delivery cadence; store-and-forward behaviour; the real data-loss level;
+real event durations; labour and procurement prices; the acceptable operator load.

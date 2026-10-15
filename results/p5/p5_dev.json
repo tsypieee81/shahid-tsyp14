@@ -1,0 +1,2214 @@
+{
+ "stamp": {
+  "commit": "372ffd2",
+  "config_hash": "a9a4252a4a12",
+  "config": {
+   "protocol": "docs/process/protocols/03_p5_split.md",
+   "fams": {
+    "cp5": [
+     101,
+     102,
+     103
+    ],
+    "cp6_concentrators_random": [
+     201,
+     202
+    ],
+    "feeder_semiurb5": [
+     401,
+     402
+    ]
+   }
+  },
+  "command": "python -m shahid.p5_split",
+  "date": "2026-10-14T08:58:44",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "label": "development, selection data",
+ "fault_free_val": {
+  "v1": {
+   "k": 6,
+   "meter_days": 9464.0,
+   "per_meter_day": 0.0006339814032121725,
+   "per_meter_day_ci95": [
+    0.00029058676422687125,
+    0.001382614021050314
+   ],
+   "per_transformer_year": 24.065934065934066,
+   "days": 91.0
+  },
+  "P5": {
+   "k": 5,
+   "meter_days": 9464.0,
+   "per_meter_day": 0.0005283178360101438,
+   "per_meter_day_ci95": [
+    0.00022568291701734666,
+    0.0012362764803599817
+   ],
+   "per_transformer_year": 20.054945054945055,
+   "days": 91.0
+  }
+ },
+ "cp5_val": {
+  "all": {
+   "v1": {
+    "n_outage": 112,
+    "n_comms": 152,
+    "outage_recall": 0.5446428571428571,
+    "comms_recall": 0.7171052631578947,
+    "precision_outage": 1.0,
+    "precision_comms": 0.9819819819819819,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": 0.03571428571428571,
+    "abstention_rate": 0.3371212121212121,
+    "correct_cause_rate": 0.6439393939393939,
+    "balanced_correct": 0.630874060150376,
+    "accuracy_when_decided": 0.9883720930232558,
+    "latency_median": 2.0
+   },
+   "P5": {
+    "n_outage": 112,
+    "n_comms": 152,
+    "outage_recall": 0.5446428571428571,
+    "comms_recall": 0.6118421052631579,
+    "precision_outage": 1.0,
+    "precision_comms": 0.9893617021276596,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": 0.017857142857142856,
+    "abstention_rate": 0.3371212121212121,
+    "correct_cause_rate": 0.5833333333333334,
+    "balanced_correct": 0.5782424812030075,
+    "accuracy_when_decided": 0.9935483870967742,
+    "latency_median": 2.0
+   }
+  },
+  "concentrator": {
+   "n": 36,
+   "v1": {
+    "n_outage": 0,
+    "n_comms": 36,
+    "outage_recall": NaN,
+    "comms_recall": 0.8888888888888888,
+    "precision_outage": NaN,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.1111111111111111,
+    "correct_cause_rate": 0.8888888888888888,
+    "balanced_correct": 0.8888888888888888,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 2.0
+   },
+   "P5": {
+    "n_outage": 0,
+    "n_comms": 36,
+    "outage_recall": NaN,
+    "comms_recall": 0.8888888888888888,
+    "precision_outage": NaN,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.1111111111111111,
+    "correct_cause_rate": 0.8888888888888888,
+    "balanced_correct": 0.8888888888888888,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 2.0
+   },
+   "abstention_diff_P5_minus_v1": 0.0,
+   "abstention_diff_ci95": [
+    0.0,
+    0.0
+   ]
+  },
+  "line": {
+   "n": 112,
+   "v1": {
+    "n_outage": 112,
+    "n_comms": 0,
+    "outage_recall": 0.5446428571428571,
+    "comms_recall": NaN,
+    "precision_outage": 1.0,
+    "precision_comms": 0.0,
+    "false_outage_rate": NaN,
+    "missed_outage_rate": 0.03571428571428571,
+    "abstention_rate": 0.41964285714285715,
+    "correct_cause_rate": 0.5446428571428571,
+    "balanced_correct": 0.5446428571428571,
+    "accuracy_when_decided": 0.9682539682539683,
+    "latency_median": 2.5
+   },
+   "P5": {
+    "n_outage": 112,
+    "n_comms": 0,
+    "outage_recall": 0.5446428571428571,
+    "comms_recall": NaN,
+    "precision_outage": 1.0,
+    "precision_comms": 0.0,
+    "false_outage_rate": NaN,
+    "missed_outage_rate": 0.017857142857142856,
+    "abstention_rate": 0.4375,
+    "correct_cause_rate": 0.5446428571428571,
+    "balanced_correct": 0.5446428571428571,
+    "accuracy_when_decided": 0.9838709677419355,
+    "latency_median": 3.0
+   },
+   "abstention_diff_P5_minus_v1": 0.01785714285714285,
+   "abstention_diff_ci95": [
+    0.0,
+    0.04464285714285715
+   ]
+  },
+  "meters": {
+   "n": 32,
+   "v1": {
+    "n_outage": 0,
+    "n_comms": 32,
+    "outage_recall": NaN,
+    "comms_recall": 0.65625,
+    "precision_outage": NaN,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.34375,
+    "correct_cause_rate": 0.65625,
+    "balanced_correct": 0.65625,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 2.0
+   },
+   "P5": {
+    "n_outage": 0,
+    "n_comms": 32,
+    "outage_recall": NaN,
+    "comms_recall": 0.15625,
+    "precision_outage": NaN,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.28125,
+    "correct_cause_rate": 0.15625,
+    "balanced_correct": 0.15625,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 6.0
+   },
+   "abstention_diff_P5_minus_v1": -0.0625,
+   "abstention_diff_ci95": [
+    -0.1875,
+    0.0625
+   ]
+  },
+  "zone": {
+   "n": 84,
+   "v1": {
+    "n_outage": 0,
+    "n_comms": 84,
+    "outage_recall": NaN,
+    "comms_recall": 0.6666666666666666,
+    "precision_outage": NaN,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.32142857142857145,
+    "correct_cause_rate": 0.6666666666666666,
+    "balanced_correct": 0.6666666666666666,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 2.0
+   },
+   "P5": {
+    "n_outage": 0,
+    "n_comms": 84,
+    "outage_recall": NaN,
+    "comms_recall": 0.6666666666666666,
+    "precision_outage": NaN,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.32142857142857145,
+    "correct_cause_rate": 0.6666666666666666,
+    "balanced_correct": 0.6666666666666666,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 2.0
+   },
+   "abstention_diff_P5_minus_v1": 0.0,
+   "abstention_diff_ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "v3_feasible": {
+  "v1": true,
+  "P5": true
+ },
+ "concentrators_random_val": {
+  "all": {
+   "v1": {
+    "n_outage": 50,
+    "n_comms": 126,
+    "outage_recall": 0.44,
+    "comms_recall": 0.6190476190476191,
+    "precision_outage": 0.9565217391304348,
+    "precision_comms": 0.9873417721518988,
+    "false_outage_rate": 0.007936507936507936,
+    "missed_outage_rate": 0.02,
+    "abstention_rate": 0.4090909090909091,
+    "correct_cause_rate": 0.5681818181818182,
+    "balanced_correct": 0.5295238095238095,
+    "accuracy_when_decided": 0.9803921568627451,
+    "latency_median": 2.0
+   },
+   "P5": {
+    "n_outage": 50,
+    "n_comms": 126,
+    "outage_recall": 0.44,
+    "comms_recall": 0.35714285714285715,
+    "precision_outage": 0.9565217391304348,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.007936507936507936,
+    "missed_outage_rate": 0.0,
+    "abstention_rate": 0.4318181818181818,
+    "correct_cause_rate": 0.3806818181818182,
+    "balanced_correct": 0.3985714285714286,
+    "accuracy_when_decided": 0.9852941176470589,
+    "latency_median": 6.0
+   }
+  },
+  "concentrator": {
+   "n": 63,
+   "v1": {
+    "n_outage": 0,
+    "n_comms": 63,
+    "outage_recall": NaN,
+    "comms_recall": 0.6666666666666666,
+    "precision_outage": NaN,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.31746031746031744,
+    "correct_cause_rate": 0.6666666666666666,
+    "balanced_correct": 0.6666666666666666,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 2.0
+   },
+   "P5": {
+    "n_outage": 0,
+    "n_comms": 63,
+    "outage_recall": NaN,
+    "comms_recall": 0.14285714285714285,
+    "precision_outage": NaN,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.3492063492063492,
+    "correct_cause_rate": 0.14285714285714285,
+    "balanced_correct": 0.14285714285714285,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 6.0
+   },
+   "abstention_diff_P5_minus_v1": 0.031746031746031744,
+   "abstention_diff_ci95": [
+    -0.047619047619047616,
+    0.12698412698412698
+   ]
+  },
+  "line": {
+   "n": 50,
+   "v1": {
+    "n_outage": 50,
+    "n_comms": 0,
+    "outage_recall": 0.44,
+    "comms_recall": NaN,
+    "precision_outage": 1.0,
+    "precision_comms": 0.0,
+    "false_outage_rate": NaN,
+    "missed_outage_rate": 0.02,
+    "abstention_rate": 0.54,
+    "correct_cause_rate": 0.44,
+    "balanced_correct": 0.44,
+    "accuracy_when_decided": 0.9565217391304348,
+    "latency_median": 6.0
+   },
+   "P5": {
+    "n_outage": 50,
+    "n_comms": 0,
+    "outage_recall": 0.44,
+    "comms_recall": NaN,
+    "precision_outage": 1.0,
+    "precision_comms": NaN,
+    "false_outage_rate": NaN,
+    "missed_outage_rate": 0.0,
+    "abstention_rate": 0.56,
+    "correct_cause_rate": 0.44,
+    "balanced_correct": 0.44,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 6.0
+   },
+   "abstention_diff_P5_minus_v1": 0.020000000000000018,
+   "abstention_diff_ci95": [
+    0.0,
+    0.06000000000000005
+   ]
+  },
+  "zone": {
+   "n": 63,
+   "v1": {
+    "n_outage": 0,
+    "n_comms": 63,
+    "outage_recall": NaN,
+    "comms_recall": 0.5714285714285714,
+    "precision_outage": 0.0,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.015873015873015872,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.3968253968253968,
+    "correct_cause_rate": 0.5714285714285714,
+    "balanced_correct": 0.5714285714285714,
+    "accuracy_when_decided": 0.972972972972973,
+    "latency_median": 3.0
+   },
+   "P5": {
+    "n_outage": 0,
+    "n_comms": 63,
+    "outage_recall": NaN,
+    "comms_recall": 0.5714285714285714,
+    "precision_outage": 0.0,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.015873015873015872,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.4126984126984127,
+    "correct_cause_rate": 0.5714285714285714,
+    "balanced_correct": 0.5714285714285714,
+    "accuracy_when_decided": 0.972972972972973,
+    "latency_median": 3.0
+   },
+   "abstention_diff_P5_minus_v1": 0.015873015873015872,
+   "abstention_diff_ci95": [
+    0.0,
+    0.04761904761904767
+   ]
+  }
+ },
+ "whole_feeder_all_weeks": {
+  "all": {
+   "v1": {
+    "n_outage": 350,
+    "n_comms": 350,
+    "outage_recall": 0.6885714285714286,
+    "comms_recall": 0.84,
+    "precision_outage": 1.0,
+    "precision_comms": 0.9932432432432432,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": 0.011428571428571429,
+    "abstention_rate": 0.22857142857142856,
+    "correct_cause_rate": 0.7642857142857142,
+    "balanced_correct": 0.7642857142857142,
+    "accuracy_when_decided": 0.9962756052141527,
+    "latency_median": 2.0
+   },
+   "P5": {
+    "n_outage": 350,
+    "n_comms": 350,
+    "outage_recall": 0.6914285714285714,
+    "comms_recall": 0.8371428571428572,
+    "precision_outage": 1.0,
+    "precision_comms": 0.9965986394557823,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": 0.008571428571428572,
+    "abstention_rate": 0.23,
+    "correct_cause_rate": 0.7642857142857142,
+    "balanced_correct": 0.7642857142857142,
+    "accuracy_when_decided": 0.9981343283582089,
+    "latency_median": 2.0
+   }
+  },
+  "feeder": {
+   "n": 350,
+   "v1": {
+    "n_outage": 350,
+    "n_comms": 0,
+    "outage_recall": 0.6885714285714286,
+    "comms_recall": NaN,
+    "precision_outage": 1.0,
+    "precision_comms": 0.0,
+    "false_outage_rate": NaN,
+    "missed_outage_rate": 0.011428571428571429,
+    "abstention_rate": 0.3,
+    "correct_cause_rate": 0.6885714285714286,
+    "balanced_correct": 0.6885714285714286,
+    "accuracy_when_decided": 0.9917695473251029,
+    "latency_median": 2.0
+   },
+   "P5": {
+    "n_outage": 350,
+    "n_comms": 0,
+    "outage_recall": 0.6914285714285714,
+    "comms_recall": NaN,
+    "precision_outage": 1.0,
+    "precision_comms": 0.0,
+    "false_outage_rate": NaN,
+    "missed_outage_rate": 0.008571428571428572,
+    "abstention_rate": 0.3,
+    "correct_cause_rate": 0.6914285714285714,
+    "balanced_correct": 0.6914285714285714,
+    "accuracy_when_decided": 0.9958847736625515,
+    "latency_median": 2.0
+   },
+   "abstention_diff_P5_minus_v1": 0.0,
+   "abstention_diff_ci95": [
+    -0.011428571428571399,
+    0.011428571428571455
+   ]
+  },
+  "zone": {
+   "n": 350,
+   "v1": {
+    "n_outage": 0,
+    "n_comms": 350,
+    "outage_recall": NaN,
+    "comms_recall": 0.84,
+    "precision_outage": NaN,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.15714285714285714,
+    "correct_cause_rate": 0.84,
+    "balanced_correct": 0.84,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 2.0
+   },
+   "P5": {
+    "n_outage": 0,
+    "n_comms": 350,
+    "outage_recall": NaN,
+    "comms_recall": 0.8371428571428572,
+    "precision_outage": NaN,
+    "precision_comms": 1.0,
+    "false_outage_rate": 0.0,
+    "missed_outage_rate": NaN,
+    "abstention_rate": 0.16,
+    "correct_cause_rate": 0.8371428571428572,
+    "balanced_correct": 0.8371428571428572,
+    "accuracy_when_decided": 1.0,
+    "latency_median": 2.0
+   },
+   "abstention_diff_P5_minus_v1": 0.0028571428571428636,
+   "abstention_diff_ci95": [
+    0.0,
+    0.008571428571428591
+   ]
+  }
+ },
+ "merges": {
+  "cp5": {
+   "groups_matched_to_outage": 404,
+   "with_powered_meter": 37,
+   "cross_feeder": 30,
+   "same_feeder_only": 7,
+   "wrong_comms_p095_v1": 1,
+   "wrong_comms_p095_P5": 0,
+   "cases": [
+    {
+     "seed": 101,
+     "episode": 34,
+     "n_episode": 36,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.01018917629172272,
+     "P5": "OUTAGE",
+     "P5_p": 0.008718550147117338
+    },
+    {
+     "seed": 101,
+     "episode": 40,
+     "n_episode": 7,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.02341472767375239,
+     "P5": "OUTAGE",
+     "P5_p": 0.02415958096344675
+    },
+    {
+     "seed": 101,
+     "episode": 68,
+     "n_episode": 5,
+     "n_extra": 1,
+     "cross_feeder": false,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.030705825598440817,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.030705825598440817
+    },
+    {
+     "seed": 101,
+     "episode": 81,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.39507941794643087,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.44994308490158896
+    },
+    {
+     "seed": 101,
+     "episode": 102,
+     "n_episode": 8,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.021594584394367122,
+     "P5": "OUTAGE",
+     "P5_p": 0.02863090757947566
+    },
+    {
+     "seed": 101,
+     "episode": 140,
+     "n_episode": 34,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.012513015187244755,
+     "P5": "OUTAGE",
+     "P5_p": 0.0049776087178662245
+    },
+    {
+     "seed": 101,
+     "episode": 148,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.3477708909648167,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.37338919984821883
+    },
+    {
+     "seed": 101,
+     "episode": 149,
+     "n_episode": 8,
+     "n_extra": 1,
+     "cross_feeder": false,
+     "v1": "OUTAGE",
+     "v1_p": 0.0027551230388390287,
+     "P5": "OUTAGE",
+     "P5_p": 0.0027551230388390287
+    },
+    {
+     "seed": 101,
+     "episode": 185,
+     "n_episode": 8,
+     "n_extra": 1,
+     "cross_feeder": false,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.2584195526923323,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.2584195526923323
+    },
+    {
+     "seed": 101,
+     "episode": 248,
+     "n_episode": 7,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.002489893676238908,
+     "P5": "OUTAGE",
+     "P5_p": 0.002684189064377634
+    },
+    {
+     "seed": 101,
+     "episode": 263,
+     "n_episode": 1,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.3623350730264024,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.407038387878794
+    },
+    {
+     "seed": 101,
+     "episode": 288,
+     "n_episode": 35,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 1.326276355558709e-05,
+     "P5": "OUTAGE",
+     "P5_p": 1.4227709358831121e-05
+    },
+    {
+     "seed": 101,
+     "episode": 304,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0038496759284462495,
+     "P5": "OUTAGE",
+     "P5_p": 0.023497404505875254
+    },
+    {
+     "seed": 101,
+     "episode": 305,
+     "n_episode": 11,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.018663087838077203,
+     "P5": "OUTAGE",
+     "P5_p": 0.018838057120073783
+    },
+    {
+     "seed": 101,
+     "episode": 316,
+     "n_episode": 36,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.013880597120240815,
+     "P5": "OUTAGE",
+     "P5_p": 0.017675867463517292
+    },
+    {
+     "seed": 102,
+     "episode": 0,
+     "n_episode": 1,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.4614580290740486,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.4890912603940195
+    },
+    {
+     "seed": 102,
+     "episode": 38,
+     "n_episode": 5,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.18938495325223798,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.18406205775599577
+    },
+    {
+     "seed": 102,
+     "episode": 44,
+     "n_episode": 9,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.01886053910016908,
+     "P5": "OUTAGE",
+     "P5_p": 0.022118605496113903
+    },
+    {
+     "seed": 102,
+     "episode": 65,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.017583866655943536,
+     "P5": "OUTAGE",
+     "P5_p": 0.025857716626308844
+    },
+    {
+     "seed": 102,
+     "episode": 210,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.06062091088348505,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.08407789027773319
+    },
+    {
+     "seed": 102,
+     "episode": 217,
+     "n_episode": 27,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.029556385829275677,
+     "P5": "OUTAGE",
+     "P5_p": 0.02506608949649606
+    },
+    {
+     "seed": 102,
+     "episode": 242,
+     "n_episode": 29,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0038578595990481565,
+     "P5": "OUTAGE",
+     "P5_p": 0.007537512088446495
+    },
+    {
+     "seed": 102,
+     "episode": 252,
+     "n_episode": 4,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.28618472144752477,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.29632285318089346
+    },
+    {
+     "seed": 102,
+     "episode": 261,
+     "n_episode": 27,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0004416190226412298,
+     "P5": "OUTAGE",
+     "P5_p": 0.0006476159574111751
+    },
+    {
+     "seed": 102,
+     "episode": 273,
+     "n_episode": 13,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0051217107559465725,
+     "P5": "OUTAGE",
+     "P5_p": 0.006671427583163158
+    },
+    {
+     "seed": 102,
+     "episode": 277,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": false,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.05643617327377248,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.05643617327377248
+    },
+    {
+     "seed": 102,
+     "episode": 289,
+     "n_episode": 15,
+     "n_extra": 1,
+     "cross_feeder": false,
+     "v1": "OUTAGE",
+     "v1_p": 0.000512938403157496,
+     "P5": "OUTAGE",
+     "P5_p": 0.000512938403157496
+    },
+    {
+     "seed": 102,
+     "episode": 328,
+     "n_episode": 5,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "COMMS_FAILURE",
+     "v1_p": 0.9999863119424246,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.07601829059032308
+    },
+    {
+     "seed": 103,
+     "episode": 2,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.01074551394539885,
+     "P5": "OUTAGE",
+     "P5_p": 0.018460878758594642
+    },
+    {
+     "seed": 103,
+     "episode": 5,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.05382655544903473,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.0972727764418324
+    },
+    {
+     "seed": 103,
+     "episode": 33,
+     "n_episode": 1,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.33050693263504705,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.47716225404443774
+    },
+    {
+     "seed": 103,
+     "episode": 76,
+     "n_episode": 2,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.06906202791997264,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.10921417802654722
+    },
+    {
+     "seed": 103,
+     "episode": 102,
+     "n_episode": 28,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.006193633290745517,
+     "P5": "OUTAGE",
+     "P5_p": 0.0032158689622640325
+    },
+    {
+     "seed": 103,
+     "episode": 119,
+     "n_episode": 14,
+     "n_extra": 1,
+     "cross_feeder": false,
+     "v1": "OUTAGE",
+     "v1_p": 0.01040743079154129,
+     "P5": "OUTAGE",
+     "P5_p": 0.01040743079154129
+    },
+    {
+     "seed": 103,
+     "episode": 178,
+     "n_episode": 33,
+     "n_extra": 2,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0008678278806726675,
+     "P5": "OUTAGE",
+     "P5_p": 0.0023805570795367285
+    },
+    {
+     "seed": 103,
+     "episode": 301,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": false,
+     "v1": "OUTAGE",
+     "v1_p": 0.0010626458058742708,
+     "P5": "OUTAGE",
+     "P5_p": 0.0010626458058742708
+    },
+    {
+     "seed": 103,
+     "episode": 321,
+     "n_episode": 19,
+     "n_extra": 2,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.01624111213120225,
+     "P5": "OUTAGE",
+     "P5_p": 0.0017696457330512927
+    }
+   ],
+   "transformer_years": 3.0082191780821916,
+   "with_powered_meter_per_transformer_year": 12.299635701275045
+  },
+  "cp6_concentrators_random": {
+   "groups_matched_to_outage": 210,
+   "with_powered_meter": 21,
+   "cross_feeder": 18,
+   "same_feeder_only": 3,
+   "wrong_comms_p095_v1": 2,
+   "wrong_comms_p095_P5": 0,
+   "cases": [
+    {
+     "seed": 201,
+     "episode": 53,
+     "n_episode": 6,
+     "n_extra": 2,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0142944099525335,
+     "P5": "OUTAGE",
+     "P5_p": 0.0067328433406536325
+    },
+    {
+     "seed": 201,
+     "episode": 76,
+     "n_episode": 30,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 6.170344517496219e-05,
+     "P5": "OUTAGE",
+     "P5_p": 0.00017161089402539329
+    },
+    {
+     "seed": 201,
+     "episode": 79,
+     "n_episode": 16,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.016141739165071823,
+     "P5": "OUTAGE",
+     "P5_p": 0.015701640732372082
+    },
+    {
+     "seed": 201,
+     "episode": 112,
+     "n_episode": 16,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.05170522986801059,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.05587358216548409
+    },
+    {
+     "seed": 201,
+     "episode": 151,
+     "n_episode": 16,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "COMMS_FAILURE",
+     "v1_p": 0.9999991735279992,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.1057524975477137
+    },
+    {
+     "seed": 201,
+     "episode": 188,
+     "n_episode": 1,
+     "n_extra": 1,
+     "cross_feeder": false,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.19704124347861823,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.19704124347861823
+    },
+    {
+     "seed": 201,
+     "episode": 190,
+     "n_episode": 21,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.4582463046510463,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.4521376187285823
+    },
+    {
+     "seed": 201,
+     "episode": 244,
+     "n_episode": 8,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.29198193752705814,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.31340536479509346
+    },
+    {
+     "seed": 201,
+     "episode": 265,
+     "n_episode": 14,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.003138263526791288,
+     "P5": "OUTAGE",
+     "P5_p": 0.0031256504098499576
+    },
+    {
+     "seed": 201,
+     "episode": 290,
+     "n_episode": 1,
+     "n_extra": 1,
+     "cross_feeder": false,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.18873308014308238,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.18873308014308238
+    },
+    {
+     "seed": 201,
+     "episode": 319,
+     "n_episode": 25,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0008533461107144369,
+     "P5": "OUTAGE",
+     "P5_p": 0.0007192721782127778
+    },
+    {
+     "seed": 202,
+     "episode": 2,
+     "n_episode": 5,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "COMMS_FAILURE",
+     "v1_p": 0.997717429014178,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.29472871286571906
+    },
+    {
+     "seed": 202,
+     "episode": 13,
+     "n_episode": 14,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.001193727026353539,
+     "P5": "OUTAGE",
+     "P5_p": 0.001152573928497156
+    },
+    {
+     "seed": 202,
+     "episode": 59,
+     "n_episode": 36,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.14133365317282612,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.17319190741077684
+    },
+    {
+     "seed": 202,
+     "episode": 88,
+     "n_episode": 1,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.25154646760750077,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.2934640841924926
+    },
+    {
+     "seed": 202,
+     "episode": 102,
+     "n_episode": 7,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0015878387996576956,
+     "P5": "OUTAGE",
+     "P5_p": 0.003133999257801966
+    },
+    {
+     "seed": 202,
+     "episode": 119,
+     "n_episode": 23,
+     "n_extra": 1,
+     "cross_feeder": false,
+     "v1": "OUTAGE",
+     "v1_p": 9.179157781010157e-05,
+     "P5": "OUTAGE",
+     "P5_p": 9.179157781010157e-05
+    },
+    {
+     "seed": 202,
+     "episode": 155,
+     "n_episode": 5,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.35607611898454705,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.32122710490214434
+    },
+    {
+     "seed": 202,
+     "episode": 287,
+     "n_episode": 6,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.04679978628961098,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.049986897211392725
+    },
+    {
+     "seed": 202,
+     "episode": 293,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.19460192556415093,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.23050133153221136
+    },
+    {
+     "seed": 202,
+     "episode": 333,
+     "n_episode": 26,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.016768087726879828,
+     "P5": "OUTAGE",
+     "P5_p": 0.021379845026068735
+    }
+   ],
+   "transformer_years": 2.0054794520547947,
+   "with_powered_meter_per_transformer_year": 10.471311475409834
+  },
+  "feeder_semiurb5": {
+   "groups_matched_to_outage": 348,
+   "with_powered_meter": 39,
+   "cross_feeder": 39,
+   "same_feeder_only": 0,
+   "wrong_comms_p095_v1": 1,
+   "wrong_comms_p095_P5": 0,
+   "cases": [
+    {
+     "seed": 401,
+     "episode": 10,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.06931885669816822,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.1287810405405302
+    },
+    {
+     "seed": 401,
+     "episode": 34,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.007399271297082387,
+     "P5": "OUTAGE",
+     "P5_p": 0.014367868015029267
+    },
+    {
+     "seed": 401,
+     "episode": 50,
+     "n_episode": 7,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.005848154799605679,
+     "P5": "OUTAGE",
+     "P5_p": 0.00622889542390782
+    },
+    {
+     "seed": 401,
+     "episode": 58,
+     "n_episode": 1,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.02279781774890074,
+     "P5": "OUTAGE",
+     "P5_p": 0.002133504751126794
+    },
+    {
+     "seed": 401,
+     "episode": 72,
+     "n_episode": 22,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.18575649351755832,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.19197059173789255
+    },
+    {
+     "seed": 401,
+     "episode": 82,
+     "n_episode": 34,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0012302520105658026,
+     "P5": "OUTAGE",
+     "P5_p": 0.0018823681723740963
+    },
+    {
+     "seed": 401,
+     "episode": 84,
+     "n_episode": 7,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "COMMS_FAILURE",
+     "v1_p": 0.9990388123918901,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.18203987310557132
+    },
+    {
+     "seed": 401,
+     "episode": 128,
+     "n_episode": 7,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.05238828600972028,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.060684763854748504
+    },
+    {
+     "seed": 401,
+     "episode": 134,
+     "n_episode": 22,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.023552530410896402,
+     "P5": "OUTAGE",
+     "P5_p": 0.010057284860060415
+    },
+    {
+     "seed": 401,
+     "episode": 152,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.3602723136498696,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.3854002319973893
+    },
+    {
+     "seed": 401,
+     "episode": 184,
+     "n_episode": 22,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.015542936863568599,
+     "P5": "OUTAGE",
+     "P5_p": 0.009141956159608175
+    },
+    {
+     "seed": 401,
+     "episode": 202,
+     "n_episode": 22,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.057410576139721003,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.05865047965059327
+    },
+    {
+     "seed": 401,
+     "episode": 204,
+     "n_episode": 22,
+     "n_extra": 2,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.732350476374314,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.7477751615507625
+    },
+    {
+     "seed": 401,
+     "episode": 212,
+     "n_episode": 7,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.007508185992379798,
+     "P5": "OUTAGE",
+     "P5_p": 0.0008043107175008076
+    },
+    {
+     "seed": 401,
+     "episode": 232,
+     "n_episode": 34,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.020623719158982486,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.15376883181790757
+    },
+    {
+     "seed": 401,
+     "episode": 248,
+     "n_episode": 34,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.008766134807756737,
+     "P5": "OUTAGE",
+     "P5_p": 0.016008026270362602
+    },
+    {
+     "seed": 401,
+     "episode": 302,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.22284994661686047,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.29030784027194256
+    },
+    {
+     "seed": 401,
+     "episode": 312,
+     "n_episode": 1,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.004251589593791413,
+     "P5": "OUTAGE",
+     "P5_p": 0.0035197300265142452
+    },
+    {
+     "seed": 401,
+     "episode": 318,
+     "n_episode": 7,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.03268985216644806,
+     "P5": "OUTAGE",
+     "P5_p": 0.011726704691883406
+    },
+    {
+     "seed": 401,
+     "episode": 328,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.09023917204578667,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.039082946948919624
+    },
+    {
+     "seed": 402,
+     "episode": 18,
+     "n_episode": 37,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 1.3775547058911581e-05,
+     "P5": "OUTAGE",
+     "P5_p": 2.76136566836438e-05
+    },
+    {
+     "seed": 402,
+     "episode": 20,
+     "n_episode": 37,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.29791206233104034,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.3060734524924006
+    },
+    {
+     "seed": 402,
+     "episode": 26,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.020113776637423898,
+     "P5": "OUTAGE",
+     "P5_p": 0.023733041744430177
+    },
+    {
+     "seed": 402,
+     "episode": 32,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0029814610133586743,
+     "P5": "OUTAGE",
+     "P5_p": 0.002823790204622491
+    },
+    {
+     "seed": 402,
+     "episode": 42,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.12538553475624153,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.13447214755323605
+    },
+    {
+     "seed": 402,
+     "episode": 50,
+     "n_episode": 22,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.18273080026223776,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.1799000023427469
+    },
+    {
+     "seed": 402,
+     "episode": 62,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.017264802336006954,
+     "P5": "OUTAGE",
+     "P5_p": 0.019283764774592718
+    },
+    {
+     "seed": 402,
+     "episode": 120,
+     "n_episode": 37,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0006620985109738347,
+     "P5": "OUTAGE",
+     "P5_p": 0.0016297426511386317
+    },
+    {
+     "seed": 402,
+     "episode": 140,
+     "n_episode": 34,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.002487672033611612,
+     "P5": "OUTAGE",
+     "P5_p": 7.494573030333057e-05
+    },
+    {
+     "seed": 402,
+     "episode": 142,
+     "n_episode": 37,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.11625491956757428,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.12187446489322558
+    },
+    {
+     "seed": 402,
+     "episode": 156,
+     "n_episode": 34,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.012625060448740582,
+     "P5": "OUTAGE",
+     "P5_p": 0.016571068871653088
+    },
+    {
+     "seed": 402,
+     "episode": 158,
+     "n_episode": 22,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.041476635945791,
+     "P5": "OUTAGE",
+     "P5_p": 0.0265457638015976
+    },
+    {
+     "seed": 402,
+     "episode": 184,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "UNCERTAIN",
+     "v1_p": 0.12789658114804464,
+     "P5": "UNCERTAIN",
+     "P5_p": 0.1815558707514377
+    },
+    {
+     "seed": 402,
+     "episode": 214,
+     "n_episode": 1,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.004787649144022336,
+     "P5": "OUTAGE",
+     "P5_p": 0.00785171682499588
+    },
+    {
+     "seed": 402,
+     "episode": 256,
+     "n_episode": 37,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0027457602180518204,
+     "P5": "OUTAGE",
+     "P5_p": 0.004896328095624846
+    },
+    {
+     "seed": 402,
+     "episode": 272,
+     "n_episode": 7,
+     "n_extra": 2,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.003410903241013663,
+     "P5": "OUTAGE",
+     "P5_p": 0.0025438817519802368
+    },
+    {
+     "seed": 402,
+     "episode": 316,
+     "n_episode": 3,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.0016459431810616856,
+     "P5": "OUTAGE",
+     "P5_p": 0.0028517384674872125
+    },
+    {
+     "seed": 402,
+     "episode": 324,
+     "n_episode": 1,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.00753325694429257,
+     "P5": "OUTAGE",
+     "P5_p": 0.0033039085302325774
+    },
+    {
+     "seed": 402,
+     "episode": 326,
+     "n_episode": 34,
+     "n_extra": 1,
+     "cross_feeder": true,
+     "v1": "OUTAGE",
+     "v1_p": 0.021917706778432272,
+     "P5": "OUTAGE",
+     "P5_p": 0.0004170588699065888
+    }
+   ],
+   "transformer_years": 2.0054794520547947,
+   "with_powered_meter_per_transformer_year": 19.446721311475407
+  }
+ },
+ "price_addendum_A": {
+  "cp5_val": {
+   "all": {
+    "n": 264,
+    "v1": {
+     "n_outage": 112,
+     "n_comms": 152,
+     "outage_recall": 0.5446428571428571,
+     "comms_recall": 0.7171052631578947,
+     "precision_outage": 1.0,
+     "precision_comms": 0.9819819819819819,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": 0.026785714285714284,
+     "abstention_rate": 0.3446969696969697,
+     "correct_cause_rate": 0.6439393939393939,
+     "balanced_correct": 0.630874060150376,
+     "accuracy_when_decided": 0.9883720930232558,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 112,
+     "n_comms": 152,
+     "outage_recall": 0.5446428571428571,
+     "comms_recall": 0.5855263157894737,
+     "precision_outage": 1.0,
+     "precision_comms": 0.9888888888888889,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": 0.017857142857142856,
+     "abstention_rate": 0.42424242424242425,
+     "correct_cause_rate": 0.5681818181818182,
+     "balanced_correct": 0.5650845864661653,
+     "accuracy_when_decided": 0.9933774834437086,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.07954545454545453,
+    "abstention_diff_ci95": [
+     0.049242424242424254,
+     0.11363636363636365
+    ],
+    "subsets_per_episode": {
+     "v1": 0.9962121212121212,
+     "P5": 1.231060606060606
+    },
+    "human_items_per_episode": {
+     "v1": 0.5757575757575758,
+     "P5": 0.8333333333333334
+    },
+    "human_items_diff_ci95": [
+     0.15909090909090906,
+     0.36363636363636365
+    ]
+   },
+   "concentrator": {
+    "n": 36,
+    "v1": {
+     "n_outage": 0,
+     "n_comms": 36,
+     "outage_recall": NaN,
+     "comms_recall": 0.8888888888888888,
+     "precision_outage": NaN,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.1111111111111111,
+     "correct_cause_rate": 0.8888888888888888,
+     "balanced_correct": 0.8888888888888888,
+     "accuracy_when_decided": 1.0,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 0,
+     "n_comms": 36,
+     "outage_recall": NaN,
+     "comms_recall": 0.8888888888888888,
+     "precision_outage": NaN,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.1111111111111111,
+     "correct_cause_rate": 0.8888888888888888,
+     "balanced_correct": 0.8888888888888888,
+     "accuracy_when_decided": 1.0,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.0,
+    "abstention_diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "subsets_per_episode": {
+     "v1": 1.0,
+     "P5": 1.0
+    },
+    "human_items_per_episode": {
+     "v1": 0.1111111111111111,
+     "P5": 0.1111111111111111
+    },
+    "human_items_diff_ci95": [
+     0.0,
+     0.0
+    ]
+   },
+   "line": {
+    "n": 112,
+    "v1": {
+     "n_outage": 112,
+     "n_comms": 0,
+     "outage_recall": 0.5446428571428571,
+     "comms_recall": NaN,
+     "precision_outage": 1.0,
+     "precision_comms": 0.0,
+     "false_outage_rate": NaN,
+     "missed_outage_rate": 0.026785714285714284,
+     "abstention_rate": 0.42857142857142855,
+     "correct_cause_rate": 0.5446428571428571,
+     "balanced_correct": 0.5446428571428571,
+     "accuracy_when_decided": 0.9682539682539683,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 112,
+     "n_comms": 0,
+     "outage_recall": 0.5446428571428571,
+     "comms_recall": NaN,
+     "precision_outage": 1.0,
+     "precision_comms": 0.0,
+     "false_outage_rate": NaN,
+     "missed_outage_rate": 0.017857142857142856,
+     "abstention_rate": 0.4375,
+     "correct_cause_rate": 0.5446428571428571,
+     "balanced_correct": 0.5446428571428571,
+     "accuracy_when_decided": 0.9838709677419355,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.008928571428571452,
+    "abstention_diff_ci95": [
+     0.0,
+     0.0267857142857143
+    ],
+    "subsets_per_episode": {
+     "v1": 0.9910714285714286,
+     "P5": 0.9910714285714286
+    },
+    "human_items_per_episode": {
+     "v1": 0.9732142857142857,
+     "P5": 0.9821428571428571
+    },
+    "human_items_diff_ci95": [
+     0.0,
+     0.0267857142857143
+    ]
+   },
+   "meters": {
+    "n": 32,
+    "v1": {
+     "n_outage": 0,
+     "n_comms": 32,
+     "outage_recall": NaN,
+     "comms_recall": 0.65625,
+     "precision_outage": NaN,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.34375,
+     "correct_cause_rate": 0.65625,
+     "balanced_correct": 0.65625,
+     "accuracy_when_decided": 1.0,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 0,
+     "n_comms": 32,
+     "outage_recall": NaN,
+     "comms_recall": 0.03125,
+     "precision_outage": NaN,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.96875,
+     "correct_cause_rate": 0.03125,
+     "balanced_correct": 0.03125,
+     "accuracy_when_decided": 1.0,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.625,
+    "abstention_diff_ci95": [
+     0.46875,
+     0.78125
+    ],
+    "subsets_per_episode": {
+     "v1": 1.0,
+     "P5": 2.9375
+    },
+    "human_items_per_episode": {
+     "v1": 0.34375,
+     "P5": 2.4375
+    },
+    "human_items_diff_ci95": [
+     1.59296875,
+     2.625
+    ]
+   },
+   "zone": {
+    "n": 84,
+    "v1": {
+     "n_outage": 0,
+     "n_comms": 84,
+     "outage_recall": NaN,
+     "comms_recall": 0.6666666666666666,
+     "precision_outage": NaN,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.3333333333333333,
+     "correct_cause_rate": 0.6666666666666666,
+     "balanced_correct": 0.6666666666666666,
+     "accuracy_when_decided": 1.0,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 0,
+     "n_comms": 84,
+     "outage_recall": NaN,
+     "comms_recall": 0.6666666666666666,
+     "precision_outage": NaN,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.3333333333333333,
+     "correct_cause_rate": 0.6666666666666666,
+     "balanced_correct": 0.6666666666666666,
+     "accuracy_when_decided": 1.0,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.0,
+    "abstention_diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "subsets_per_episode": {
+     "v1": 1.0,
+     "P5": 1.0
+    },
+    "human_items_per_episode": {
+     "v1": 0.3333333333333333,
+     "P5": 0.3333333333333333
+    },
+    "human_items_diff_ci95": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "concentrators_random_val": {
+   "all": {
+    "n": 176,
+    "v1": {
+     "n_outage": 50,
+     "n_comms": 126,
+     "outage_recall": 0.44,
+     "comms_recall": 0.6190476190476191,
+     "precision_outage": 0.9565217391304348,
+     "precision_comms": 0.9873417721518988,
+     "false_outage_rate": 0.007936507936507936,
+     "missed_outage_rate": 0.02,
+     "abstention_rate": 0.42045454545454547,
+     "correct_cause_rate": 0.5681818181818182,
+     "balanced_correct": 0.5295238095238095,
+     "accuracy_when_decided": 0.9803921568627451,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 50,
+     "n_comms": 126,
+     "outage_recall": 0.44,
+     "comms_recall": 0.2857142857142857,
+     "precision_outage": 0.9565217391304348,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.007936507936507936,
+     "missed_outage_rate": 0.0,
+     "abstention_rate": 0.6647727272727273,
+     "correct_cause_rate": 0.32954545454545453,
+     "balanced_correct": 0.3628571428571429,
+     "accuracy_when_decided": 0.9830508474576272,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.24431818181818182,
+    "abstention_diff_ci95": [
+     0.18749999999999994,
+     0.30681818181818177
+    ],
+    "subsets_per_episode": {
+     "v1": 1.0,
+     "P5": 1.8636363636363635
+    },
+    "human_items_per_episode": {
+     "v1": 0.5511363636363636,
+     "P5": 1.4261363636363635
+    },
+    "human_items_diff_ci95": [
+     0.6704545454545455,
+     1.0909090909090908
+    ]
+   },
+   "concentrator": {
+    "n": 63,
+    "v1": {
+     "n_outage": 0,
+     "n_comms": 63,
+     "outage_recall": NaN,
+     "comms_recall": 0.6666666666666666,
+     "precision_outage": NaN,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.3333333333333333,
+     "correct_cause_rate": 0.6666666666666666,
+     "balanced_correct": 0.6666666666666666,
+     "accuracy_when_decided": 1.0,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 0,
+     "n_comms": 63,
+     "outage_recall": NaN,
+     "comms_recall": 0.0,
+     "precision_outage": NaN,
+     "precision_comms": NaN,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 1.0,
+     "correct_cause_rate": 0.0,
+     "balanced_correct": 0.0,
+     "accuracy_when_decided": NaN,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.6666666666666667,
+    "abstention_diff_ci95": [
+     0.5555555555555556,
+     0.7777777777777778
+    ],
+    "subsets_per_episode": {
+     "v1": 1.0,
+     "P5": 3.4126984126984126
+    },
+    "human_items_per_episode": {
+     "v1": 0.3333333333333333,
+     "P5": 2.761904761904762
+    },
+    "human_items_diff_ci95": [
+     2.0634920634920633,
+     2.8095238095238093
+    ]
+   },
+   "line": {
+    "n": 50,
+    "v1": {
+     "n_outage": 50,
+     "n_comms": 0,
+     "outage_recall": 0.44,
+     "comms_recall": NaN,
+     "precision_outage": 1.0,
+     "precision_comms": 0.0,
+     "false_outage_rate": NaN,
+     "missed_outage_rate": 0.02,
+     "abstention_rate": 0.54,
+     "correct_cause_rate": 0.44,
+     "balanced_correct": 0.44,
+     "accuracy_when_decided": 0.9565217391304348,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 50,
+     "n_comms": 0,
+     "outage_recall": 0.44,
+     "comms_recall": NaN,
+     "precision_outage": 1.0,
+     "precision_comms": NaN,
+     "false_outage_rate": NaN,
+     "missed_outage_rate": 0.0,
+     "abstention_rate": 0.56,
+     "correct_cause_rate": 0.44,
+     "balanced_correct": 0.44,
+     "accuracy_when_decided": 1.0,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.020000000000000018,
+    "abstention_diff_ci95": [
+     0.0,
+     0.06000000000000005
+    ],
+    "subsets_per_episode": {
+     "v1": 1.0,
+     "P5": 1.0
+    },
+    "human_items_per_episode": {
+     "v1": 0.98,
+     "P5": 1.0
+    },
+    "human_items_diff_ci95": [
+     0.0,
+     0.06000000000000005
+    ]
+   },
+   "zone": {
+    "n": 63,
+    "v1": {
+     "n_outage": 0,
+     "n_comms": 63,
+     "outage_recall": NaN,
+     "comms_recall": 0.5714285714285714,
+     "precision_outage": 0.0,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.015873015873015872,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.4126984126984127,
+     "correct_cause_rate": 0.5714285714285714,
+     "balanced_correct": 0.5714285714285714,
+     "accuracy_when_decided": 0.972972972972973,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 0,
+     "n_comms": 63,
+     "outage_recall": NaN,
+     "comms_recall": 0.5714285714285714,
+     "precision_outage": 0.0,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.015873015873015872,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.4126984126984127,
+     "correct_cause_rate": 0.5714285714285714,
+     "balanced_correct": 0.5714285714285714,
+     "accuracy_when_decided": 0.972972972972973,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.0,
+    "abstention_diff_ci95": [
+     0.0,
+     0.0
+    ],
+    "subsets_per_episode": {
+     "v1": 1.0,
+     "P5": 1.0
+    },
+    "human_items_per_episode": {
+     "v1": 0.42857142857142855,
+     "P5": 0.42857142857142855
+    },
+    "human_items_diff_ci95": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "whole_feeder_all_weeks": {
+   "all": {
+    "n": 700,
+    "v1": {
+     "n_outage": 350,
+     "n_comms": 350,
+     "outage_recall": 0.6885714285714286,
+     "comms_recall": 0.84,
+     "precision_outage": 1.0,
+     "precision_comms": 0.9932432432432432,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": 0.011428571428571429,
+     "abstention_rate": 0.22857142857142856,
+     "correct_cause_rate": 0.7642857142857142,
+     "balanced_correct": 0.7642857142857142,
+     "accuracy_when_decided": 0.9962756052141527,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 350,
+     "n_comms": 350,
+     "outage_recall": 0.6914285714285714,
+     "comms_recall": 0.8371428571428572,
+     "precision_outage": 1.0,
+     "precision_comms": 0.9965986394557823,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": 0.008571428571428572,
+     "abstention_rate": 0.23,
+     "correct_cause_rate": 0.7642857142857142,
+     "balanced_correct": 0.7642857142857142,
+     "accuracy_when_decided": 0.9981343283582089,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.0014285714285714457,
+    "abstention_diff_ci95": [
+     -0.004285714285714282,
+     0.008571428571428563
+    ],
+    "subsets_per_episode": {
+     "v1": 0.9957142857142857,
+     "P5": 0.9957142857142857
+    },
+    "human_items_per_episode": {
+     "v1": 0.5728571428571428,
+     "P5": 0.5757142857142857
+    },
+    "human_items_diff_ci95": [
+     0.0,
+     0.0071428571428572285
+    ]
+   },
+   "feeder": {
+    "n": 350,
+    "v1": {
+     "n_outage": 350,
+     "n_comms": 0,
+     "outage_recall": 0.6885714285714286,
+     "comms_recall": NaN,
+     "precision_outage": 1.0,
+     "precision_comms": 0.0,
+     "false_outage_rate": NaN,
+     "missed_outage_rate": 0.011428571428571429,
+     "abstention_rate": 0.3,
+     "correct_cause_rate": 0.6885714285714286,
+     "balanced_correct": 0.6885714285714286,
+     "accuracy_when_decided": 0.9917695473251029,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 350,
+     "n_comms": 0,
+     "outage_recall": 0.6914285714285714,
+     "comms_recall": NaN,
+     "precision_outage": 1.0,
+     "precision_comms": 0.0,
+     "false_outage_rate": NaN,
+     "missed_outage_rate": 0.008571428571428572,
+     "abstention_rate": 0.3,
+     "correct_cause_rate": 0.6914285714285714,
+     "balanced_correct": 0.6914285714285714,
+     "accuracy_when_decided": 0.9958847736625515,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.0,
+    "abstention_diff_ci95": [
+     -0.011428571428571455,
+     0.011428571428571399
+    ],
+    "subsets_per_episode": {
+     "v1": 0.9942857142857143,
+     "P5": 0.9942857142857143
+    },
+    "human_items_per_episode": {
+     "v1": 0.9885714285714285,
+     "P5": 0.9914285714285714
+    },
+    "human_items_diff_ci95": [
+     0.0,
+     0.008571428571428674
+    ]
+   },
+   "zone": {
+    "n": 350,
+    "v1": {
+     "n_outage": 0,
+     "n_comms": 350,
+     "outage_recall": NaN,
+     "comms_recall": 0.84,
+     "precision_outage": NaN,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.15714285714285714,
+     "correct_cause_rate": 0.84,
+     "balanced_correct": 0.84,
+     "accuracy_when_decided": 1.0,
+     "latency_median": NaN
+    },
+    "P5": {
+     "n_outage": 0,
+     "n_comms": 350,
+     "outage_recall": NaN,
+     "comms_recall": 0.8371428571428572,
+     "precision_outage": NaN,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": NaN,
+     "abstention_rate": 0.16,
+     "correct_cause_rate": 0.8371428571428572,
+     "balanced_correct": 0.8371428571428572,
+     "accuracy_when_decided": 1.0,
+     "latency_median": NaN
+    },
+    "abstention_diff_P5_minus_v1": 0.0028571428571428636,
+    "abstention_diff_ci95": [
+     0.0,
+     0.008571428571428591
+    ],
+    "subsets_per_episode": {
+     "v1": 0.9971428571428571,
+     "P5": 0.9971428571428571
+    },
+    "human_items_per_episode": {
+     "v1": 0.15714285714285714,
+     "P5": 0.16
+    },
+    "human_items_diff_ci95": [
+     0.0,
+     0.008571428571428591
+    ]
+   }
+  }
+ }
+}

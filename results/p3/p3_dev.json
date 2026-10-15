@@ -1,0 +1,152 @@
+{
+ "grid": "1-LV-semiurb5--0-sw",
+ "seed": 951,
+ "thresholds": {
+  "d1": 2.5212884749244506,
+  "d2": 3.999293888209749
+ },
+ "fault_free_false_alarm_rate": {
+  "d1": 0.01014957264957265,
+  "d2": 0.01014957264957265
+ },
+ "calibration_windows": 36,
+ "meter_windows": 3744,
+ "results": {
+  "stuck_None": {
+   "n": 150,
+   "d1": 0.02,
+   "d2": 0.44,
+   "d2_localised_share": 0.9242424242424242
+  },
+  "gain_0.5": {
+   "n": 150,
+   "d1": 0.02,
+   "d2": 0.6133333333333333,
+   "d2_localised_share": 0.8804347826086957
+  },
+  "gain_0.8": {
+   "n": 150,
+   "d1": 0.0,
+   "d2": 0.04666666666666667,
+   "d2_localised_share": 0.5714285714285714
+  },
+  "gain_0.9": {
+   "n": 150,
+   "d1": 0.02,
+   "d2": 0.03333333333333333,
+   "d2_localised_share": 0.8
+  },
+  "gain_1.1": {
+   "n": 150,
+   "d1": 0.006666666666666667,
+   "d2": 0.02,
+   "d2_localised_share": 0.6666666666666666
+  },
+  "gain_1.2": {
+   "n": 150,
+   "d1": 0.013333333333333334,
+   "d2": 0.03333333333333333,
+   "d2_localised_share": 0.6
+  },
+  "gain_1.5": {
+   "n": 150,
+   "d1": 0.006666666666666667,
+   "d2": 0.11333333333333333,
+   "d2_localised_share": 0.9411764705882353
+  },
+  "bias_-0.05": {
+   "n": 150,
+   "d1": 0.02,
+   "d2": 0.013333333333333334,
+   "d2_localised_share": 1.0
+  },
+  "bias_-0.02": {
+   "n": 150,
+   "d1": 0.006666666666666667,
+   "d2": 0.006666666666666667,
+   "d2_localised_share": 1.0
+  },
+  "bias_0.02": {
+   "n": 150,
+   "d1": 0.006666666666666667,
+   "d2": 0.006666666666666667,
+   "d2_localised_share": 0.0
+  },
+  "bias_0.05": {
+   "n": 150,
+   "d1": 0.02666666666666667,
+   "d2": 0.02,
+   "d2_localised_share": 0.3333333333333333
+  },
+  "noise_0.02": {
+   "n": 150,
+   "d1": 0.006666666666666667,
+   "d2": 0.006666666666666667,
+   "d2_localised_share": 0.0
+  },
+  "noise_0.05": {
+   "n": 150,
+   "d1": 0.0,
+   "d2": 0.14,
+   "d2_localised_share": 0.5714285714285714
+  },
+  "noise_0.2": {
+   "n": 150,
+   "d1": 0.006666666666666667,
+   "d2": 0.5733333333333334,
+   "d2_localised_share": 0.7558139534883721
+  }
+ },
+ "stamp": {
+  "commit": "96f383a",
+  "config_hash": "1aff8cf02adf",
+  "config": {
+   "world": {
+    "grid": "1-LV-semiurb5--0-sw",
+    "start_day": 0,
+    "days": 366,
+    "diversity": 0.5,
+    "pv_scale": 1.0,
+    "seed": 0,
+    "unmetered": {
+     "kind": "none",
+     "kw": 0.0
+    }
+   },
+   "meter": {
+    "gain_sd": 0.005,
+    "noise_rel_sd": 0.002,
+    "noise_abs_kwh": 0.0005,
+    "quant_kwh": 0.001
+   },
+   "tmeter": {
+    "gain_sd": 0.002,
+    "noise_rel_sd": 0.001,
+    "quant_kwh": 0.01
+   },
+   "comms": {
+    "concentrators": "aligned",
+    "p_missing": 0.01,
+    "p_delay": 0.03,
+    "delay_mean_intervals": 4,
+    "backlog": true,
+    "backlog_spread": 4,
+    "outage_backfill": false,
+    "last_gasp": false,
+    "voltage": true
+   },
+   "seed": 951,
+   "events": []
+  },
+  "command": "python -m shahid.p3_single_meter",
+  "date": "2026-10-14T09:01:35",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "label": "development",
+ "h3_dev": {
+  "gain_0.8": false,
+  "gain_0.5": false,
+  "bias_-0.05": false
+ }
+}

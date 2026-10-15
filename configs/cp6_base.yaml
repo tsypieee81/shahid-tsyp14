@@ -1,0 +1,8 @@
+# CP6 base scenario family: development grid, nominal parameters, outages vs zone-shaped comms
+# failures (same silent-set distribution). Cells in shahid/cp6_sweep.py override this.
+generator:
+  n: 340
+  first_day: 15
+  mix: {outage: 0.5, comms_zone: 0.5}
+  duration_steps: [4, 16]
+  zone_sizes: [1, 40]

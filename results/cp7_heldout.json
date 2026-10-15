@@ -1,0 +1,1233 @@
+{
+ "stamp": {
+  "commit": "9de959a",
+  "config_hash": "a011dae77ec4",
+  "config": {
+   "targets": {
+    "heldout_urban6": "1-LV-urban6--0-sw",
+    "dev_semiurb5": "1-LV-semiurb5--0-sw"
+   },
+   "episodes_config": "configs/cp5_episodes.yaml",
+   "seeds": [
+    301,
+    302,
+    303
+   ],
+   "methods": [
+    "bayes",
+    "lr",
+    "share",
+    "ztest"
+   ],
+   "baselines": [
+    "naive",
+    "step",
+    "count",
+    "structure"
+   ],
+   "test_week": 3,
+   "boot": 1000,
+   "z90": 1.6449,
+   "thresholds": {
+    "share": {
+     "share_threshold": 0.5,
+     "min_expected_kwh": 2.0
+    },
+    "ztest": {
+     "z_crit": 2.9,
+     "min_expected_kwh": 2.0
+    },
+    "lr": {
+     "llr_threshold": 0,
+     "min_expected_kwh": 2.0
+    },
+    "bayes": {
+     "abstain_band": 0.03,
+     "min_expected_kwh": 0.0
+    }
+   }
+  },
+  "command": "python -m shahid.cp7_heldout",
+  "date": "2026-10-07T09:39:27",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "targets": {
+  "heldout_urban6": {
+   "grid": "1-LV-urban6--0-sw",
+   "fitted": {
+    "K": 2,
+    "L_max": 4,
+    "history_days": 14,
+    "gap_days": 1,
+    "min_expected_kwh": 0.5,
+    "share_threshold": 0.5,
+    "z_crit": 2.576,
+    "t_df": 4,
+    "llr_threshold": 0.0,
+    "prior_comms": 0.5,
+    "abstain_band": 0.05,
+    "gap_const": 0.003000000000001002,
+    "gap_sd": 0.017791199999999355,
+    "gap_acf1": 0.2643173126702291,
+    "rho_by_lead": [
+     0.8737895707078599,
+     0.7940523737168587,
+     0.7510435534946557,
+     0.6917476516825353,
+     0.6587407915932635,
+     0.5756735622964304
+    ],
+    "sigma_mult_by_lead": [
+     0.6107209981437883,
+     0.7945657048876906,
+     0.8744853107954983,
+     0.9628507876663571,
+     1.0229859953650857,
+     1.0699788590264665
+    ],
+    "rho1_by_lead": [
+     0.8798012327061058,
+     0.7337602395904561,
+     0.671404012358678,
+     0.6308600382547682,
+     0.6369699455488536,
+     0.6041245374303417
+    ],
+    "sigma1_mult_by_lead": [
+     0.6077197373117631,
+     0.7635631824775448,
+     0.7873470324137585,
+     0.8414848549148931,
+     0.8868035011031479,
+     0.9199327043515471
+    ]
+   },
+   "results": {
+    "bayes": {
+     "n_outage": 109,
+     "n_comms": 155,
+     "outage_recall": 0.6697247706422018,
+     "comms_recall": 0.7548387096774194,
+     "precision_outage": 1.0,
+     "precision_comms": 0.9915254237288136,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": 0.009174311926605505,
+     "abstention_rate": 0.2765151515151515,
+     "correct_cause_rate": 0.7196969696969697,
+     "balanced_correct": 0.7122817401598106,
+     "accuracy_when_decided": 0.9947643979057592,
+     "latency_median": 2.0,
+     "ci95": {
+      "balanced_correct": [
+       0.656575910032554,
+       0.7646049126960639
+      ],
+      "outage_recall": [
+       0.5779816513761468,
+       0.7522935779816514
+      ],
+      "comms_recall": [
+       0.6838709677419355,
+       0.8193548387096774
+      ],
+      "precision_outage": [
+       1.0,
+       1.0
+      ],
+      "precision_comms": [
+       0.9734393685721119,
+       1.0
+      ],
+      "false_outage_rate": [
+       0.0,
+       0.0
+      ],
+      "missed_outage_rate": [
+       0.0,
+       0.027522935779816515
+      ],
+      "abstention_rate": [
+       0.22348484848484848,
+       0.3333333333333333
+      ]
+     },
+     "fault_free_false_outages": 10,
+     "fault_free_meter_days": 10101.0,
+     "fault_free_false_outage_per_meter_day": 0.00099000099000099,
+     "fault_free_ci95_per_meter_day": [
+      0.0005378469486243912,
+      0.0018215764786562502
+     ],
+     "expected_load": {
+      "n": 155,
+      "mae_kwh": 0.6248843335227322,
+      "rel_err": 0.18173706715445698,
+      "coverage90": 0.8516129032258064
+     },
+     "brier": 0.048405335511493425,
+     "reliability": [
+      {
+       "bin": "(-0.001, 0.1]",
+       "n": 80,
+       "mean_p": 0.011378548976358968,
+       "frac_comms": 0.0125
+      },
+      {
+       "bin": "(0.1, 0.2]",
+       "n": 14,
+       "mean_p": 0.13606496952743038,
+       "frac_comms": 0.21428571428571427
+      },
+      {
+       "bin": "(0.2, 0.3]",
+       "n": 5,
+       "mean_p": 0.21616797479637057,
+       "frac_comms": 0.2
+      },
+      {
+       "bin": "(0.3, 0.4]",
+       "n": 9,
+       "mean_p": 0.3540015785990192,
+       "frac_comms": 0.3333333333333333
+      },
+      {
+       "bin": "(0.4, 0.5]",
+       "n": 8,
+       "mean_p": 0.45316084106550747,
+       "frac_comms": 0.375
+      },
+      {
+       "bin": "(0.5, 0.6]",
+       "n": 12,
+       "mean_p": 0.5367288300927641,
+       "frac_comms": 0.75
+      },
+      {
+       "bin": "(0.6, 0.7]",
+       "n": 5,
+       "mean_p": 0.642770107435252,
+       "frac_comms": 1.0
+      },
+      {
+       "bin": "(0.7, 0.8]",
+       "n": 4,
+       "mean_p": 0.756868060563799,
+       "frac_comms": 1.0
+      },
+      {
+       "bin": "(0.8, 0.9]",
+       "n": 3,
+       "mean_p": 0.8755311463256837,
+       "frac_comms": 1.0
+      },
+      {
+       "bin": "(0.9, 1.0]",
+       "n": 124,
+       "mean_p": 0.9934916357711314,
+       "frac_comms": 0.9919354838709677
+      }
+     ]
+    },
+    "lr": {
+     "n_outage": 109,
+     "n_comms": 155,
+     "outage_recall": 0.7155963302752294,
+     "comms_recall": 0.6774193548387096,
+     "precision_outage": 0.9285714285714286,
+     "precision_comms": 0.9905660377358491,
+     "false_outage_rate": 0.03870967741935484,
+     "missed_outage_rate": 0.009174311926605505,
+     "abstention_rate": 0.2803030303030303,
+     "correct_cause_rate": 0.6931818181818182,
+     "balanced_correct": 0.6965078425569695,
+     "accuracy_when_decided": 0.9631578947368421,
+     "latency_median": 2.0,
+     "ci95": {
+      "balanced_correct": [
+       0.6385824208345664,
+       0.7520945546019532
+      ],
+      "outage_recall": [
+       0.6238532110091743,
+       0.7981651376146789
+      ],
+      "comms_recall": [
+       0.6064516129032258,
+       0.7483870967741936
+      ],
+      "precision_outage": [
+       0.8763334624822421,
+       0.9761904761904762
+      ],
+      "precision_comms": [
+       0.9663721899016017,
+       1.0
+      ],
+      "false_outage_rate": [
+       0.012903225806451613,
+       0.07096774193548387
+      ],
+      "missed_outage_rate": [
+       0.0,
+       0.027522935779816515
+      ],
+      "abstention_rate": [
+       0.22727272727272727,
+       0.3371212121212121
+      ]
+     },
+     "fault_free_false_outages": 38,
+     "fault_free_meter_days": 10101.0,
+     "fault_free_false_outage_per_meter_day": 0.003762003762003762,
+     "fault_free_ci95_per_meter_day": [
+      0.0027421790814503126,
+      0.0051591422020025625
+     ],
+     "expected_load": {
+      "n": 155,
+      "mae_kwh": 0.5843664263645026,
+      "rel_err": 0.16168744994290085,
+      "coverage90": 0.8774193548387097
+     }
+    },
+    "share": {
+     "n_outage": 109,
+     "n_comms": 155,
+     "outage_recall": 0.7247706422018348,
+     "comms_recall": 0.6709677419354839,
+     "precision_outage": 0.9186046511627907,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.04516129032258064,
+     "missed_outage_rate": 0.0,
+     "abstention_rate": 0.2803030303030303,
+     "correct_cause_rate": 0.6931818181818182,
+     "balanced_correct": 0.6978691920686594,
+     "accuracy_when_decided": 0.9631578947368421,
+     "latency_median": 2.0,
+     "ci95": {
+      "balanced_correct": [
+       0.638591299200947,
+       0.7535750221959159
+      ],
+      "outage_recall": [
+       0.6330275229357798,
+       0.8073394495412844
+      ],
+      "comms_recall": [
+       0.6,
+       0.7419354838709677
+      ],
+      "precision_outage": [
+       0.8604651162790697,
+       0.9710812356979405
+      ],
+      "precision_comms": [
+       1.0,
+       1.0
+      ],
+      "false_outage_rate": [
+       0.012903225806451613,
+       0.07741935483870968
+      ],
+      "missed_outage_rate": [
+       0.0,
+       0.0
+      ],
+      "abstention_rate": [
+       0.22727272727272727,
+       0.3333333333333333
+      ]
+     },
+     "fault_free_false_outages": 45,
+     "fault_free_meter_days": 10101.0,
+     "fault_free_false_outage_per_meter_day": 0.004455004455004455,
+     "fault_free_ci95_per_meter_day": [
+      0.003331290994862037,
+      0.0059555047526338965
+     ],
+     "expected_load": {
+      "n": 155,
+      "mae_kwh": 0.5843664263645026,
+      "rel_err": 0.16168744994290085,
+      "coverage90": 0.8774193548387097
+     }
+    },
+    "ztest": {
+     "n_outage": 109,
+     "n_comms": 155,
+     "outage_recall": 0.6146788990825688,
+     "comms_recall": 0.6451612903225806,
+     "precision_outage": 1.0,
+     "precision_comms": 0.9900990099009901,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": 0.009174311926605505,
+     "abstention_rate": 0.36363636363636365,
+     "correct_cause_rate": 0.6325757575757576,
+     "balanced_correct": 0.6299200947025747,
+     "accuracy_when_decided": 0.9940476190476191,
+     "latency_median": 3.0,
+     "ci95": {
+      "balanced_correct": [
+       0.5765781296241491,
+       0.6864878662326133
+      ],
+      "outage_recall": [
+       0.5229357798165137,
+       0.7064220183486238
+      ],
+      "comms_recall": [
+       0.567741935483871,
+       0.7162903225806451
+      ],
+      "precision_outage": [
+       1.0,
+       1.0
+      ],
+      "precision_comms": [
+       0.9690721649484536,
+       1.0
+      ],
+      "false_outage_rate": [
+       0.0,
+       0.0
+      ],
+      "missed_outage_rate": [
+       0.0,
+       0.027522935779816515
+      ],
+      "abstention_rate": [
+       0.3068181818181818,
+       0.4166666666666667
+      ]
+     },
+     "fault_free_false_outages": 2,
+     "fault_free_meter_days": 10101.0,
+     "fault_free_false_outage_per_meter_day": 0.000198000198000198,
+     "fault_free_ci95_per_meter_day": [
+      5.429933875380165e-05,
+      0.0007217247010490587
+     ],
+     "expected_load": {
+      "n": 155,
+      "mae_kwh": 0.7059314103609795,
+      "rel_err": 0.18721044599885536,
+      "coverage90": 0.8774193548387097
+     }
+    },
+    "naive": {
+     "n_outage": 109,
+     "n_comms": 155,
+     "outage_recall": 0.8899082568807339,
+     "comms_recall": 0.7741935483870968,
+     "precision_outage": 0.9065420560747663,
+     "precision_comms": 0.975609756097561,
+     "false_outage_rate": 0.06451612903225806,
+     "missed_outage_rate": 0.027522935779816515,
+     "abstention_rate": 0.12878787878787878,
+     "correct_cause_rate": 0.821969696969697,
+     "balanced_correct": 0.8320509026339153,
+     "accuracy_when_decided": 0.9434782608695652,
+     "latency_median": 4.0,
+     "ci95": {
+      "balanced_correct": [
+       0.7868807339449541,
+       0.8751997632435632
+      ],
+      "outage_recall": [
+       0.8346330275229358,
+       0.944954128440367
+      ],
+      "comms_recall": [
+       0.7161290322580646,
+       0.8387096774193549
+      ],
+      "precision_outage": [
+       0.8495575221238938,
+       0.9514563106796117
+      ],
+      "precision_comms": [
+       0.9465441742114918,
+       1.0
+      ],
+      "false_outage_rate": [
+       0.025806451612903226,
+       0.10967741935483871
+      ],
+      "missed_outage_rate": [
+       0.0,
+       0.06422018348623854
+      ],
+      "abstention_rate": [
+       0.09090909090909091,
+       0.16666666666666666
+      ]
+     },
+     "fault_free_false_outages": 105,
+     "fault_free_meter_days": 10101.0,
+     "fault_free_false_outage_per_meter_day": 0.010395010395010396,
+     "fault_free_ci95_per_meter_day": [
+      0.008594822139104528,
+      0.01256746901447476
+     ]
+    },
+    "step": {
+     "n_outage": 109,
+     "n_comms": 155,
+     "outage_recall": 0.7522935779816514,
+     "comms_recall": 0.632258064516129,
+     "precision_outage": 0.5899280575539568,
+     "precision_comms": 0.784,
+     "false_outage_rate": 0.36774193548387096,
+     "missed_outage_rate": 0.24770642201834864,
+     "abstention_rate": 0.0,
+     "correct_cause_rate": 0.6818181818181818,
+     "balanced_correct": 0.6922758212488902,
+     "accuracy_when_decided": 0.6818181818181818,
+     "latency_median": 4.0,
+     "ci95": {
+      "balanced_correct": [
+       0.6367268422610239,
+       0.7474785439479135
+      ],
+      "outage_recall": [
+       0.6605504587155964,
+       0.8256880733944955
+      ],
+      "comms_recall": [
+       0.5611290322580645,
+       0.7096774193548387
+      ],
+      "precision_outage": [
+       0.5354770558836892,
+       0.6488649310698416
+      ],
+      "precision_comms": [
+       0.7307692307692307,
+       0.8429752066115702
+      ],
+      "false_outage_rate": [
+       0.2967741935483871,
+       0.44516129032258067
+      ],
+      "missed_outage_rate": [
+       0.1651376146788991,
+       0.3302752293577982
+      ],
+      "abstention_rate": [
+       0.0,
+       0.0
+      ]
+     },
+     "fault_free_false_outages": 635,
+     "fault_free_meter_days": 10101.0,
+     "fault_free_false_outage_per_meter_day": 0.06286506286506287,
+     "fault_free_ci95_per_meter_day": [
+      0.058295763167873646,
+      0.06776673740610863
+     ]
+    },
+    "count": {
+     "n_outage": 109,
+     "n_comms": 155,
+     "outage_recall": 0.8256880733944955,
+     "comms_recall": 0.34838709677419355,
+     "precision_outage": 0.4712041884816754,
+     "precision_comms": 0.7397260273972602,
+     "false_outage_rate": 0.6516129032258065,
+     "missed_outage_rate": 0.1743119266055046,
+     "abstention_rate": 0.0,
+     "correct_cause_rate": 0.5454545454545454,
+     "balanced_correct": 0.5870375850843446,
+     "accuracy_when_decided": 0.5454545454545454,
+     "latency_median": 4.0,
+     "ci95": {
+      "balanced_correct": [
+       0.5364094406629181,
+       0.6390145013317549
+      ],
+      "outage_recall": [
+       0.7522935779816514,
+       0.8899082568807339
+      ],
+      "comms_recall": [
+       0.27741935483870966,
+       0.4258064516129032
+      ],
+      "precision_outage": [
+       0.4401866028708134,
+       0.5107556100981767
+      ],
+      "precision_comms": [
+       0.6461538461538462,
+       0.8266666666666667
+      ],
+      "false_outage_rate": [
+       0.567741935483871,
+       0.7290322580645161
+      ],
+      "missed_outage_rate": [
+       0.10986238532110093,
+       0.25688073394495414
+      ],
+      "abstention_rate": [
+       0.0,
+       0.0
+      ]
+     },
+     "fault_free_false_outages": 39,
+     "fault_free_meter_days": 10101.0,
+     "fault_free_false_outage_per_meter_day": 0.003861003861003861,
+     "fault_free_ci95_per_meter_day": [
+      0.0028257914747775803,
+      0.005273454732110018
+     ]
+    },
+    "structure": {
+     "n_outage": 109,
+     "n_comms": 155,
+     "outage_recall": 0.6238532110091743,
+     "comms_recall": 0.34838709677419355,
+     "precision_outage": 0.5271317829457365,
+     "precision_comms": 0.7397260273972602,
+     "false_outage_rate": 0.3935483870967742,
+     "missed_outage_rate": 0.1743119266055046,
+     "abstention_rate": 0.23484848484848486,
+     "correct_cause_rate": 0.4621212121212121,
+     "balanced_correct": 0.48612015389168395,
+     "accuracy_when_decided": 0.6039603960396039,
+     "latency_median": 4.0,
+     "ci95": {
+      "balanced_correct": [
+       0.424060372891388,
+       0.5448949393311631
+      ],
+      "outage_recall": [
+       0.5321100917431193,
+       0.7155963302752294
+      ],
+      "comms_recall": [
+       0.27741935483870966,
+       0.41935483870967744
+      ],
+      "precision_outage": [
+       0.46921875,
+       0.5882471537001898
+      ],
+      "precision_comms": [
+       0.6493506493506493,
+       0.8286363636363636
+      ],
+      "false_outage_rate": [
+       0.3096774193548387,
+       0.47096774193548385
+      ],
+      "missed_outage_rate": [
+       0.10986238532110093,
+       0.25688073394495414
+      ],
+      "abstention_rate": [
+       0.1856060606060606,
+       0.2840909090909091
+      ]
+     },
+     "fault_free_false_outages": 31,
+     "fault_free_meter_days": 10101.0,
+     "fault_free_false_outage_per_meter_day": 0.003069003069003069,
+     "fault_free_ci95_per_meter_day": [
+      0.002162996068290805,
+      0.004352850751119012
+     ]
+    }
+   }
+  },
+  "dev_semiurb5": {
+   "grid": "1-LV-semiurb5--0-sw",
+   "fitted": {
+    "K": 2,
+    "L_max": 4,
+    "history_days": 14,
+    "gap_days": 1,
+    "min_expected_kwh": 0.5,
+    "share_threshold": 0.5,
+    "z_crit": 2.576,
+    "t_df": 4,
+    "llr_threshold": 0.0,
+    "prior_comms": 0.5,
+    "abstain_band": 0.05,
+    "gap_const": 0.002000000000000668,
+    "gap_sd": 0.017791200000000673,
+    "gap_acf1": 0.35245169508377205,
+    "rho_by_lead": [
+     0.9394819743242748,
+     0.8813673632578846,
+     0.8250517220391905,
+     0.7611565245070647,
+     0.6980275171577657,
+     0.6712246261800544
+    ],
+    "sigma_mult_by_lead": [
+     0.6246625189711775,
+     0.7856576682947578,
+     0.9180041983151381,
+     0.9837470543907293,
+     1.004591550845259,
+     1.0875036401415232
+    ],
+    "rho1_by_lead": [
+     0.8418996162075056,
+     0.6995774430973662,
+     0.6321448623168988,
+     0.5812689102460451,
+     0.547582037819761,
+     0.47454963364212444
+    ],
+    "sigma1_mult_by_lead": [
+     0.5871813149465126,
+     0.7320462174420389,
+     0.7864655283146786,
+     0.8129514668402504,
+     0.8142868763357626,
+     0.8446867585796767
+    ]
+   },
+   "results": {
+    "bayes": {
+     "n_outage": 105,
+     "n_comms": 159,
+     "outage_recall": 0.6190476190476191,
+     "comms_recall": 0.7358490566037735,
+     "precision_outage": 1.0,
+     "precision_comms": 1.0,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": 0.0,
+     "abstention_rate": 0.30303030303030304,
+     "correct_cause_rate": 0.6893939393939394,
+     "balanced_correct": 0.6774483378256964,
+     "accuracy_when_decided": 1.0,
+     "latency_median": 2.0,
+     "ci95": {
+      "balanced_correct": [
+       0.6192183288409703,
+       0.7344115004492363
+      ],
+      "outage_recall": [
+       0.5238095238095238,
+       0.7142857142857143
+      ],
+      "comms_recall": [
+       0.6665094339622641,
+       0.8051886792452829
+      ],
+      "precision_outage": [
+       1.0,
+       1.0
+      ],
+      "precision_comms": [
+       1.0,
+       1.0
+      ],
+      "false_outage_rate": [
+       0.0,
+       0.0
+      ],
+      "missed_outage_rate": [
+       0.0,
+       0.0
+      ],
+      "abstention_rate": [
+       0.24990530303030303,
+       0.3522727272727273
+      ]
+     },
+     "fault_free_false_outages": 8,
+     "fault_free_meter_days": 9464.0,
+     "fault_free_false_outage_per_meter_day": 0.0008453085376162299,
+     "fault_free_ci95_per_meter_day": [
+      0.00042839379863570304,
+      0.0016672897624411954
+     ],
+     "expected_load": {
+      "n": 157,
+      "mae_kwh": 0.6111258396933115,
+      "rel_err": 0.1920703232777088,
+      "coverage90": 0.8471337579617835
+     },
+     "brier": 0.04855019870735089,
+     "reliability": [
+      {
+       "bin": "(-0.001, 0.1]",
+       "n": 73,
+       "mean_p": 0.015063686636395823,
+       "frac_comms": 0.0
+      },
+      {
+       "bin": "(0.1, 0.2]",
+       "n": 17,
+       "mean_p": 0.14655112627633007,
+       "frac_comms": 0.0
+      },
+      {
+       "bin": "(0.2, 0.3]",
+       "n": 9,
+       "mean_p": 0.24995444013453616,
+       "frac_comms": 0.6666666666666666
+      },
+      {
+       "bin": "(0.3, 0.4]",
+       "n": 9,
+       "mean_p": 0.3547889414714,
+       "frac_comms": 0.4444444444444444
+      },
+      {
+       "bin": "(0.4, 0.5]",
+       "n": 8,
+       "mean_p": 0.45054329391348785,
+       "frac_comms": 0.625
+      },
+      {
+       "bin": "(0.5, 0.6]",
+       "n": 11,
+       "mean_p": 0.5514815404411122,
+       "frac_comms": 0.8181818181818182
+      },
+      {
+       "bin": "(0.6, 0.7]",
+       "n": 3,
+       "mean_p": 0.6607622579364688,
+       "frac_comms": 1.0
+      },
+      {
+       "bin": "(0.7, 0.8]",
+       "n": 2,
+       "mean_p": 0.7440508229918087,
+       "frac_comms": 0.5
+      },
+      {
+       "bin": "(0.8, 0.9]",
+       "n": 8,
+       "mean_p": 0.8500624786598777,
+       "frac_comms": 1.0
+      },
+      {
+       "bin": "(0.9, 1.0]",
+       "n": 122,
+       "mean_p": 0.993026130691799,
+       "frac_comms": 0.9918032786885246
+      }
+     ]
+    },
+    "lr": {
+     "n_outage": 105,
+     "n_comms": 159,
+     "outage_recall": 0.6857142857142857,
+     "comms_recall": 0.7044025157232704,
+     "precision_outage": 0.96,
+     "precision_comms": 0.9655172413793104,
+     "false_outage_rate": 0.018867924528301886,
+     "missed_outage_rate": 0.0380952380952381,
+     "abstention_rate": 0.2689393939393939,
+     "correct_cause_rate": 0.696969696969697,
+     "balanced_correct": 0.6950584007187781,
+     "accuracy_when_decided": 0.9633507853403142,
+     "latency_median": 3.0,
+     "ci95": {
+      "balanced_correct": [
+       0.6365655884995507,
+       0.7487870619946092
+      ],
+      "outage_recall": [
+       0.6,
+       0.7714285714285715
+      ],
+      "comms_recall": [
+       0.6289308176100629,
+       0.7735849056603774
+      ],
+      "precision_outage": [
+       0.9146341463414634,
+       1.0
+      ],
+      "precision_comms": [
+       0.9327731092436975,
+       1.0
+      ],
+      "false_outage_rate": [
+       0.0,
+       0.0440251572327044
+      ],
+      "missed_outage_rate": [
+       0.009523809523809525,
+       0.0761904761904762
+      ],
+      "abstention_rate": [
+       0.2159090909090909,
+       0.32206439393939384
+      ]
+     },
+     "fault_free_false_outages": 44,
+     "fault_free_meter_days": 9464.0,
+     "fault_free_false_outage_per_meter_day": 0.004649196956889264,
+     "fault_free_ci95_per_meter_day": [
+      0.003465250070330571,
+      0.00623512345514117
+     ],
+     "expected_load": {
+      "n": 157,
+      "mae_kwh": 0.6240186462490839,
+      "rel_err": 0.188866697263932,
+      "coverage90": 0.8471337579617835
+     }
+    },
+    "share": {
+     "n_outage": 105,
+     "n_comms": 159,
+     "outage_recall": 0.6952380952380952,
+     "comms_recall": 0.6981132075471698,
+     "precision_outage": 0.948051948051948,
+     "precision_comms": 0.9736842105263158,
+     "false_outage_rate": 0.025157232704402517,
+     "missed_outage_rate": 0.02857142857142857,
+     "abstention_rate": 0.2689393939393939,
+     "correct_cause_rate": 0.696969696969697,
+     "balanced_correct": 0.6966756513926324,
+     "accuracy_when_decided": 0.9633507853403142,
+     "latency_median": 3.0,
+     "ci95": {
+      "balanced_correct": [
+       0.6350022461814914,
+       0.7519317160826595
+      ],
+      "outage_recall": [
+       0.6092857142857143,
+       0.7714285714285715
+      ],
+      "comms_recall": [
+       0.6289308176100629,
+       0.7672955974842768
+      ],
+      "precision_outage": [
+       0.8947368421052632,
+       0.9871794871794872
+      ],
+      "precision_comms": [
+       0.9416544117647059,
+       1.0
+      ],
+      "false_outage_rate": [
+       0.006289308176100629,
+       0.050314465408805034
+      ],
+      "missed_outage_rate": [
+       0.0,
+       0.06666666666666667
+      ],
+      "abstention_rate": [
+       0.2196969696969697,
+       0.32196969696969696
+      ]
+     },
+     "fault_free_false_outages": 49,
+     "fault_free_meter_days": 9464.0,
+     "fault_free_false_outage_per_meter_day": 0.005177514792899409,
+     "fault_free_ci95_per_meter_day": [
+      0.00391876179421911,
+      0.006837818670751915
+     ],
+     "expected_load": {
+      "n": 157,
+      "mae_kwh": 0.6240186462490839,
+      "rel_err": 0.188866697263932,
+      "coverage90": 0.8471337579617835
+     }
+    },
+    "ztest": {
+     "n_outage": 105,
+     "n_comms": 159,
+     "outage_recall": 0.49523809523809526,
+     "comms_recall": 0.6729559748427673,
+     "precision_outage": 1.0,
+     "precision_comms": 0.981651376146789,
+     "false_outage_rate": 0.0,
+     "missed_outage_rate": 0.01904761904761905,
+     "abstention_rate": 0.38257575757575757,
+     "correct_cause_rate": 0.6022727272727273,
+     "balanced_correct": 0.5840970350404313,
+     "accuracy_when_decided": 0.9875776397515528,
+     "latency_median": 4.0,
+     "ci95": {
+      "balanced_correct": [
+       0.5269249775381851,
+       0.6472641509433963
+      ],
+      "outage_recall": [
+       0.4,
+       0.581190476190476
+      ],
+      "comms_recall": [
+       0.5974842767295597,
+       0.7422955974842765
+      ],
+      "precision_outage": [
+       1.0,
+       1.0
+      ],
+      "precision_comms": [
+       0.9527839437661857,
+       1.0
+      ],
+      "false_outage_rate": [
+       0.0,
+       0.0
+      ],
+      "missed_outage_rate": [
+       0.0,
+       0.047619047619047616
+      ],
+      "abstention_rate": [
+       0.32575757575757575,
+       0.4393939393939394
+      ]
+     },
+     "fault_free_false_outages": 13,
+     "fault_free_meter_days": 9464.0,
+     "fault_free_false_outage_per_meter_day": 0.0013736263736263737,
+     "fault_free_ci95_per_meter_day": [
+      0.0008029513231637193,
+      0.002348939177412463
+     ],
+     "expected_load": {
+      "n": 157,
+      "mae_kwh": 0.7599640253333361,
+      "rel_err": 0.2031229335053296,
+      "coverage90": 0.8471337579617835
+     }
+    },
+    "naive": {
+     "n_outage": 105,
+     "n_comms": 159,
+     "outage_recall": 0.8285714285714286,
+     "comms_recall": 0.7987421383647799,
+     "precision_outage": 0.8877551020408163,
+     "precision_comms": 0.9621212121212122,
+     "false_outage_rate": 0.06918238993710692,
+     "missed_outage_rate": 0.047619047619047616,
+     "abstention_rate": 0.12121212121212122,
+     "correct_cause_rate": 0.8106060606060606,
+     "balanced_correct": 0.8136567834681043,
+     "accuracy_when_decided": 0.9304347826086956,
+     "latency_median": 4.0,
+     "ci95": {
+      "balanced_correct": [
+       0.7679245283018867,
+       0.8595687331536388
+      ],
+      "outage_recall": [
+       0.7619047619047619,
+       0.8952380952380953
+      ],
+      "comms_recall": [
+       0.7295597484276729,
+       0.8616352201257862
+      ],
+      "precision_outage": [
+       0.8332894736842106,
+       0.9431818181818182
+      ],
+      "precision_comms": [
+       0.929566374625707,
+       0.9920634920634921
+      ],
+      "false_outage_rate": [
+       0.031446540880503145,
+       0.1069182389937107
+      ],
+      "missed_outage_rate": [
+       0.009523809523809525,
+       0.09523809523809523
+      ],
+      "abstention_rate": [
+       0.08333333333333333,
+       0.1590909090909091
+      ]
+     },
+     "fault_free_false_outages": 100,
+     "fault_free_meter_days": 9464.0,
+     "fault_free_false_outage_per_meter_day": 0.010566356720202874,
+     "fault_free_ci95_per_meter_day": [
+      0.008695776381173304,
+      0.012834114866690411
+     ]
+    },
+    "step": {
+     "n_outage": 105,
+     "n_comms": 159,
+     "outage_recall": 0.5428571428571428,
+     "comms_recall": 0.6540880503144654,
+     "precision_outage": 0.5181818181818182,
+     "precision_comms": 0.6842105263157895,
+     "false_outage_rate": 0.3333333333333333,
+     "missed_outage_rate": 0.45714285714285713,
+     "abstention_rate": 0.0,
+     "correct_cause_rate": 0.6098484848484849,
+     "balanced_correct": 0.5984725965858041,
+     "accuracy_when_decided": 0.6145038167938931,
+     "latency_median": 4.0,
+     "ci95": {
+      "balanced_correct": [
+       0.5399820305480683,
+       0.6570530098831986
+      ],
+      "outage_recall": [
+       0.45714285714285713,
+       0.6288095238095236
+      ],
+      "comms_recall": [
+       0.5786163522012578,
+       0.7295597484276729
+      ],
+      "precision_outage": [
+       0.44761904761904764,
+       0.5865538990825688
+      ],
+      "precision_comms": [
+       0.6333273381294964,
+       0.7347293083900227
+      ],
+      "false_outage_rate": [
+       0.2641509433962264,
+       0.4088050314465409
+      ],
+      "missed_outage_rate": [
+       0.3619047619047619,
+       0.5523809523809524
+      ],
+      "abstention_rate": [
+       0.0,
+       0.0
+      ]
+     },
+     "fault_free_false_outages": 501,
+     "fault_free_meter_days": 9464.0,
+     "fault_free_false_outage_per_meter_day": 0.0529374471682164,
+     "fault_free_ci95_per_meter_day": [
+      0.04860493935563018,
+      0.057632748440076084
+     ]
+    },
+    "count": {
+     "n_outage": 105,
+     "n_comms": 159,
+     "outage_recall": 0.8285714285714286,
+     "comms_recall": 0.3836477987421384,
+     "precision_outage": 0.47540983606557374,
+     "precision_comms": 0.7721518987341772,
+     "false_outage_rate": 0.6037735849056604,
+     "missed_outage_rate": 0.17142857142857143,
+     "abstention_rate": 0.0,
+     "correct_cause_rate": 0.5606060606060606,
+     "balanced_correct": 0.6061096136567835,
+     "accuracy_when_decided": 0.5648854961832062,
+     "latency_median": 4.0,
+     "ci95": {
+      "balanced_correct": [
+       0.5554020664869721,
+       0.656644204851752
+      ],
+      "outage_recall": [
+       0.7523809523809524,
+       0.8952380952380953
+      ],
+      "comms_recall": [
+       0.31446540880503143,
+       0.4591194968553459
+      ],
+      "precision_outage": [
+       0.4378293918918919,
+       0.5149700598802395
+      ],
+      "precision_comms": [
+       0.6867424923574896,
+       0.8552671211160431
+      ],
+      "false_outage_rate": [
+       0.5345911949685535,
+       0.6792452830188679
+      ],
+      "missed_outage_rate": [
+       0.10476190476190476,
+       0.24761904761904763
+      ],
+      "abstention_rate": [
+       0.0,
+       0.0
+      ]
+     },
+     "fault_free_false_outages": 115,
+     "fault_free_meter_days": 9464.0,
+     "fault_free_false_outage_per_meter_day": 0.012151310228233306,
+     "fault_free_ci95_per_meter_day": [
+      0.010133472780747773,
+      0.014565039285613795
+     ]
+    },
+    "structure": {
+     "n_outage": 105,
+     "n_comms": 159,
+     "outage_recall": 0.7428571428571429,
+     "comms_recall": 0.3836477987421384,
+     "precision_outage": 0.5416666666666666,
+     "precision_comms": 0.7721518987341772,
+     "false_outage_rate": 0.41509433962264153,
+     "missed_outage_rate": 0.17142857142857143,
+     "abstention_rate": 0.14772727272727273,
+     "correct_cause_rate": 0.5265151515151515,
+     "balanced_correct": 0.5632524707996407,
+     "accuracy_when_decided": 0.6233183856502242,
+     "latency_median": 4.0,
+     "ci95": {
+      "balanced_correct": [
+       0.5109613656783468,
+       0.618423180592992
+      ],
+      "outage_recall": [
+       0.6571428571428571,
+       0.819047619047619
+      ],
+      "comms_recall": [
+       0.3081761006289308,
+       0.4591194968553459
+      ],
+      "precision_outage": [
+       0.48683771929824565,
+       0.600036231884058
+      ],
+      "precision_comms": [
+       0.6922535211267605,
+       0.8500337837837837
+      ],
+      "false_outage_rate": [
+       0.34591194968553457,
+       0.4968553459119497
+      ],
+      "missed_outage_rate": [
+       0.10476190476190476,
+       0.24785714285714264
+      ],
+      "abstention_rate": [
+       0.10984848484848485,
+       0.1857007575757575
+      ]
+     },
+     "fault_free_false_outages": 105,
+     "fault_free_meter_days": 9464.0,
+     "fault_free_false_outage_per_meter_day": 0.011094674556213017,
+     "fault_free_ci95_per_meter_day": [
+      0.009173827744733225,
+      0.013412270442629774
+     ]
+    }
+   }
+  }
+ }
+}

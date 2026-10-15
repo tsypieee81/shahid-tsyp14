@@ -1,0 +1,106 @@
+{
+ "stamp": {
+  "commit": "b3e555c",
+  "config_hash": "709d44bc8bc3",
+  "config": {
+   "n_random_zones": 24,
+   "rows_per_zone": 20,
+   "unmetered_kw": 2.0,
+   "unmetered_rows": 200,
+   "seed": 7,
+   "baseline_config": "configs/baseline.yaml",
+   "world": {
+    "grid": "1-LV-semiurb5--0-sw",
+    "start_day": 0,
+    "days": 366,
+    "diversity": 0.5,
+    "pv_scale": 1.0,
+    "seed": 0,
+    "unmetered": {
+     "kind": "none",
+     "kw": 0.0
+    }
+   }
+  },
+  "command": "python -m shahid.cp3_checks",
+  "date": "2026-10-05T16:32:33",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "world_converged": 35136,
+ "world_steps": 35136,
+ "resolve_vs_naive": {
+  "n": 600,
+  "n_zones": 30,
+  "zone_sizes": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   9,
+   12,
+   13,
+   14,
+   16,
+   18,
+   21,
+   22,
+   26,
+   28,
+   30,
+   32,
+   33,
+   34,
+   37
+  ],
+  "delta_kwh_mean": -0.00515728820040569,
+  "delta_kwh_abs_p50": 0.0015459515939486579,
+  "delta_kwh_abs_p95": 0.02536078144568967,
+  "delta_kwh_abs_max": 0.046943895533372526,
+  "delta_over_abs_lost_p50_(|lost|>0.1kWh)": 0.0017937454532867,
+  "delta_over_abs_lost_p95_(|lost|>0.1kWh)": 0.007635082850010995,
+  "delta_over_T_p95": 0.002245463142864378,
+  "sign_note": "delta < 0 means the re-solved transformer energy is lower than naive, i.e. the outage also removed line losses"
+ },
+ "unmetered_posthoc_error": {
+  "unmetered_kwh_per_interval": 0.5,
+  "bus": 21,
+  "n": 200,
+  "error_kwh_mean": 0.002753816090635266,
+  "error_kwh_abs_max": 0.008900525179324603,
+  "error_over_u_abs_max": 0.017801050358649206
+ },
+ "baseline_dataset": {
+  "dir": "data/baseline_1fe8f9a34a75",
+  "intervals": 35136,
+  "meters": 104,
+  "cells_by_cause": {
+   "DELAYED": 108897,
+   "RANDOM_LOSS": 36743,
+   "NORMAL": 0,
+   "COMMS_FAILURE": 0,
+   "OUTAGE": 0
+  },
+  "share_never_arrived": 0.010055159293120397,
+  "files_mb": {
+   "manifest.json": 0.0,
+   "context/meters.parquet": 0.0,
+   "context/zones.parquet": 0.0,
+   "labels/cells.parquet": 0.66,
+   "labels/episodes.parquet": 0.0,
+   "observed/events.parquet": 0.0,
+   "observed/meter_readings.parquet": 11.21,
+   "observed/transformer.parquet": 0.39,
+   "truth/meter_energy_true.parquet": 22.05,
+   "truth/powerflow.npz": 53.67
+  },
+  "annual_meter_kwh_true": 383988.73618125456,
+  "annual_trafo_kwh_observed": 383772.6,
+  "annual_trafo_kwh_true": 384757.5501928564,
+  "annual_line_losses_kwh": 768.846630312512,
+  "implied_trafo_meter_gain": 0.9974400757246668
+ }
+}

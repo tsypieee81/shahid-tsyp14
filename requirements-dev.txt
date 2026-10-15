@@ -1,0 +1,12 @@
+# Development-only requirements: executing the notebooks (python -m shahid.run_notebooks) and the
+# classifier-comparison study (python -m shahid.classifier_study), the PDF number check (pypdf)
+# and the lint inventory (ruff check --select F).
+# Not needed for the pipeline or the tests. Install after requirements.lock.
+nbformat==5.11.1
+nbclient==0.11.0
+nbconvert==7.17.1
+ipykernel==7.4.0
+shap==0.51.0
+slicer==0.0.8
+pypdf==6.20.1
+ruff==0.17.0

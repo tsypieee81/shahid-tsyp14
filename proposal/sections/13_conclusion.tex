@@ -1,0 +1,26 @@
+\section{Conclusion and Phase 2 Plan}\label{sec:conclusion}
+In simulation on five benchmark LV networks, a transformer-side energy balance with abstention
+separates power outages from communication failures for silent groups above its measured resolution
+limit, and it abstains below that limit instead of guessing. Every verdict carries its evidence, a
+probability, the alternative cause and a tamper-evident record. The evaluations also show where the
+method fails and what deployment would cost in operator time.
+
+\textbf{Phase 2 plan, in priority order.}
+\begin{enumerate}[leftmargin=1.4em]
+\item Bring operator load to at most 1.93 human items per transformer-day, so that one operator around
+the clock covers a district of 149 substations (the escalating gate gives 4.15); wire the escalating
+gate and the communication re-check into the escalation step; operator trials of the console.
+\item Run the registered people study on the explanations.
+\item Fix the evidence accounting for late stored readings and sub-interval onsets; add a gap model
+that depends on load.
+\item Single-meter faults: per-meter residual drift and neighbour comparison with field voltage data.
+\item Shared learning through a bulletin of frozen thresholds and anonymous failure signatures.
+\item Ask STEG the prerequisite questions of Section~\ref{sec:business} and run a retrospective test on
+one substation.
+\end{enumerate}
+
+\textbf{Repository.} The submitted repository holds the code (MIT), the simulated dataset (ODbL 1.0,
+derived from SimBench, which is ODbL 1.0), the claims ledger, the protocols and the extended report
+(\texttt{docs/EXTENDED\_REPORT.md}). Quickstart: \texttt{pip install -r requirements.lock}, \texttt{python -m pytest -q},
+\texttt{python -m shahid.demo}. Figures and tables contain information from the SimBench database,
+made available under the ODbL 1.0.

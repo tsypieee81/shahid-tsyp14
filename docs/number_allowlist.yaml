@@ -1,0 +1,92 @@
+# Numbers in proposal-facing documents that are not measured results. Each has a reason, prefixed
+# by a category tag: [date], [identifier], [parameter], [environment], [derived] (arithmetic on
+# ledger values), [count] (size of a design or of a file set, not an outcome). A measured result
+# must never be listed here (tests/test_numbers.py enforces the tags).
+# Checked by tests/test_numbers.py (shahid/check_numbers.py).
+global:
+  1301: "[identifier] event-stream seed (seed + 1000)"
+  1303: "[identifier] event-stream seed (seed + 1000)"
+  2010: "[date] year in a cited report title (Ofgem 2010-11)"
+  403: "[identifier] HTTP status code returned by a web page"
+  2016: "[date] SimBench profile year"
+  395508: "[identifier] article id in the URL of proposal reference [2] (Webdo, March 2026)"
+  403405: "[identifier] article id in the URL of proposal reference [11] (Webdo, 2 September 2026)"
+  4.096: "[derived] bench supply-sensor full scale in A: INA226 shunt input 81.92 mV (datasheet SBOS547C) / 0.02 ohm shunt (DESIGN CHOICE)"
+  819.2: "[derived] bench load-sensor full scale in mA: 81.92 mV (INA226 datasheet SBOS547C) / 0.1 ohm shunt (DESIGN CHOICE)"
+  81.92: "[parameter] INA226 shunt voltage input range in mV, datasheet SBOS547C (proposal reference [14])"
+  520: "[parameter] ESP32 on-chip SRAM in KB, ESP32 Series Datasheet v5.3 (proposal reference [16])"
+  2026: "[date] year of an access or revision date in the proposal's bench table and references"
+  802.11: "[identifier] IEEE Wi-Fi standard named in the ESP32 datasheet v5.3"
+  2015: "[date] revision year of the INA219 datasheet SBOS448G (proposal reference [15])"
+  41: "[count] customers (loads) of SimBench network 1-LV-semiurb4--0-sw, results/cp1_simbench_facts.json"
+  0.697: "[derived] development test-week coverage 1 - 0.303 (abstention, C7-03), 3 decimals"
+  0.527: "[derived] semiurb4 confirmatory coverage 1 - 0.4735 (abstention, P2C-01), 3 decimals"
+files:
+  proposal/sections/11_business.tex:
+    15.2: "[derived] 121.7 review hours per day (BUS-02) / 8-hour shift"
+    6.4: "[derived] 51.5 review hours per day (BUS-02) / 8-hour shift"
+    288: "[derived] items one operator reviews per day: 24 h x 60 / 5 min per item"
+    1.93: "[derived] 288 items per day / 149 substations (Douz-sized district)"
+    2004: "[identifier] year in the name of Organic Law 2004-63"
+    2025: "[date] year the STEG price and cost figures refer to (Managers, 29 June 2026)"
+  proposal/sections/13_conclusion.tex:
+    1.93: "[derived] 24 h x 60 / 5 min per item / 149 substations"
+  docs/BUSINESS_CASE.md:
+    2004: "[identifier] year in the name of Organic Law 2004-63"
+    2025: "[date] year the STEG price and cost figures refer to (Managers, 29 June 2026)"
+  README.md:
+    24.6: "[environment] tracked size of dataset/ in MB, verified by tests/test_hygiene.py"
+    1.65: "[environment] Streamlit version pinned for the console (streamlit==1.65.0)"
+    88: "[environment] length in seconds of docs/media/shahid_explainer.mp4, measured by video/build.py --cut explainer"
+    3290: "[identifier] SimBench paper article number (Crossref record of doi:10.3390/en13123290)"
+    2020: "[date] SimBench paper year"
+    "10.3390": "[identifier] DOI prefix of the SimBench paper"
+    6510: "[identifier] pandapower paper first page (pandapower.org/references)"
+    6521: "[identifier] pandapower paper last page"
+    2018: "[date] pandapower paper year"
+    "10.1109": "[identifier] DOI prefix of the pandapower paper"
+  docs/COMPLIANCE.md:
+    340: "[parameter] number of injected events per scenario (configs/cp5_episodes.yaml generator n)"
+  docs/process/checkpoints/CP3.md:
+    -0.26: "[derived] (transformer-meter gain 0.9974 - 1) x 100, from C3-04"
+  docs/process/checkpoints/CP4.md:
+    0.25: "[parameter] diversity grid value d = 0.25"
+  docs/process/checkpoints/CP9.md:
+    25: "[environment] approximate size in MB of dataset/ (du), not a result"
+  docs/process/checkpoints/CP10.md:
+    1.4: "[derived] ratio 0.114 / 0.083 from CP10-T3"
+  docs/EXTENDED_REPORT.md:
+    1503.08244: "[identifier] arXiv identifier of report reference 1 (docs/literature/REFERENCES.md L1)"
+    1912.04543: "[identifier] arXiv identifier of report reference 2 (L2)"
+    1802.04117: "[identifier] arXiv identifier of report reference 3 (L3)"
+    "10.4108": "[identifier] DOI prefix of report reference 4 (L4)"
+    "10.1109": "[identifier] DOI prefix of report references 7 and 12"
+    "1705.08500": "[identifier] arXiv identifier of report reference 9 (L9)"
+    "10.3390": "[identifier] DOI prefix of the SimBench paper"
+ledger:
+  FC-01:
+    2: "[parameter] SHAHID_WORKERS used in the fresh-clone run"
+  C2-01:
+    7: "[parameter] episode size in the smoke config"
+    34: "[parameter] episode size in the smoke config"
+  C3-01:
+    0.1: "[parameter] selection threshold abs(lost) > 0.1 kWh"
+  C6-01:
+    504: "[derived] episode count n_outage + n_comms (237 + 267) in results/cp6/nominal.json"
+  AU-07:
+    43.8: "[derived] 384 758 kWh / 8 784 h from C3-04"
+    8784: "[parameter] hours in the 2016 profile year (366 x 24)"
+  AU-08:
+    11: "[environment] Windows version"
+    3.11: "[environment] Python version"
+    4: "[parameter] worker count SHAHID_WORKERS"
+  CP10-REC:
+    46: "[count] number of record families in results/records/"
+  CP10-T10:
+    3: "[parameter] world index 0-3"
+  CP11-REPRO2:
+    10: "[count] number of addendum B families (cp11_sims.extra_families)"
+  CAD-13:
+    60: "[parameter] reporting interval of the 60-min condition"
+  CAD-14:
+    1000: "[parameter] rate unit: per 1 000 silent groups"

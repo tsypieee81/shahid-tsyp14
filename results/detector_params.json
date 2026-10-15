@@ -1,0 +1,165 @@
+{
+ "stamp": {
+  "commit": "329946f",
+  "config_hash": "02b13dbef9dc",
+  "config": {
+   "episodes_config": "configs/cp5_episodes.yaml",
+   "seeds": [
+    101,
+    102,
+    103
+   ],
+   "baseline_config": "configs/baseline.yaml",
+   "methods": [
+    "share",
+    "ztest",
+    "lr",
+    "bayes"
+   ],
+   "baselines": [
+    "count",
+    "structure",
+    "step",
+    "naive"
+   ],
+   "grid": {
+    "share": [
+     "share_threshold",
+     [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8
+     ]
+    ],
+    "ztest": [
+     "z_crit",
+     [
+      1.645,
+      1.96,
+      2.25,
+      2.576,
+      2.9,
+      3.29
+     ]
+    ],
+    "lr": [
+     "llr_threshold",
+     [
+      -6,
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      4
+     ]
+    ],
+    "bayes": [
+     "abstain_band",
+     [
+      0.005,
+      0.01,
+      0.02,
+      0.03,
+      0.05,
+      0.1,
+      0.2
+     ]
+    ]
+   },
+   "min_expected_grid": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+   ],
+   "constraints": {
+    "fault_free_false_outage_per_meter_day": 0.001,
+    "missed_outage_rate": 0.05,
+    "false_outage_rate": 0.05
+   },
+   "objective": "minimise abstention_rate subject to constraints",
+   "permute_shift_days": 7,
+   "boot": 1000,
+   "seed": 5
+  },
+  "command": "python -m shahid.cp5_compare",
+  "date": "2026-10-06T11:10:21",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "fitted": {
+  "K": 2,
+  "L_max": 4,
+  "history_days": 14,
+  "gap_days": 1,
+  "min_expected_kwh": 0.5,
+  "share_threshold": 0.5,
+  "z_crit": 2.576,
+  "t_df": 4,
+  "llr_threshold": 0.0,
+  "prior_comms": 0.5,
+  "abstain_band": 0.05,
+  "gap_const": 0.002000000000000668,
+  "gap_sd": 0.017791200000000673,
+  "gap_acf1": 0.35245169508377205,
+  "rho_by_lead": [
+   0.9394819743242748,
+   0.8813673632578846,
+   0.8250517220391905,
+   0.7611565245070647,
+   0.6980275171577657,
+   0.6712246261800544
+  ],
+  "sigma_mult_by_lead": [
+   0.6246625189711775,
+   0.7856576682947578,
+   0.9180041983151381,
+   0.9837470543907293,
+   1.004591550845259,
+   1.0875036401415232
+  ],
+  "rho1_by_lead": [
+   0.8418996162075056,
+   0.6995774430973662,
+   0.6321448623168988,
+   0.5812689102460451,
+   0.547582037819761,
+   0.47454963364212444
+  ],
+  "sigma1_mult_by_lead": [
+   0.5871813149465126,
+   0.7320462174420389,
+   0.7864655283146786,
+   0.8129514668402504,
+   0.8142868763357626,
+   0.8446867585796767
+  ]
+ },
+ "thresholds": {
+  "share": {
+   "share_threshold": 0.5,
+   "min_expected_kwh": 2.0
+  },
+  "ztest": {
+   "z_crit": 2.9,
+   "min_expected_kwh": 2.0
+  },
+  "lr": {
+   "llr_threshold": 0,
+   "min_expected_kwh": 2.0
+  },
+  "bayes": {
+   "abstain_band": 0.03,
+   "min_expected_kwh": 0.0
+  }
+ }
+}

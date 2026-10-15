@@ -1,0 +1,40 @@
+\section{Introduction}\label{sec:intro}
+The Tunisian utility, the Société Tunisienne de l'Électricité et du Gaz (STEG), is deploying smart
+meters. Press reports of a STEG briefing put the count at about 80,000 low-voltage (LV) meters in
+pilot zones by the end of March 2026, with a first phase of 450,000 electricity meters
+\cite{africanmanager2026compteurs,webdo2026compteurs}. STEG serves about 4.7 million subscribers,
+most of them residential LV customers \cite{lapresse2025steg}. In the summer of 2026 the same network
+went through rotating power cuts during a heatwave
+\cite{newarab2026heatwave,africanmanager2026heat,webdo2026delestages}. These facts come from
+secondary sources; they motivate the problem and enter no result.
+
+As this advanced metering infrastructure (AMI) grows, operators will see groups of meters go silent.
+From the meter data alone they cannot tell an \emph{outage}, which needs a crew, from a
+\emph{communication failure}, which does not. A wrong call either wastes a truck roll or leaves
+customers without power and unattended. SHAHID addresses this one question for one LV neighbourhood
+under one medium-voltage/low-voltage (MV/LV) transformer, with 15-min readings. It is a probabilistic
+artificial intelligence (AI) trust layer between smart-meter data and dispatch decisions.
+
+\textbf{Hypothesis.} A meter on the LV side of the transformer still measures the energy of customers
+whose data stopped, and no longer measures the energy of customers who lost power. If this difference
+is large compared with the uncertainty of the expected consumption, the two causes can be separated.
+
+\textbf{Contributions.} All results are SIMULATED.
+\begin{enumerate}[leftmargin=1.4em]
+\item A transformer-side energy-balance test with abstention that, with thresholds frozen on one
+network, called no labelled communication failure an outage in every registered evaluation, on four
+networks never used for tuning. On data with no events, random single-meter data losses still produced
+about 15 to 33 false outage verdicts per transformer-year under the registered configuration; a post-hoc
+gate reduced this to 0.2 to 1.0 (Section~\ref{sec:results}).
+\item A measured operating envelope: the resolution limit, the reporting interval, and five conditions
+under which the method weakens or fails (Section~\ref{sec:weakens}).
+\item Governance measured, not assumed: an escalation table whose automatic rule was found to close
+real outages and was made provisional, operator load per transformer-day, a hash-chained decision log
+and an operator console preview (Sections~\ref{sec:explain}--\ref{sec:governance}).
+\item A failure mechanism measured and removed: a powered meter merged into an outage group can
+explain the whole residual; splitting silent groups by feeder removed the confident wrong verdicts it
+caused, 4 to 0 (Section~\ref{sec:phase2}).
+\item A verifiable evidence chain: protocols committed before each confirmatory run, negative results
+reported, and every number in this paper checked by code against a claims ledger
+(Section~\ref{sec:protocol}).
+\end{enumerate}

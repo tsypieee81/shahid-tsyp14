@@ -1,0 +1,27 @@
+{
+ "stamp": {
+  "commit": "73d0f71",
+  "config_hash": "44136fa355b3",
+  "config": {},
+  "command": "python -m shahid.verify_repro --summary",
+  "date": "2026-10-10T19:30:54",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "repro_check_all.json": {
+  "n_files": 178,
+  "n_identical": 163,
+  "n_differences": 15,
+  "n_parquet_differences": 11
+ },
+ "repro_check_fresh_clone.json": {
+  "n_files": 178,
+  "n_identical": 177,
+  "n_differences": 1,
+  "n_parquet_differences": 0
+ },
+ "records/verify.json": {
+  "n_checked": 264,
+  "n_mismatches": 0
+ }
+}

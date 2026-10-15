@@ -1,0 +1,156 @@
+{
+ "stamp": {
+  "commit": "fdeb289",
+  "config_hash": "3069c2649fb8",
+  "config": {
+   "world": {
+    "grid": "1-LV-semiurb5--0-sw",
+    "start_day": 146,
+    "days": 15,
+    "diversity": 0.5,
+    "pv_scale": 1.0,
+    "seed": 0,
+    "unmetered": {
+     "kind": "none",
+     "kw": 0.0
+    }
+   },
+   "meter": {
+    "gain_sd": 0.005,
+    "noise_rel_sd": 0.002,
+    "noise_abs_kwh": 0.0005,
+    "quant_kwh": 0.001
+   },
+   "tmeter": {
+    "gain_sd": 0.002,
+    "noise_rel_sd": 0.001,
+    "quant_kwh": 0.01
+   },
+   "comms": {
+    "concentrators": "aligned",
+    "p_missing": 0.01,
+    "p_delay": 0.03,
+    "delay_mean_intervals": 4,
+    "backlog": true,
+    "backlog_spread": 4,
+    "outage_backfill": false,
+    "last_gasp": false,
+    "voltage": true
+   },
+   "seed": 1,
+   "events": [
+    {
+     "type": "outage",
+     "line": 4,
+     "duration_steps": 8,
+     "start_step": 1380
+    }
+   ]
+  },
+  "command": "python -m shahid.demo_eval small_group",
+  "date": "2026-10-13T22:32:20",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "note": "SIMULATION EVALUATION: labels are not available to the detector",
+ "group_truth": [
+  {
+   "onset": "2016-06-09 01:45:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 02:15:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 02:30:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 03:45:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 07:30:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 07:45:00",
+   "n_meters": 2,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 08:30:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 09:00:00",
+   "n_meters": 2,
+   "verdict": "OUTAGE",
+   "truth": "OUTAGE"
+  },
+  {
+   "onset": "2016-06-09 10:00:00",
+   "n_meters": 1,
+   "verdict": "COMMS_FAILURE",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 13:00:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 13:45:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 14:45:00",
+   "n_meters": 1,
+   "verdict": "COMMS_FAILURE",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 16:15:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 18:00:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  },
+  {
+   "onset": "2016-06-09 20:00:00",
+   "n_meters": 1,
+   "verdict": "UNCERTAIN",
+   "truth": "COMMS_FAILURE"
+  }
+ ],
+ "episodes": [
+  {
+   "cause": "OUTAGE",
+   "start": "2016-06-09 09:00:00",
+   "n_meters": 2,
+   "verdict": "OUTAGE"
+  }
+ ]
+}

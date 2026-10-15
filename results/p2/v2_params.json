@@ -1,0 +1,33 @@
+{
+ "stamp": {
+  "commit": "5dd66a1",
+  "config_hash": "a60f1613849d",
+  "config": {
+   "protocol": "docs/process/protocols/02_p2_evidence_v2.md",
+   "bands": [
+    0.005,
+    0.01,
+    0.02,
+    0.03,
+    0.05,
+    0.1,
+    0.2
+   ]
+  },
+  "command": "python -m shahid.p2_v2 select",
+  "date": "2026-10-14T08:59:16",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "rules": {
+  "stored": true,
+  "own_excluded": true,
+  "onset_excluded": true,
+  "minutes": true,
+  "silence_min": 30,
+  "window_min": 60
+ },
+ "frozen": {
+  "band": 0.1
+ }
+}

@@ -1,0 +1,35 @@
+\section{Data and Anomaly Simulation}\label{sec:data}
+No STEG data is available to us, and no public dataset combines customer meter readings, a transformer
+meter, a communication layer and labelled causes. We therefore simulate the network and its
+measurement chain and label every event where it is injected. Table~\ref{tab:data} states what is real
+and what is simulated, class by class.
+
+\begin{table*}[!t]
+\caption{What is real and what is simulated, class by class}\label{tab:data}
+\centering\tabfont\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\textwidth}{@{}L{0.21\textwidth} L{0.09\textwidth} Y L{0.21\textwidth}@{}}
+\toprule
+\textbf{Element or anomaly class} & \textbf{Layer} & \textbf{Generation rule} & \textbf{Status (default value)} \\
+\midrule
+Networks, load and PV profiles & truth & Public German benchmark LV networks with their 2016 profiles (SimBench) \cite{meinecke2020simbench} & REUSED, real benchmark data, not Tunisian \\
+Electrical state & truth & AC power flow at every 15-min step (pandapower) \cite{thurner2018pandapower} & REUSED solver \\
+Customer diversity & truth & Per-customer daily shift, daily scale and correlated noise around the benchmark shapes, one parameter $d$ & ASSUMPTION, results over its range \\
+Physical outage & truth & A line is opened and the power flow is re-solved; isolated customers and their PV drop to zero & SIMULATED, from the event file \\
+Real load change & truth & The load of a set of customers is scaled, then re-solved & SIMULATED, factor 0.3 to 2.5 \\
+Unmetered energy & truth & Added to the transformer series, constant or following the load shape & SIMULATED, none by default \\
+Communication failure & observation & Readings of a concentrator, line section or random set stop; stored readings arrive after the link returns & SIMULATED, late delivery on \\
+Random missing reading & observation & Each reading is lost independently & ASSUMPTION, probability 0.01 \\
+Delayed reading & observation & Each reading may arrive some intervals late & ASSUMPTION, probability 0.03 \\
+Meter and transformer-meter error & observation & Fixed gain, noise and quantisation per device & ASSUMPTION, gain sd 0.005 and 0.002 \\
+Single-meter faults (study only) & observation & Gain, bias and noise injected into one meter for seven days & SIMULATED, not in the dataset \\
+Power-loss (last-gasp) message & observation & Optional message at outage onset & implemented, off in every result \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+The simulator writes four separate stores: hidden physical truth, the observed data a utility export
+could contain, static context, and labels. The detector reads only observed data and context; a test
+fails if it opens truth or labels. Outages and communication failures are drawn from the same sets of
+customers, so the pattern of silent meters carries no information about the cause. Every generator
+parameter is a configuration value in the repository, and the committed dataset regenerates with one
+command per folder.

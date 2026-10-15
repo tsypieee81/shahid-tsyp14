@@ -1,0 +1,2 @@
+LEVEL 1 (documents -> ledger): checked 1796 numbers, unmatched 0
+LEVEL 2 (ledger -> cited result files): checked 397 numbers, unmatched 0

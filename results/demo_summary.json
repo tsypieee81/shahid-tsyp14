@@ -1,0 +1,21 @@
+{
+ "stamp": {
+  "commit": "84ffc9d",
+  "config_hash": "2b239a82142c",
+  "config": {
+   "data": "dataset/episodes_semiurb5_seed101",
+   "rule": "Cases are fixed by this rule: the first labelled episode (by start time) with at least 10 meters that (1) is an outage decided OUTAGE, (2) is a communication failure decided COMMS_FAILURE, (3) is abstained (UNCERTAIN); (4) the documented wrong verdict of ledger C9-01 (smoke scenario, first entry of results/decision_log_demo.jsonl)."
+  },
+  "command": "python -m shahid.demo",
+  "date": "2026-10-11T21:47:41",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "label": "SIMULATED; one dataset folder, whole year, all labelled events; not a held-out result",
+ "n_labelled_events": 340,
+ "decided_correctly": 200,
+ "abstained": 139,
+ "decided_wrongly": 1,
+ "never_detected": 0,
+ "rule": "Cases are fixed by this rule: the first labelled episode (by start time) with at least 10 meters that (1) is an outage decided OUTAGE, (2) is a communication failure decided COMMS_FAILURE, (3) is abstained (UNCERTAIN); (4) the documented wrong verdict of ledger C9-01 (smoke scenario, first entry of results/decision_log_demo.jsonl)."
+}

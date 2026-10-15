@@ -1,0 +1,121 @@
+{
+ "stamp": {
+  "commit": "81342d6",
+  "config_hash": "dd5550854b20",
+  "config": {
+   "world": {
+    "start_day": 100,
+    "days": 16
+   },
+   "window": [
+    1480,
+    8
+   ]
+  },
+  "command": "python -m shahid.audit_faults",
+  "date": "2026-10-07T10:33:33",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "scenarios": {
+  "physical_outage (feeder line opened)": {
+   "physical_state_changes": true,
+   "meter_truth_changes": true,
+   "transformer_truth_changes": true,
+   "observations_change": true,
+   "detector_sees_label_columns": [],
+   "meter_truth_kwh_window_base_vs_event": [
+    6.49,
+    0.0
+   ],
+   "transformer_truth_kwh_window_base_vs_event": [
+    8.523,
+    2.03
+   ]
+  },
+  "comms_failure (zone)": {
+   "physical_state_changes": false,
+   "meter_truth_changes": false,
+   "transformer_truth_changes": false,
+   "observations_change": true,
+   "detector_sees_label_columns": [],
+   "meter_truth_kwh_window_base_vs_event": [
+    6.49,
+    6.49
+   ],
+   "transformer_truth_kwh_window_base_vs_event": [
+    8.523,
+    8.523
+   ]
+  },
+  "concentrator_failure": {
+   "physical_state_changes": false,
+   "meter_truth_changes": false,
+   "transformer_truth_changes": false,
+   "observations_change": true,
+   "detector_sees_label_columns": [],
+   "meter_truth_kwh_window_base_vs_event": [
+    4.293,
+    4.293
+   ],
+   "transformer_truth_kwh_window_base_vs_event": [
+    8.523,
+    8.523
+   ]
+  },
+  "real_load_change (x2, no comms fault)": {
+   "physical_state_changes": true,
+   "meter_truth_changes": true,
+   "transformer_truth_changes": true,
+   "observations_change": true,
+   "detector_sees_label_columns": [],
+   "meter_truth_kwh_window_base_vs_event": [
+    6.49,
+    12.979
+   ],
+   "transformer_truth_kwh_window_base_vs_event": [
+    8.523,
+    15.022
+   ]
+  },
+  "unmetered_energy (load-shaped 5 kW)": {
+   "physical_state_changes": false,
+   "meter_truth_changes": false,
+   "transformer_truth_changes": true,
+   "observations_change": true,
+   "detector_sees_label_columns": [],
+   "meter_truth_kwh_window_base_vs_event": [
+    6.49,
+    6.49
+   ],
+   "transformer_truth_kwh_window_base_vs_event": [
+    8.523,
+    20.829
+   ]
+  },
+  "stuck_meter (CP8, observed readings only)": {
+   "physical_state_changes": false,
+   "meter_truth_changes": false,
+   "transformer_truth_changes": false,
+   "observations_change": true,
+   "true_load_varies_in_window": true,
+   "observed_frozen_in_window": true,
+   "note": "inject() edits a copy of the observed array; truth arrays are never passed to it"
+  }
+ },
+ "conservation_example": {
+  "interval": "2016-04-25 10:00:00",
+  "customer_load_kwh": 18.707423252508576,
+  "pv_generation_kwh": 15.049707874327503,
+  "line_losses_kwh": 0.01975880259551559,
+  "transformer_lv_delivered_kwh_truth": 3.6774740055620248,
+  "check_load_minus_pv_plus_losses_kwh": 3.6774741807765894,
+  "residual_kwh": -1.7521456463498453e-07,
+  "transformer_losses_kwh_outside_lv_meter": 0.43515488555898824,
+  "transformer_hv_side_kwh (= LV delivered + transformer losses)": 4.112628891121013,
+  "observed_transformer_kwh": 3.69,
+  "observed_sum_of_reported_meters_kwh": 3.639,
+  "n_meters_reported_this_interval": 103,
+  "observed_gap_kwh": 0.051000000000000156
+ }
+}

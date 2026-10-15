@@ -1,0 +1,277 @@
+{
+ "stamp": {
+  "commit": "82a2f60",
+  "config_hash": "13e4c17f6c2c",
+  "config": {
+   "protocol": "docs/process/protocols/01_p1_size_prior.md",
+   "mode": "v1",
+   "bands": [
+    0.005,
+    0.01,
+    0.02,
+    0.03,
+    0.05,
+    0.1,
+    0.2
+   ],
+   "train_weeks": [
+    0,
+    1
+   ],
+   "val_weeks": [
+    2
+   ]
+  },
+  "command": "python -m shahid.p1_prior",
+  "date": "2026-10-14T08:54:18",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "label": "development, selection data",
+ "mode": "v1",
+ "n_training_groups": 8505,
+ "prior_by_size_bin": {
+  "1-1": 0.9962835147332094,
+  "2-2": 0.979890310786106,
+  "3-5": 0.688,
+  "6-20": 0.5316455696202531,
+  "21-1000000": 0.6357615894039735
+ },
+ "lr": {
+  "coef": [
+   0.5836391768200971,
+   -2.2567333761224826,
+   0.4653453929288927
+  ],
+  "intercept": 5.717268988590529
+ },
+ "v1_at_frozen_band": {
+  "band": 0.03,
+  "missed_outage_rate": 0.03571428571428571,
+  "false_outage_rate": 0.0,
+  "abstention_rate": 0.3371212121212121,
+  "outage_recall": 0.5446428571428571,
+  "comms_recall": 0.7171052631578947,
+  "accuracy_when_decided": 0.9883720930232558,
+  "ff_per_meter_day": 0.0006339814032121725,
+  "ff_per_transformer_year": 24.065934065934066,
+  "ff_k": 6,
+  "feasible": true
+ },
+ "P1a": {
+  "sweep": [
+   {
+    "band": 0.005,
+    "missed_outage_rate": 0.10714285714285714,
+    "false_outage_rate": 0.0,
+    "abstention_rate": 0.3787878787878788,
+    "outage_recall": 0.32142857142857145,
+    "comms_recall": 0.756578947368421,
+    "accuracy_when_decided": 0.937888198757764,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.01,
+    "missed_outage_rate": 0.10714285714285714,
+    "false_outage_rate": 0.0,
+    "abstention_rate": 0.3143939393939394,
+    "outage_recall": 0.4017857142857143,
+    "comms_recall": 0.8092105263157895,
+    "accuracy_when_decided": 0.9438202247191011,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.02,
+    "missed_outage_rate": 0.10714285714285714,
+    "false_outage_rate": 0.0,
+    "abstention_rate": 0.24621212121212122,
+    "outage_recall": 0.45535714285714285,
+    "comms_recall": 0.8881578947368421,
+    "accuracy_when_decided": 0.9489795918367347,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.03,
+    "missed_outage_rate": 0.125,
+    "false_outage_rate": 0.0,
+    "abstention_rate": 0.2159090909090909,
+    "outage_recall": 0.49107142857142855,
+    "comms_recall": 0.9013157894736842,
+    "accuracy_when_decided": 0.9411764705882353,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.05,
+    "missed_outage_rate": 0.16964285714285715,
+    "false_outage_rate": 0.0,
+    "abstention_rate": 0.18181818181818182,
+    "outage_recall": 0.5267857142857143,
+    "comms_recall": 0.9013157894736842,
+    "accuracy_when_decided": 0.92018779342723,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.1,
+    "missed_outage_rate": 0.1875,
+    "false_outage_rate": 0.0,
+    "abstention_rate": 0.12121212121212122,
+    "outage_recall": 0.625,
+    "comms_recall": 0.9210526315789473,
+    "accuracy_when_decided": 0.9170305676855895,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.2,
+    "missed_outage_rate": 0.1875,
+    "false_outage_rate": 0.006578947368421052,
+    "abstention_rate": 0.07954545454545454,
+    "outage_recall": 0.6517857142857143,
+    "comms_recall": 0.9671052631578947,
+    "accuracy_when_decided": 0.9166666666666666,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   }
+  ],
+  "chosen": null
+ },
+ "P1b": {
+  "sweep": [
+   {
+    "band": 0.005,
+    "missed_outage_rate": 0.11607142857142858,
+    "false_outage_rate": 0.0,
+    "abstention_rate": 0.23484848484848486,
+    "outage_recall": 0.5089285714285714,
+    "comms_recall": 0.8618421052631579,
+    "accuracy_when_decided": 0.9447236180904522,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.01,
+    "missed_outage_rate": 0.11607142857142858,
+    "false_outage_rate": 0.006578947368421052,
+    "abstention_rate": 0.19318181818181818,
+    "outage_recall": 0.5357142857142857,
+    "comms_recall": 0.9078947368421053,
+    "accuracy_when_decided": 0.9428571428571428,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.02,
+    "missed_outage_rate": 0.13392857142857142,
+    "false_outage_rate": 0.006578947368421052,
+    "abstention_rate": 0.1590909090909091,
+    "outage_recall": 0.5625,
+    "comms_recall": 0.9342105263157895,
+    "accuracy_when_decided": 0.9360730593607306,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.03,
+    "missed_outage_rate": 0.16071428571428573,
+    "false_outage_rate": 0.006578947368421052,
+    "abstention_rate": 0.13636363636363635,
+    "outage_recall": 0.5714285714285714,
+    "comms_recall": 0.9473684210526315,
+    "accuracy_when_decided": 0.9244444444444444,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.05,
+    "missed_outage_rate": 0.20535714285714285,
+    "false_outage_rate": 0.006578947368421052,
+    "abstention_rate": 0.11363636363636363,
+    "outage_recall": 0.5803571428571429,
+    "comms_recall": 0.9473684210526315,
+    "accuracy_when_decided": 0.9047619047619048,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.1,
+    "missed_outage_rate": 0.26785714285714285,
+    "false_outage_rate": 0.013157894736842105,
+    "abstention_rate": 0.07196969696969698,
+    "outage_recall": 0.6071428571428571,
+    "comms_recall": 0.9473684210526315,
+    "accuracy_when_decided": 0.8760330578512396,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   },
+   {
+    "band": 0.2,
+    "missed_outage_rate": 0.32142857142857145,
+    "false_outage_rate": 0.02631578947368421,
+    "abstention_rate": 0.030303030303030304,
+    "outage_recall": 0.625,
+    "comms_recall": 0.9539473684210527,
+    "accuracy_when_decided": 0.849802371541502,
+    "ff_per_meter_day": 0.0,
+    "ff_per_transformer_year": 0.0,
+    "ff_k": 0,
+    "feasible": false
+   }
+  ],
+  "chosen": null
+ },
+ "frozen": null,
+ "gate_rows_dev_all_weeks": {
+  "v1": {
+   "whole_feeder_outages": 350,
+   "closed_no_verdict": 0,
+   "without_real_time_attention": 31,
+   "human_items_per_transformer_day": 10.229508196721312,
+   "false_outage_verdicts_per_transformer_year": 27.923497267759565
+  },
+  "v1+gate-close": {
+   "whole_feeder_outages": 350,
+   "closed_no_verdict": 16,
+   "without_real_time_attention": 49,
+   "human_items_per_transformer_day": 0.01912568306010929,
+   "false_outage_verdicts_per_transformer_year": 0.0
+  },
+  "v1+gate-escalate": {
+   "whole_feeder_outages": 350,
+   "closed_no_verdict": 0,
+   "without_real_time_attention": 48,
+   "human_items_per_transformer_day": 4.502732240437158,
+   "false_outage_verdicts_per_transformer_year": 0.0
+  }
+ }
+}

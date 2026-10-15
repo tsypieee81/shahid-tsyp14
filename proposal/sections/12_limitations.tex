@@ -1,0 +1,21 @@
+\section{Limitations}\label{sec:limitations}
+Each limitation is paired with its next action.
+\begin{itemize}
+\item \textbf{Simulation only.} The simulator and the detector were written by the same team, and
+energy conservation holds in the simulator by construction. \emph{Next:} a retrospective test on one
+substation's historical data.
+\item \textbf{German benchmark networks.} No labelled Tunisian AMI data exists for this problem; the
+physics of the balance is the same, but profiles, topology and network sizes are not Tunisian.
+\emph{Next:} recalibrate every fit and recheck every threshold on STEG data before any use.
+\item \textbf{Transformer meter required.} Without it the method cannot decide. \emph{Next:} STEG's
+answer on transformer metering decides applicability.
+\item \textbf{Operator load.} Under the registered table it is the main cost. \emph{Next:} wire the
+escalating gate into the escalation step and evaluate it with operators.
+\item \textbf{Events start on reading boundaries in simulation,} so missed-outage rates at 15 min are
+probably optimistic (HYPOTHESIS); late stored readings counted as reported energy push verdicts toward
+outage (a known flaw of version 1). \emph{Next:} simulate sub-interval onsets and fix the accounting.
+\item \textbf{Event durations} of 1 to 4 hours are an assumption without a source; the re-check
+timeout depends on real durations. \emph{Next:} field durations from STEG.
+\item \textbf{Not validated with people.} No operator has used the console and the explanation study
+is pending. \emph{Next:} the registered people study and operator trials.
+\end{itemize}

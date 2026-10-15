@@ -1,0 +1,31 @@
+\section{Brief Coverage}\label{app:coverage}
+Table~\ref{tab:coverage} maps every item of the brief to its status. The full table, with evidence
+paths, metrics and the Phase 2 plan for each gap, is \texttt{docs/BRIEF\_COVERAGE.md}.
+
+\begin{table*}[!t]
+\caption{Brief coverage}\label{tab:coverage}
+\centering\tabfont\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\textwidth}{@{}L{0.07\textwidth} L{0.30\textwidth} L{0.24\textwidth} Y@{}}
+\toprule
+\textbf{Goal} & \textbf{Brief item} & \textbf{Status} & \textbf{Where} \\
+\midrule
+G1 & Genuine grid event vs.\ data problem & IMPLEMENTED+MEASURED & Sections~\ref{sec:method}, \ref{sec:results} \\
+G1 & Equipment faults, natural failures & IMPLEMENTED+MEASURED (loss of supply; cause not diagnosed) & Section~\ref{sec:results} \\
+G1 & Degraded sensors, biased readings & TESTED --- NOT DETECTED (negative result) & Section~\ref{sec:singlemeter} \\
+G1 & Falsified readings & NOT ADDRESSED (Phase 2 design: persistent transformer-gap attribution) & Section~\ref{sec:singlemeter} \\
+G1 & Corrupted readings & IMPLEMENTED+MEASURED (missing, delayed); wrong values TESTED --- NOT DETECTED & Sections~\ref{sec:data}, \ref{sec:singlemeter} \\
+G1 & Voltage & TESTED --- NOT USEFUL IN SIMULATION & Section~\ref{sec:singlemeter} \\
+G1 & Current, power quality & OUT OF SCOPE (no waveform data) & Section~\ref{sec:scope} \\
+G2 & Confidence score & IMPLEMENTED+MEASURED (extremes reliable, mid range not) & Section~\ref{sec:explain} \\
+G2 & Plain-language explanation & IMPLEMENTED+MEASURED (faithfulness); usefulness pending & Section~\ref{sec:explain} \\
+G2 & Auditable log; what was detected, concluded and why & IMPLEMENTED+MEASURED & Section~\ref{sec:explain} \\
+G3 & Thresholds for automatic action; human approval & IMPLEMENTED+MEASURED & Section~\ref{sec:governance} \\
+G3 & Operator interface & IMPLEMENTED (preview; not used by operators) & Section~\ref{sec:governance} \\
+G3 & Over-trust and under-trust & IMPLEMENTED (devices); effect not measured & Section~\ref{sec:governance} \\
+G4 & What is shared, what stays local, and why & DESIGN-ONLY; proof of concept measured & Section~\ref{sec:shared} \\
+Eval. & Precision/recall, false-positive rate, latency & IMPLEMENTED+MEASURED & Sections~\ref{sec:protocol}, \ref{sec:results} \\
+Eval. & Explanation quality & IMPLEMENTED+MEASURED (faithfulness); people study pending & Section~\ref{sec:explain} \\
+Phase 1 & Proposal, repository, dataset, anomaly documentation & IMPLEMENTED & Sections~\ref{sec:data}, \ref{sec:conclusion} \\
+\bottomrule
+\end{tabularx}
+\end{table*}

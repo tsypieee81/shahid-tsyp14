@@ -1,0 +1,20 @@
+\section{Related Work}\label{sec:related}
+\textbf{Outages from AMI messages.} Meters with outage notification send a ``last gasp'' message when
+power is lost, and utilities can ``ping'' meters to bound an outage \cite{doe2016ami}; pinging is also
+used to monitor grid-edge devices \cite{huang2021pinging}, and pings can enter a joint estimate of
+topology and outages \cite{gandluru2019joint}. SHAHID uses neither: its decision rests on interval
+energy alone, for the case where messages are absent or unreliable.
+
+\textbf{Outages from flows and forecasts.} Sevlian et al.\ detect outages by combining line-flow
+measurements with load forecasts at the nodes of a distribution tree \cite{sevlian2015outage}; Wang et
+al.\ learn the normal distribution of smart-meter data per region \cite{wang2024outage}; a review
+surveys smart-meter analytics \cite{wang2018review}. SHAHID shares the principle of comparing a
+measured upstream flow with a forecast of downstream consumption, and applies it to a narrower
+question: which cause explains a group of meters that stopped reporting.
+
+\textbf{Deciding with a reject option.} Chow characterised the trade-off between error and reject
+\cite{chow1970reject}; selective classification trades coverage for accuracy
+\cite{elyaniv2010selective,geifman2017selective}, and reject strategies are compared in
+\cite{franc2023reject}. SHAHID's threshold rule is a constrained selection of this kind: it bounds
+missed and false outages, then maximises coverage. We make no novelty claim; these comparisons
+position the work.

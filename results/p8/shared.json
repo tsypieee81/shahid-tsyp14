@@ -1,0 +1,351 @@
+{
+ "stamp": {
+  "commit": "598109b",
+  "config_hash": "450c9f932c1b",
+  "config": {
+   "protocol": "docs/process/protocols/08_shared_learning.md",
+   "days": [
+    1,
+    2,
+    4,
+    7,
+    28
+   ],
+   "shared": [
+    "rho_by_lead",
+    "sigma_mult_by_lead",
+    "rho1_by_lead",
+    "sigma1_mult_by_lead",
+    "gap_acf1"
+   ]
+  },
+  "command": "python -m shahid.p8_shared",
+  "date": "2026-10-14T09:08:29",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "label": "proof of concept on previously examined grids (not confirmatory)",
+ "urban6": {
+  "oracle": {
+   "groups": 1121,
+   "coverage90": 0.9643175735950045,
+   "outage_verdicts": 6,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000594000594000594,
+   "ff_wilson95": [
+    0.00027225961900970706,
+    0.0012954641145320436
+   ]
+  },
+  "local_1": {
+   "groups": 1121,
+   "coverage90": 0.9776984834968778,
+   "outage_verdicts": 4,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000396000396000396,
+   "ff_wilson95": [
+    0.0001540047664274192,
+    0.0010178691202448863
+   ]
+  },
+  "shared_1": {
+   "groups": 1121,
+   "coverage90": 0.9598572702943801,
+   "outage_verdicts": 9,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000891000891000891,
+   "ff_wilson95": [
+    0.0004688357192733358,
+    0.0016926627845725828
+   ]
+  },
+  "local_2": {
+   "groups": 1121,
+   "coverage90": 0.9696699375557538,
+   "outage_verdicts": 5,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000495000495000495,
+   "ff_wilson95": [
+    0.00021144945272502273,
+    0.0011583493573820054
+   ]
+  },
+  "shared_2": {
+   "groups": 1121,
+   "coverage90": 0.9616413916146298,
+   "outage_verdicts": 8,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000792000792000792,
+   "ff_wilson95": [
+    0.0004013744221824613,
+    0.001562199158228735
+   ]
+  },
+  "local_4": {
+   "groups": 1121,
+   "coverage90": 0.9669937555753791,
+   "outage_verdicts": 5,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000495000495000495,
+   "ff_wilson95": [
+    0.00021144945272502273,
+    0.0011583493573820054
+   ]
+  },
+  "shared_4": {
+   "groups": 1121,
+   "coverage90": 0.9616413916146298,
+   "outage_verdicts": 8,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000792000792000792,
+   "ff_wilson95": [
+    0.0004013744221824613,
+    0.001562199158228735
+   ]
+  },
+  "local_7": {
+   "groups": 1121,
+   "coverage90": 0.9669937555753791,
+   "outage_verdicts": 5,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000495000495000495,
+   "ff_wilson95": [
+    0.00021144945272502273,
+    0.0011583493573820054
+   ]
+  },
+  "shared_7": {
+   "groups": 1121,
+   "coverage90": 0.9616413916146298,
+   "outage_verdicts": 9,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000891000891000891,
+   "ff_wilson95": [
+    0.0004688357192733358,
+    0.0016926627845725828
+   ]
+  },
+  "local_28": {
+   "groups": 1121,
+   "coverage90": 0.9661016949152542,
+   "outage_verdicts": 5,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000495000495000495,
+   "ff_wilson95": [
+    0.00021144945272502273,
+    0.0011583493573820054
+   ]
+  },
+  "shared_28": {
+   "groups": 1121,
+   "coverage90": 0.9598572702943801,
+   "outage_verdicts": 9,
+   "meter_days": 10101.0,
+   "ff_per_meter_day": 0.000891000891000891,
+   "ff_wilson95": [
+    0.0004688357192733358,
+    0.0016926627845725828
+   ]
+  }
+ },
+ "rural3": {
+  "oracle": {
+   "groups": 1148,
+   "coverage90": 0.9520905923344948,
+   "outage_verdicts": 5,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.00046563605885639785,
+   "ff_wilson95": [
+    0.00019890483940848653,
+    0.0010896637799612126
+   ]
+  },
+  "local_1": {
+   "groups": 1148,
+   "coverage90": 0.9660278745644599,
+   "outage_verdicts": 3,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.0002793816353138387,
+   "ff_wilson95": [
+    9.501769464635555e-05,
+    0.0008211752978103568
+   ]
+  },
+  "shared_1": {
+   "groups": 1148,
+   "coverage90": 0.9529616724738676,
+   "outage_verdicts": 4,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.00037250884708511827,
+   "ff_wilson95": [
+    0.00014486830800297185,
+    0.0009575124979102336
+   ]
+  },
+  "local_2": {
+   "groups": 1148,
+   "coverage90": 0.9668989547038328,
+   "outage_verdicts": 3,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.0002793816353138387,
+   "ff_wilson95": [
+    9.501769464635555e-05,
+    0.0008211752978103568
+   ]
+  },
+  "shared_2": {
+   "groups": 1148,
+   "coverage90": 0.9512195121951219,
+   "outage_verdicts": 5,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.00046563605885639785,
+   "ff_wilson95": [
+    0.00019890483940848653,
+    0.0010896637799612126
+   ]
+  },
+  "local_4": {
+   "groups": 1148,
+   "coverage90": 0.9677700348432056,
+   "outage_verdicts": 4,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.00037250884708511827,
+   "ff_wilson95": [
+    0.00014486830800297185,
+    0.0009575124979102336
+   ]
+  },
+  "shared_4": {
+   "groups": 1148,
+   "coverage90": 0.9503484320557491,
+   "outage_verdicts": 5,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.00046563605885639785,
+   "ff_wilson95": [
+    0.00019890483940848653,
+    0.0010896637799612126
+   ]
+  },
+  "local_7": {
+   "groups": 1148,
+   "coverage90": 0.9686411149825784,
+   "outage_verdicts": 2,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.00018625442354255913,
+   "ff_wilson95": [
+    5.1078097821303495e-05,
+    0.0006789270811789155
+   ]
+  },
+  "shared_7": {
+   "groups": 1148,
+   "coverage90": 0.9503484320557491,
+   "outage_verdicts": 5,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.00046563605885639785,
+   "ff_wilson95": [
+    0.00019890483940848653,
+    0.0010896637799612126
+   ]
+  },
+  "local_28": {
+   "groups": 1148,
+   "coverage90": 0.9573170731707317,
+   "outage_verdicts": 4,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.00037250884708511827,
+   "ff_wilson95": [
+    0.00014486830800297185,
+    0.0009575124979102336
+   ]
+  },
+  "shared_28": {
+   "groups": 1148,
+   "coverage90": 0.9486062717770035,
+   "outage_verdicts": 5,
+   "meter_days": 10738.0,
+   "ff_per_meter_day": 0.00046563605885639785,
+   "ff_wilson95": [
+    0.00019890483940848653,
+    0.0010896637799612126
+   ]
+  }
+ },
+ "h8": {
+  "by_grid": {
+   "urban6": {
+    "1": {
+     "local_usable": false,
+     "shared_usable": false,
+     "local_dev": 0.0776984834968778,
+     "shared_dev": 0.05985727029438004
+    },
+    "2": {
+     "local_usable": false,
+     "shared_usable": false,
+     "local_dev": 0.06966993755575379,
+     "shared_dev": 0.06164139161462978
+    },
+    "4": {
+     "local_usable": false,
+     "shared_usable": false,
+     "local_dev": 0.06699375557537912,
+     "shared_dev": 0.06164139161462978
+    },
+    "7": {
+     "local_usable": false,
+     "shared_usable": false,
+     "local_dev": 0.06699375557537912,
+     "shared_dev": 0.06164139161462978
+    },
+    "28": {
+     "local_usable": false,
+     "shared_usable": false,
+     "local_dev": 0.0661016949152542,
+     "shared_dev": 0.05985727029438004
+    },
+    "days_to_usable": {
+     "local": null,
+     "shared": null
+    }
+   },
+   "rural3": {
+    "1": {
+     "local_usable": false,
+     "shared_usable": false,
+     "local_dev": 0.06602787456445991,
+     "shared_dev": 0.05296167247386763
+    },
+    "2": {
+     "local_usable": false,
+     "shared_usable": false,
+     "local_dev": 0.06689895470383278,
+     "shared_dev": 0.051219512195121886
+    },
+    "4": {
+     "local_usable": false,
+     "shared_usable": false,
+     "local_dev": 0.06777003484320554,
+     "shared_dev": 0.050348432055749126
+    },
+    "7": {
+     "local_usable": false,
+     "shared_usable": false,
+     "local_dev": 0.06864111498257841,
+     "shared_dev": 0.050348432055749126
+    },
+    "28": {
+     "local_usable": false,
+     "shared_usable": true,
+     "local_dev": 0.05731707317073165,
+     "shared_dev": 0.048606271777003496
+    },
+    "days_to_usable": {
+     "local": null,
+     "shared": 28
+    }
+   }
+  },
+  "verdict": "supported"
+ }
+}

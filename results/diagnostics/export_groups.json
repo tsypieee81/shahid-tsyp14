@@ -1,0 +1,257 @@
+{
+ "note": "post-hoc diagnostic, SIMULATED; reads simulation truth (evaluation side only)",
+ "cases": [
+  {
+   "scenario": "feeder_outage",
+   "onset": "2016-06-09 10:00:00",
+   "n_meters": 38,
+   "lead": 0,
+   "R": 3.390432036792366,
+   "M": -2.099111752225849,
+   "sd_O": 0.1648658416389082,
+   "sd_C": 2.8095836744386586,
+   "posterior_comms": 0.9992272941303737,
+   "z_outage": 20.56479379287157,
+   "z_comms": 1.9538637837917392,
+   "transformer_kwh": 4.46,
+   "visible_meters_kwh": 0.7240000000000002,
+   "pv_meters_in_group": 4,
+   "pv_kw_in_group": 68.03,
+   "true_group_kwh": 3.344083903076346,
+   "group_meters_with_true_energy": [
+    {
+     "meter": "m093",
+     "true_kwh": 3.344083903076346
+    }
+   ],
+   "stamp": {
+    "commit": "fdeb289",
+    "config_hash": "ed4c402d67d5",
+    "config": {
+     "world": {
+      "grid": "1-LV-semiurb5--0-sw",
+      "start_day": 146,
+      "days": 15,
+      "diversity": 0.5,
+      "pv_scale": 1.0,
+      "seed": 0,
+      "unmetered": {
+       "kind": "none",
+       "kw": 0.0
+      }
+     },
+     "meter": {
+      "gain_sd": 0.005,
+      "noise_rel_sd": 0.002,
+      "noise_abs_kwh": 0.0005,
+      "quant_kwh": 0.001
+     },
+     "tmeter": {
+      "gain_sd": 0.002,
+      "noise_rel_sd": 0.001,
+      "quant_kwh": 0.01
+     },
+     "comms": {
+      "concentrators": "aligned",
+      "p_missing": 0.01,
+      "p_delay": 0.03,
+      "delay_mean_intervals": 4,
+      "backlog": true,
+      "backlog_spread": 4,
+      "outage_backfill": false,
+      "last_gasp": false,
+      "voltage": true
+     },
+     "seed": 1,
+     "events": [
+      {
+       "type": "outage",
+       "feeder": 3,
+       "duration_steps": 8,
+       "start_step": 1384
+      }
+     ]
+    },
+    "command": "python -m shahid.diag_export (feeder_outage)",
+    "date": "2026-10-13T22:32:28",
+    "python": "3.11.7",
+    "platform": "Windows-10-10.0.26200-SP0"
+   }
+  },
+  {
+   "scenario": "showcase",
+   "onset": "2016-06-09 09:45:00",
+   "n_meters": 20,
+   "lead": 0,
+   "R": -3.505482111024409,
+   "M": -3.7271122107717334,
+   "sd_O": 0.1477360253811097,
+   "sd_C": 1.6557600206664889,
+   "posterior_comms": 0.999952630407113,
+   "z_outage": -23.728011512299954,
+   "z_comms": 0.13385399875648174,
+   "transformer_kwh": -1.46,
+   "visible_meters_kwh": 1.6629999999999985,
+   "pv_meters_in_group": 3,
+   "pv_kw_in_group": 43.870000000000005,
+   "true_group_kwh": -3.453658109537554,
+   "group_meters_with_true_energy": [
+    {
+     "meter": "m007",
+     "true_kwh": 0.06453507943778578
+    },
+    {
+     "meter": "m008",
+     "true_kwh": 0.07316995628007592
+    },
+    {
+     "meter": "m010",
+     "true_kwh": -1.2601385825181368
+    },
+    {
+     "meter": "m011",
+     "true_kwh": 0.2659750658774221
+    },
+    {
+     "meter": "m018",
+     "true_kwh": 0.28906745057448885
+    },
+    {
+     "meter": "m043",
+     "true_kwh": 0.0762427223864149
+    },
+    {
+     "meter": "m044",
+     "true_kwh": 0.31316570837606383
+    },
+    {
+     "meter": "m053",
+     "true_kwh": 0.06934900127457418
+    },
+    {
+     "meter": "m054",
+     "true_kwh": 0.061647280440024724
+    },
+    {
+     "meter": "m064",
+     "true_kwh": 0.13557810484003038
+    },
+    {
+     "meter": "m069",
+     "true_kwh": -5.925937477283183
+    },
+    {
+     "meter": "m070",
+     "true_kwh": 0.06031092609126271
+    },
+    {
+     "meter": "m084",
+     "true_kwh": 0.7835802399489019
+    },
+    {
+     "meter": "m086",
+     "true_kwh": 0.09585492274375004
+    },
+    {
+     "meter": "m088",
+     "true_kwh": 0.19951562590337923
+    },
+    {
+     "meter": "m089",
+     "true_kwh": 0.3241583996514792
+    },
+    {
+     "meter": "m090",
+     "true_kwh": 0.053331236039590876
+    },
+    {
+     "meter": "m093",
+     "true_kwh": 3.429112543229577
+    },
+    {
+     "meter": "m095",
+     "true_kwh": -2.6040772629996254
+    }
+   ],
+   "stamp": {
+    "commit": "fdeb289",
+    "config_hash": "d4233c3d3d4c",
+    "config": {
+     "world": {
+      "grid": "1-LV-semiurb5--0-sw",
+      "start_day": 146,
+      "days": 15,
+      "diversity": 0.5,
+      "pv_scale": 1.0,
+      "seed": 0,
+      "unmetered": {
+       "kind": "none",
+       "kw": 0.0
+      }
+     },
+     "meter": {
+      "gain_sd": 0.005,
+      "noise_rel_sd": 0.002,
+      "noise_abs_kwh": 0.0005,
+      "quant_kwh": 0.001
+     },
+     "tmeter": {
+      "gain_sd": 0.002,
+      "noise_rel_sd": 0.001,
+      "quant_kwh": 0.01
+     },
+     "comms": {
+      "concentrators": "aligned",
+      "p_missing": 0.01,
+      "p_delay": 0.03,
+      "delay_mean_intervals": 4,
+      "backlog": true,
+      "backlog_spread": 4,
+      "outage_backfill": false,
+      "last_gasp": false,
+      "voltage": true
+     },
+     "seed": 1,
+     "events": [
+      {
+       "type": "outage",
+       "feeder": 3,
+       "duration_steps": 8,
+       "start_step": 1369
+      },
+      {
+       "type": "comms_failure",
+       "concentrator": 2,
+       "duration_steps": 13,
+       "start_step": 1383
+      },
+      {
+       "type": "outage",
+       "feeder": 1,
+       "duration_steps": 8,
+       "start_step": 1394
+      },
+      {
+       "type": "comms_failure",
+       "zone": 4,
+       "duration_steps": 8,
+       "start_step": 1405
+      },
+      {
+       "type": "comms_failure",
+       "meters": [
+        10
+       ],
+       "duration_steps": 8,
+       "start_step": 1413
+      }
+     ]
+    },
+    "command": "python -m shahid.diag_export (showcase)",
+    "date": "2026-10-13T22:32:36",
+    "python": "3.11.7",
+    "platform": "Windows-10-10.0.26200-SP0"
+   }
+  }
+ ]
+}

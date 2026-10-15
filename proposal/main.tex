@@ -1,0 +1,89 @@
+% SHAHID Phase 1 submission paper (IEEE conference format, A4).
+% Build: python -m shahid.build_proposal --draft   (or --final; writes SHAHID_Phase1_Proposal.pdf)
+\documentclass[conference,a4paper]{IEEEtran}
+
+% ---- build mode: draft prints placeholders in red; final stops with a list of them ----
+\newif\iffinal
+\InputIfFileExists{buildmode.tex}{}{}  % written by shahid.build_proposal; absent = draft
+
+\usepackage{fontspec}
+\setmainfont{texgyretermes}[Extension=.otf, UprightFont=*-regular, BoldFont=*-bold,
+  ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+\setsansfont{texgyreheros}[Extension=.otf, UprightFont=*-regular, BoldFont=*-bold,
+  ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+\usepackage{unicode-math}
+\setmathfont{texgyretermes-math.otf}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, fit, backgrounds, calc}
+\usepackage{enumitem}
+\setlist{leftmargin=1.1em, itemsep=0pt, topsep=1pt, parsep=0pt}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-\do.\do_\do=\do?\do\&}
+\usepackage[hidelinks, pdftitle={SHAHID: Telling Power Outages from Lost Meter Data at the
+  Distribution Transformer}, pdfauthor={Anonymous}, pdfsubject={}, pdfkeywords={},
+  pdfcreator={}, pdfproducer={}]{hyperref}
+\usepackage{cite}
+
+\renewcommand{\arraystretch}{1.08}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{Z}{>{\centering\arraybackslash}X}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcommand{\tabfont}{\footnotesize}
+
+% ---- placeholders the team must fill (never filled by guesses) ----
+\makeatletter
+\newcount\teamtodocount
+\gdef\teamtodolist{}
+\newcommand{\teamtodo}[1]{%
+  \ifcsname tt@\detokenize{#1}\endcsname\else
+    \expandafter\gdef\csname tt@\detokenize{#1}\endcsname{}%
+    \global\advance\teamtodocount by 1
+    \xdef\teamtodolist{\teamtodolist^^J  [\the\teamtodocount] \detokenize{#1}}%
+  \fi
+  \textcolor{red}{[#1]}}
+\AtEndDocument{%
+  \iffinal\ifnum\teamtodocount>0
+    \typeout{^^JUNFILLED PLACEHOLDERS (\the\teamtodocount):\teamtodolist^^J}%
+    \errmessage{Final build stopped: \the\teamtodocount\space placeholder(s) still in the document; see the list above}%
+  \fi\fi}
+\makeatother
+
+% ---- submission settings: edit here only ----
+\newcommand{\authorline}{Anonymous submission}  % or: Team code: <code from the submission form>
+
+\begin{document}
+
+\title{SHAHID: Telling Power Outages from\\Lost Meter Data at the Distribution Transformer}
+\author{\IEEEauthorblockN{\authorline}
+\IEEEauthorblockA{IEEE TSYP14 EnergyMind Tunisia challenge, Phase 1}}
+\maketitle
+
+\input{sections/00_abstract}
+\input{sections/01_introduction}
+\input{sections/02_related}
+\input{sections/03_scope}
+\input{sections/04_data}
+\input{sections/05_method}
+\input{sections/06_explanation}
+\input{sections/07_governance}
+\input{sections/08_shared}
+\input{sections/09_protocol}
+\input{sections/10_results}
+\input{sections/11_business}
+\input{sections/12_limitations}
+\input{sections/13_conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\appendices
+\input{sections/14_appendix}
+
+\end{document}

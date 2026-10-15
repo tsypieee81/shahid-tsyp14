@@ -1,0 +1,53 @@
+{
+ "stamp": {
+  "commit": "95c9ce2",
+  "config_hash": "27ffacc47fd7",
+  "config": {
+   "grid": "1-LV-semiurb5--0-sw",
+   "d_values": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+   ],
+   "seed": 0,
+   "days": [
+    0,
+    366
+   ]
+  },
+  "command": "python -m shahid.cp1_diversity",
+  "date": "2026-10-05T16:21:21",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "n_households": 92,
+ "by_d": {
+  "0.0": {
+   "pairwise_corr_mean": 0.35534602988081737,
+   "pairwise_corr_share_above_0.999": 0.2126134734830387,
+   "annual_kwh_ratio_vs_d0": 1.0
+  },
+  "0.25": {
+   "pairwise_corr_mean": 0.2894332291706591,
+   "pairwise_corr_share_above_0.999": 0.0,
+   "annual_kwh_ratio_vs_d0": 0.9996572912680532
+  },
+  "0.5": {
+   "pairwise_corr_mean": 0.23158575257906464,
+   "pairwise_corr_share_above_0.999": 0.0,
+   "annual_kwh_ratio_vs_d0": 0.9991228486365528
+  },
+  "1.0": {
+   "pairwise_corr_mean": 0.1294570329496936,
+   "pairwise_corr_share_above_0.999": 0.0,
+   "annual_kwh_ratio_vs_d0": 0.9981624965064307
+  },
+  "2.0": {
+   "pairwise_corr_mean": 0.02616781776908931,
+   "pairwise_corr_share_above_0.999": 0.0,
+   "annual_kwh_ratio_vs_d0": 0.9978572541804507
+  }
+ }
+}

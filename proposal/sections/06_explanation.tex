@@ -1,0 +1,23 @@
+\section{Confidence, Explanation and Audit (G2)}\label{sec:explain}
+\textbf{Confidence score.} Every verdict carries the posterior $p$ of (\ref{eq:p}). On the held-out
+network, probabilities below 0.1 (80 events) and above 0.9 (124 events) match the observed shares of
+communication failures (0.013 and 0.992). Over all 6210 held-out silent groups, mid-range values are
+not calibrated frequencies (expected calibration error 0.494), because most small groups are data
+losses decided under an equal prior. The console therefore labels mid-range values ``current evidence
+strength, not validated accuracy''.
+
+\textbf{Plain-language explanation.} A fixed template is filled from the verdict record: how many
+meters went silent and when, the expected energy $M$, the unexplained energy $R$ with the spread
+expected under each cause, the probability, the alternative cause and, when abstaining, the reason. A
+test fails if an explanation contains a number that is not in the record. Templates, not generated
+text, were chosen so that no explanation can state a number the system did not compute. The decision
+is interpretable by construction: it rests on two physical quantities in kWh, $R$ and $M$, that an
+operator can check against the transformer reading; post-hoc explainers such as SHAP
+\cite{lundberg2017shap} were used only to inspect the comparison classifiers. Whether
+people can act on the explanations alone is registered as a study (protocol 07b) whose results are
+pending.
+
+\textbf{Auditable log.} Each record (evidence, verdict, explanation, escalation rule) is appended to an
+append-only text log, one record per line; each entry stores the SHA-256 hash of the previous one, so any edit or deletion breaks
+the chain, and a test checks that a single edit is detected. Operator actions in the console go into
+a second chain of the same kind. The record answers what was detected, what was concluded and why.

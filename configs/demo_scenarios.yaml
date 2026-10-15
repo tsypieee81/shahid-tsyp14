@@ -1,0 +1,59 @@
+# Demo replay scenarios (python -m shahid.demo_day). DESIGN CHOICE: one simulated day on the
+# development grid with the frozen detector; every scenario is SIMULATED and reproducible.
+# The world covers 15 days so the replayed day (the last one) has the detector's 14 days of history.
+# Event times are hours of the replayed day on the 15-minute grid (6.25 = 06:15); durations are in
+# 15-minute intervals. default_cursor: replay time (intervals into the day) the console opens at
+# (DESIGN CHOICE, A-UI-DEFAULTCURSOR). shows: what the day demonstrates, shown in the console sidebar.
+world: {grid: 1-LV-semiurb5--0-sw, start_day: 146, days: 15}   # replayed day: 2016-06-09
+seed: 1
+scenarios:
+  showcase:
+    description: "CONSTRUCTED demonstration day, not a typical day: five events placed so that every queue has items (A-UI-SHOWCASE)"
+    shows: ["06:15 outage of the largest feeder", "09:45 data concentrator fails; stored readings arrive at 13:00",
+            "12:30 outage of an eight-meter feeder at midday", "15:15 two meters stop sending data",
+            "17:15 one meter stops sending data"]
+    default_cursor: 42
+    events: [{type: outage, feeder: 3, hour: 6.25, duration_steps: 8},
+             {type: comms_failure, concentrator: 2, hour: 9.75, duration_steps: 13},
+             {type: outage, feeder: 1, hour: 12.5, duration_steps: 8},
+             {type: comms_failure, zone: 4, hour: 15.25, duration_steps: 8},
+             {type: comms_failure, meters: [10], hour: 17.25, duration_steps: 8}]
+  calm:
+    description: "Fault-free day with ordinary 1% random data loss: many tiny silent groups, most sent to a human"
+    shows: ["no injected event", "tiny silent groups from random data loss", "most of them abstained and sent to a human"]
+    default_cursor: 40
+    events: []
+  feeder_outage:
+    description: "Outage of the largest feeder (line 58, 37 meters) at 10:00 for 2 hours"
+    shows: ["a confident WRONG verdict: the outage is called a communication failure",
+            "cause: a delayed large consumer merged into the outage group (LIMITATIONS item 12)"]
+    default_cursor: 42
+    events: [{type: outage, feeder: 3, hour: 10, duration_steps: 8}]
+  feeder_outage_morning:
+    description: "Same feeder outage at 06:00. Added after the 10:00 replay produced a confident wrong verdict (a delayed large consumer merged into the outage group; the documented failure of LIMITATIONS item 12)"
+    shows: ["the same outage at 06:00, decided correctly", "added after the 10:00 replay was wrong"]
+    default_cursor: 28
+    events: [{type: outage, feeder: 3, hour: 6, duration_steps: 8}]
+  concentrator_comms:
+    description: "Data concentrator of feeder line 38 fails at 14:00 for 3 hours; stored readings arrive afterwards"
+    shows: ["a communication failure decided correctly", "automatic handling with a pending re-check"]
+    default_cursor: 58
+    events: [{type: comms_failure, concentrator: 2, hour: 14, duration_steps: 12}]
+  both_at_once:
+    description: "Outage of feeder line 14 and comms failure of concentrator 2 at the same moment (merged case)"
+    shows: ["two events at the same moment merge into one silent group", "the outage is missed"]
+    default_cursor: 46
+    events: [{type: outage, feeder: 0, hour: 11, duration_steps: 8},
+             {type: comms_failure, concentrator: 2, hour: 11, duration_steps: 8}]
+  midday_pv:
+    description: "Doubled rooftop PV; outage of feeder line 25 at 13:00 and comms failure of concentrator 4 at 15:00"
+    shows: ["doubled rooftop PV", "both events end in abstention", "a one-meter data loss called an outage"]
+    default_cursor: 58
+    world: {pv_scale: 2.0}
+    events: [{type: outage, feeder: 1, hour: 13, duration_steps: 8},
+             {type: comms_failure, concentrator: 4, hour: 15, duration_steps: 8}]
+  small_group:
+    description: "Outage of a two-meter line (line 4) at 09:00: a small silent group"
+    shows: ["a two-meter outage, decided correctly here"]
+    default_cursor: 38
+    events: [{type: outage, line: 4, hour: 9, duration_steps: 8}]

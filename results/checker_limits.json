@@ -1,0 +1,69 @@
+{
+ "stamp": {
+  "commit": "84ffc9d",
+  "config_hash": "a1c3cea7ca1f",
+  "config": {
+   "forms": [
+    [
+     "two decimals in [0, 1]",
+     2,
+     0,
+     1
+    ],
+    [
+     "three decimals in [0, 1]",
+     3,
+     0,
+     1
+    ],
+    [
+     "one decimal in [0, 100]",
+     1,
+     0,
+     100
+    ],
+    [
+     "two decimals in [0, 100]",
+     2,
+     0,
+     100
+    ],
+    [
+     "integers in [0, 1000]",
+     0,
+     0,
+     1000
+    ]
+   ],
+   "n": 2000,
+   "seed": 0
+  },
+  "command": "python -m shahid.checker_limits",
+  "date": "2026-10-11T21:47:41",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "ledger_values": 374,
+ "results": {
+  "two decimals in [0, 1]": {
+   "n": 2000,
+   "share_matching_ledger": 1.0
+  },
+  "three decimals in [0, 1]": {
+   "n": 2000,
+   "share_matching_ledger": 0.3445
+  },
+  "one decimal in [0, 100]": {
+   "n": 2000,
+   "share_matching_ledger": 0.382
+  },
+  "two decimals in [0, 100]": {
+   "n": 2000,
+   "share_matching_ledger": 0.052
+  },
+  "integers in [0, 1000]": {
+   "n": 2000,
+   "share_matching_ledger": 0.162
+  }
+ }
+}

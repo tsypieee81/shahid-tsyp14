@@ -1,0 +1,186 @@
+# Business-case parameters (read by python -m shahid.business_model).
+# Every entry: value, unit, currency, tag (FACT | ESTIMATE | DESIGN CHOICE | ASSUMPTION), source, note.
+# A FACT carries its source and access date; the quoted sentence was checked on the access date.
+# A cost with no public source stays null: the model then prints its formula instead of a number.
+# Change a value here, rerun the model, and every table follows.
+
+facts:
+  steg_avg_selling_price_2025:
+    value: 290.7
+    unit: millimes per kWh
+    currency: TND
+    tag: FACT
+    source: "Managers, 29 June 2026, 'Steg : l'électricité est vendue 290,7 millimes, mais coûte 456,3 millimes à produire', https://managers.tn/2026/06/29/steg-lelectricite-est-vendue-2907-millimes-mais-coute-4563-millimes-a-produire/ (accessed 2026-10-14)"
+    note: "press source; average over 2025"
+  steg_avg_production_cost_2025:
+    value: 456.3
+    unit: millimes per kWh
+    currency: TND
+    tag: FACT
+    source: "same article as steg_avg_selling_price_2025"
+    note: "STEG sells below its average production cost"
+  steg_network_losses:
+    value: 19.7
+    unit: percent
+    currency: null
+    tag: FACT
+    source: "same article as steg_avg_selling_price_2025"
+    note: "network losses as reported; SHAHID does not address losses or theft"
+  douz_customers:
+    value: 24400
+    unit: customers
+    currency: null
+    tag: FACT
+    source: "Managers, 15 July 2026, 'À Douz, la Steg renforce un réseau électrique de 913 km', https://managers.tn/2026/07/15/a-douz-la-steg-renforce-un-reseau-electrique-de-913-km/ (accessed 2026-10-14)"
+    note: "'près de 24 400 clients'"
+  douz_transformer_substations:
+    value: 149
+    unit: transformer substations
+    currency: null
+    tag: FACT
+    source: "same article as douz_customers"
+    note: "'un parc de 149 postes de transformation électrique'"
+  douz_staff:
+    value: 17
+    unit: staff
+    currency: null
+    tag: FACT
+    source: "same article as douz_customers"
+    note: "'un effectif de 17 agents et cadres'"
+  douz_lv_line_km:
+    value: 639
+    unit: km
+    currency: null
+    tag: FACT
+    source: "same article as douz_customers"
+    note: "'639 km de lignes basse tension'"
+  steg_subscribers:
+    value: 4700000
+    unit: subscribers
+    currency: null
+    tag: FACT
+    source: "La Presse, 18 February 2025, 'STEG et SONEDE : Les dettes clients dépassent 4,8 milliards de dinars', https://www.lapresse.tn/2025/02/18/steg-et-sonede-les-dettes-clients-depassent-48-milliards-de-dinars/ (accessed 2026-10-14)"
+    note: "'environ 4,7 millions d'abonnés', mostly residential low-voltage connections"
+  data_protection_draft_law_articles:
+    value: 132
+    unit: articles
+    currency: null
+    tag: FACT
+    source: "Business News, 18 February 2026, 'ARP : audition autour du projet de loi sur la protection des données personnelles', https://businessnews.com.tn/?p=1388983 (accessed 2026-10-14)"
+    note: "draft organic law heard on 17 February 2026; motivated by the limits of Organic Law 2004-63 and names AI data processing"
+  bct_tnd_per_usd:
+    value: 3.0085
+    unit: TND per USD
+    currency: TND
+    tag: FACT
+    source: "La Presse, 11 October 2026, citing the Central Bank of Tunisia (interbank average rate of 8 October 2026), https://www.lapresse.tn/?p=4364398 (accessed 2026-10-14)"
+    note: "the only exchange rate used; update here"
+
+design:
+  days_per_year:
+    value: 365
+    unit: days
+    currency: null
+    tag: DESIGN CHOICE
+    source: null
+    note: "converts per transformer-day rates to per transformer-year"
+  review_minutes_per_item:
+    value: [2, 5, 10]
+    unit: minutes per human item
+    currency: null
+    tag: DESIGN CHOICE
+    source: null
+    note: "grid of review times; no operator has been timed"
+  pilot_district_substations:
+    value: 149
+    unit: transformer substations
+    currency: null
+    tag: ESTIMATE
+    source: "douz_transformer_substations"
+    note: "example pilot district of the size of one STEG agency; assumes the per-transformer rates of the simulated grids transfer"
+  recalibration_interval_days:
+    value: 90
+    unit: days
+    currency: null
+    tag: DESIGN CHOICE
+    source: null
+    note: "detect.fit on each transformer's own fault-free data, and after every topology change"
+  timing_budget_seconds:
+    value: 300
+    unit: seconds
+    currency: null
+    tag: DESIGN CHOICE
+    source: null
+    note: "upper bound on the compute benchmark"
+
+unit_costs:
+  transformer_lv_meter_unit:
+    value: null
+    unit: per substation
+    currency: TND
+    tag: ESTIMATE
+    source: null
+    note: "LV energy meter with current transformers and its communication module; needs a STEG procurement price"
+  transformer_lv_meter_install:
+    value: null
+    unit: per substation
+    currency: TND
+    tag: ESTIMATE
+    source: null
+    note: "installation labour; needs STEG labour rates"
+  share_substations_without_lv_meter:
+    value: null
+    unit: fraction
+    currency: null
+    tag: ASSUMPTION
+    source: null
+    note: "unknown; first question to STEG (ledger TN-H2: without a transformer series the method cannot decide)"
+  operator_hourly_cost:
+    value: 2.713
+    unit: per hour
+    currency: TND
+    tag: FACT
+    source: "Managers, 30 April 2026, 'Voici le nouveau SMIG en Tunisie' (Decree No. 67 of 2026, 40-hour regime, retroactive to 1 January 2026), https://managers.tn/2026/04/30/voici-le-nouveau-smig-en-tunisie/ (accessed 2026-10-14)"
+    note: "LOWER BOUND: legal wage floor, excludes employer charges and qualification; a grid operator costs more."
+  integration_person_days:
+    value: null
+    unit: person-days
+    currency: null
+    tag: ESTIMATE
+    source: null
+    note: "head-end export adapter, ticketing or outage-management link, GIS zone register"
+  engineer_day_rate:
+    value: null
+    unit: per person-day
+    currency: TND
+    tag: ESTIMATE
+    source: null
+    note: "needs a public tender or salary grid"
+  hosting_monthly:
+    value: null
+    unit: per month
+    currency: TND
+    tag: ESTIMATE
+    source: null
+    note: "one on-premise server or virtual machine; compute need is measured below"
+  storage_per_gb_month:
+    value: null
+    unit: per GB-month
+    currency: TND
+    tag: ESTIMATE
+    source: null
+    note: "storage of readings and audit logs"
+  operator_training_per_person:
+    value: null
+    unit: per operator
+    currency: TND
+    tag: ESTIMATE
+    source: null
+    note: "initial and refresher training"
+  pilot_operators:
+    value: null
+    unit: operators
+    currency: null
+    tag: ESTIMATE
+    source: null
+    note: "operators reviewing SHAHID items in the pilot district"

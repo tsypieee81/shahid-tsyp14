@@ -1,0 +1,9 @@
+# CP5 episode scenarios (development grid, nominal parameters). One episode per day on average.
+# Silent sets for outages and zone-shaped comms failures come from the same zone distribution.
+seed: 101
+generator:
+  n: 340
+  first_day: 15
+  mix: {outage: 0.4, comms_zone: 0.3, comms_concentrator: 0.15, comms_random: 0.15}
+  duration_steps: [4, 16]
+  zone_sizes: [1, 40]

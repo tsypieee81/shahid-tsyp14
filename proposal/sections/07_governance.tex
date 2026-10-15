@@ -1,0 +1,45 @@
+\section{Escalation and Governance (G3)}\label{sec:governance}
+\textbf{Thresholds for automatic action.} Table~\ref{tab:escalation} is the escalation table, a
+configuration file (DESIGN CHOICE, not validated with operators). The only action taken without a
+person annotates data and opens a ticket; dispatching a crew or contacting customers always needs a
+person. As first written, rule R3 closed communication verdicts automatically. Measured on simulated
+events, it closed real outages without supervision in 0.9\% to 1.8\% of cases nominally and in
+24.1\% under 10 kW of load-shaped unmetered energy, so it was made provisional with a re-check.
+
+\begin{table}[!t]
+\caption{Escalation table (first matching rule wins)}\label{tab:escalation}
+\centering\tabfont\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}l Y L{0.20\columnwidth}@{}}
+\toprule
+\textbf{Rule} & \textbf{Condition and action} & \textbf{Handled by} \\
+\midrule
+R1 & Outage verdict on 20 meters or more: alert at once; operator decides on dispatch & human \\
+R2 & Outage verdict with probability 0.95 or more: alert with the evidence; operator confirms & human \\
+R3 & Communication verdict, probability 0.95 or more, at most 40 meters: provisional data-quality ticket; re-check the backlog of readings & automatic, provisional \\
+R4 & Any other communication verdict: ticket reviewed within the shift & human \\
+R5 & Abstention: review with the evidence & human \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{Operator load.} With 1\% of readings lost at random and no events, version 1 sends 10.23 items
+per transformer-day to a person on the development network, almost all one- or two-meter silences.
+A meter-count gate (post-hoc variant) watches groups of fewer than 3 meters for one hour. On a network
+never used before, the gate that escalates instead of closing cut human items from 9.80 to 4.15 per
+transformer-day and false outage verdicts from 15.0 to 0.5 per transformer-year, with no outage
+closed silently among 350 whole-feeder outages. The gate that closes lost 16 of 350 outages on
+development data. \textbf{Implementation status:} the gate and the R3 re-check are evaluated in study
+code; neither is yet executed by the escalation step.
+
+\textbf{Operator interface.} A validation and audit console (IMPLEMENTED as a preview, Streamlit)
+replays stored simulated days through the frozen pipeline: three queues that are never merged (outage
+awaiting approval, uncertain case, unconfirmed communication verdict), an evidence card per item with
+the alternative cause, a network map, and the hash-chained operator log with chain verification.
+Replay comes before live operation by design: verdicts and thresholds can be checked against known
+outcomes first. No operator has used it.
+
+\textbf{Over-trust and under-trust.} Against over-trust: the alternative cause is shown with every
+verdict, a random sample of automatic closures goes to audit,
+and approvals given within seconds are flagged. Against under-trust: a track record per verdict class
+and overrides recorded with their outcome. These devices are implemented in the console; their effect
+on operators is not measured.

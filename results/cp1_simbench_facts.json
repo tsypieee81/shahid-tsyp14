@@ -1,0 +1,3466 @@
+{
+ "stamp": {
+  "commit": "43b6eda",
+  "config_hash": "d4caee1b0b84",
+  "config": {
+   "grids": [
+    "1-LV-rural1--0-sw",
+    "1-LV-rural1--1-sw",
+    "1-LV-rural1--2-sw",
+    "1-LV-rural2--0-sw",
+    "1-LV-rural2--1-sw",
+    "1-LV-rural2--2-sw",
+    "1-LV-rural3--0-sw",
+    "1-LV-rural3--1-sw",
+    "1-LV-rural3--2-sw",
+    "1-LV-semiurb4--0-sw",
+    "1-LV-semiurb4--1-sw",
+    "1-LV-semiurb4--2-sw",
+    "1-LV-semiurb5--0-sw",
+    "1-LV-semiurb5--1-sw",
+    "1-LV-semiurb5--2-sw",
+    "1-LV-urban6--0-sw",
+    "1-LV-urban6--1-sw",
+    "1-LV-urban6--2-sw"
+   ],
+   "ts_weeks_start_day": [
+    14,
+    172
+   ],
+   "ts_days": 7,
+   "versions": {
+    "simbench": "1.6.3",
+    "pandapower": "3.5.5"
+   }
+  },
+  "command": "python -m shahid.cp1_facts",
+  "date": "2026-10-05T16:12:02",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "grids": {
+  "1-LV-rural1--0-sw": {
+   "counts": {
+    "bus": 15,
+    "line": 13,
+    "trafo": 1,
+    "load": 13,
+    "sgen": 4,
+    "gen": 0,
+    "storage": 0,
+    "switch": 28,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.16
+   ],
+   "trafo_std_type": [
+    "0.16 MVA 20/0.4 kV DOTE 160/20  SGB"
+   ],
+   "switch_types": {
+    "l/LS": 26,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "L2-A": 5,
+    "L1-A": 5,
+    "H0-C": 1,
+    "H0-B": 1,
+    "H0-A": 1
+   },
+   "sgen_profiles": {
+    "PV5": 2,
+    "PV8": 1,
+    "PV6": 1
+   },
+   "sgen_types": {
+    "PV": 4
+   },
+   "sgen_installed_kw": 160.381,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 14.0
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     13
+    ],
+    "sgen_p": [
+     35136,
+     4
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 199538.67273450003,
+   "annual_pv_kwh": 104078.98279871719,
+   "feeders": 4,
+   "loads_per_feeder": [
+    5,
+    4,
+    3,
+    1
+   ],
+   "candidate_zones_distinct": 13,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "diversity": {
+    "loads_nonconstant": 13,
+    "distinct_normalised_shapes": 5,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.4438958644329791,
+    "pairwise_corr_share_above_0.999": 0.2564102564102564
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": 0.08006807186426561
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 15.786486544779368,
+    "vm_min_pu": 1.0144982641883789,
+    "vm_max_pu": 1.0296713930127572,
+    "trafo_loading_max_pct": 40.70180065779658,
+    "energy_kwh": {
+     "load": 6960.668179249999,
+     "pv": 3135.592831727031,
+     "lv_delivered": 3833.394036665872,
+     "line_losses": 8.319256125761205,
+     "storage": 0.0,
+     "trafo_losses": 178.05864524570381
+    },
+    "line_losses_share_of_load": 0.0011951806797171002,
+    "trafo_losses_share_of_load": 0.02558068286842102,
+    "reverse_flow_steps": 202,
+    "balance_resid_lv_max_abs_mw": 1.0966595395678347e-08,
+    "balance_resid_hv_max_abs_mw": 5.421010862427522e-20
+   }
+  },
+  "1-LV-rural1--1-sw": {
+   "counts": {
+    "bus": 15,
+    "line": 13,
+    "trafo": 1,
+    "load": 14,
+    "sgen": 8,
+    "gen": 0,
+    "storage": 4,
+    "switch": 28,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.16
+   ],
+   "trafo_std_type": [
+    "0.16 MVA 20/0.4 kV DOTE 160/20  SGB"
+   ],
+   "switch_types": {
+    "l/LS": 26,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "L2-A": 5,
+    "L1-A": 5,
+    "H0-C": 1,
+    "H0-B": 1,
+    "H0-A": 1,
+    "Soil_Alternative_2": 1
+   },
+   "sgen_profiles": {
+    "PV8": 3,
+    "PV6": 3,
+    "PV5": 2
+   },
+   "sgen_types": {
+    "PV": 8
+   },
+   "sgen_installed_kw": 468.19999999999993,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 13.899999999999999
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     14
+    ],
+    "sgen_p": [
+     35136,
+     8
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 201879.09294269996,
+   "annual_pv_kwh": 302344.10302615236,
+   "feeders": 4,
+   "loads_per_feeder": [
+    5,
+    5,
+    3,
+    1
+   ],
+   "candidate_zones_distinct": 13,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "diversity": {
+    "loads_nonconstant": 14,
+    "distinct_normalised_shapes": 6,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.3932243007050373,
+    "pairwise_corr_share_above_0.999": 0.21978021978021978
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": 0.5333376133335445
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 15.245794185570308,
+    "vm_min_pu": 1.0303050953312476,
+    "vm_max_pu": 1.0834563239934598,
+    "trafo_loading_max_pct": 226.71060121218724,
+    "energy_kwh": {
+     "load": 7048.45249985,
+     "pv": 9136.563746510426,
+     "lv_delivered": -54004.223163868344,
+     "line_losses": 432.68808355597645,
+     "storage": -52348.799999999996,
+     "trafo_losses": 977.9743933250521
+    },
+    "line_losses_share_of_load": 0.06138767106186565,
+    "trafo_losses_share_of_load": 0.1387502282729244,
+    "reverse_flow_steps": 1344,
+    "balance_resid_lv_max_abs_mw": 8.849732058280324e-11,
+    "balance_resid_hv_max_abs_mw": 0.0
+   }
+  },
+  "1-LV-rural1--2-sw": {
+   "counts": {
+    "bus": 15,
+    "line": 13,
+    "trafo": 1,
+    "load": 28,
+    "sgen": 8,
+    "gen": 0,
+    "storage": 5,
+    "switch": 28,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.16
+   ],
+   "trafo_std_type": [
+    "0.16 MVA 20/0.4 kV DOTE 160/20  SGB"
+   ],
+   "switch_types": {
+    "l/LS": 26,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "L2-A": 5,
+    "L1-A": 5,
+    "Soil_Alternative_2": 5,
+    "HLS_A_11.0": 2,
+    "HLS_A_3.7": 2,
+    "HLS_A_22.0": 2,
+    "H0-A": 1,
+    "H0-C": 1,
+    "H0-B": 1,
+    "Air_Semi-Parallel_2": 1,
+    "HLS_B_3.7": 1,
+    "Air_Parallel_2": 1,
+    "Air_Alternative_2": 1
+   },
+   "sgen_profiles": {
+    "PV8": 3,
+    "PV6": 3,
+    "PV5": 2
+   },
+   "sgen_types": {
+    "PV": 8
+   },
+   "sgen_installed_kw": 468.19999999999993,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 21.8
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     28
+    ],
+    "sgen_p": [
+     35136,
+     8
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 233932.557360925,
+   "annual_pv_kwh": 302344.10302615236,
+   "feeders": 4,
+   "loads_per_feeder": [
+    12,
+    10,
+    5,
+    1
+   ],
+   "candidate_zones_distinct": 13,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    12
+   ],
+   "diversity": {
+    "loads_nonconstant": 28,
+    "distinct_normalised_shapes": 13,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.19816671266710928,
+    "pairwise_corr_share_above_0.999": 0.0873015873015873
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": 0.48484124165179626
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 14.964410059508824,
+    "vm_min_pu": 1.031238740334412,
+    "vm_max_pu": 1.0866977422847195,
+    "trafo_loading_max_pct": 255.67576417527195,
+    "energy_kwh": {
+     "load": 8288.098325149998,
+     "pv": 9136.563746510426,
+     "lv_delivered": -69598.13005924654,
+     "line_losses": 466.335363295758,
+     "storage": -69216.00000000001,
+     "trafo_losses": 1463.7236455086904
+    },
+    "line_losses_share_of_load": 0.05626566493313388,
+    "trafo_losses_share_of_load": 0.17660548754194463,
+    "reverse_flow_steps": 1344,
+    "balance_resid_lv_max_abs_mw": 1.2540996019438921e-10,
+    "balance_resid_hv_max_abs_mw": 0.0
+   }
+  },
+  "1-LV-rural2--0-sw": {
+   "counts": {
+    "bus": 97,
+    "line": 95,
+    "trafo": 1,
+    "load": 99,
+    "sgen": 8,
+    "gen": 0,
+    "storage": 0,
+    "switch": 192,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.25
+   ],
+   "trafo_std_type": [
+    "0.25 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/LS": 190,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-L": 23,
+    "H0-A": 21,
+    "H0-B": 19,
+    "H0-C": 15,
+    "H0-G": 14,
+    "G3-A": 1,
+    "G5-A": 1,
+    "G1-C": 1,
+    "G2-A": 1,
+    "G6-A": 1,
+    "G1-B": 1,
+    "G4-A": 1
+   },
+   "sgen_profiles": {
+    "PV3": 3,
+    "PV7": 2,
+    "PV4": 2,
+    "PV1": 1
+   },
+   "sgen_types": {
+    "PV": 8
+   },
+   "sgen_installed_kw": 171.56000000000003,
+   "load_ref_p_kw": {
+    "min": 1.0,
+    "max": 10.0
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     99
+    ],
+    "sgen_p": [
+     35136,
+     8
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 260541.6868145,
+   "annual_pv_kwh": 93893.27408093109,
+   "feeders": 4,
+   "loads_per_feeder": [
+    47,
+    21,
+    16,
+    15
+   ],
+   "candidate_zones_distinct": 95,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+   ],
+   "diversity": {
+    "loads_nonconstant": 99,
+    "distinct_normalised_shapes": 12,
+    "max_abs_dev_within_same_profile_name_normalised": 1.1102230246251565e-16,
+    "pairwise_corr_mean": 0.32831775989369083,
+    "pairwise_corr_share_above_0.999": 0.17109874252731397
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.0577643589011264
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 15.183464579638981,
+    "vm_min_pu": 1.0072924268824532,
+    "vm_max_pu": 1.0307100383188625,
+    "trafo_loading_max_pct": 28.299509199957512,
+    "energy_kwh": {
+     "load": 10302.318090500003,
+     "pv": 2769.9156431943,
+     "lv_delivered": 7549.239036846645,
+     "line_losses": 16.83752469177978,
+     "storage": 0.0,
+     "trafo_losses": 324.97494002140223
+    },
+    "line_losses_share_of_load": 0.0016343433141814984,
+    "trafo_losses_share_of_load": 0.031543865872387396,
+    "reverse_flow_steps": 97,
+    "balance_resid_lv_max_abs_mw": 2.5531423412938903e-08,
+    "balance_resid_hv_max_abs_mw": 5.421010862427522e-20
+   }
+  },
+  "1-LV-rural2--1-sw": {
+   "counts": {
+    "bus": 97,
+    "line": 95,
+    "trafo": 1,
+    "load": 103,
+    "sgen": 9,
+    "gen": 0,
+    "storage": 0,
+    "switch": 192,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.25
+   ],
+   "trafo_std_type": [
+    "0.25 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/LS": 190,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-L": 23,
+    "H0-A": 21,
+    "H0-B": 19,
+    "H0-C": 15,
+    "H0-G": 14,
+    "HLS_A_3.7": 2,
+    "G3-A": 1,
+    "G1-C": 1,
+    "G5-A": 1,
+    "G6-A": 1,
+    "G2-A": 1,
+    "G1-B": 1,
+    "G4-A": 1,
+    "HLS_C_3.7": 1,
+    "HLS_B_3.7": 1
+   },
+   "sgen_profiles": {
+    "PV3": 4,
+    "PV7": 2,
+    "PV4": 2,
+    "PV1": 1
+   },
+   "sgen_types": {
+    "PV": 9
+   },
+   "sgen_installed_kw": 228.70000000000002,
+   "load_ref_p_kw": {
+    "min": 1.0,
+    "max": 10.0
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     103
+    ],
+    "sgen_p": [
+     35136,
+     9
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 263694.46636882506,
+   "annual_pv_kwh": 150598.74913586085,
+   "feeders": 4,
+   "loads_per_feeder": [
+    48,
+    22,
+    18,
+    15
+   ],
+   "candidate_zones_distinct": 95,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    30,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+   ],
+   "diversity": {
+    "loads_nonconstant": 103,
+    "distinct_normalised_shapes": 15,
+    "max_abs_dev_within_same_profile_name_normalised": 1.1102230246251565e-16,
+    "pairwise_corr_mean": 0.3062842211585622,
+    "pairwise_corr_share_above_0.999": 0.15819531696173614
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": 0.010854585136468309
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 15.063083242802392,
+    "vm_min_pu": 1.0072546495202073,
+    "vm_max_pu": 1.0341728406536659,
+    "trafo_loading_max_pct": 34.83233796544566,
+    "energy_kwh": {
+     "load": 10433.929304025,
+     "pv": 4290.744294574624,
+     "lv_delivered": 6159.390179038588,
+     "line_losses": 16.2060597173982,
+     "storage": 0.0,
+     "trafo_losses": 326.60780695504684
+    },
+    "line_losses_share_of_load": 0.0015532077365280346,
+    "trafo_losses_share_of_load": 0.03130247459402034,
+    "reverse_flow_steps": 192,
+    "balance_resid_lv_max_abs_mw": 2.54662953294571e-08,
+    "balance_resid_hv_max_abs_mw": 5.421010862427522e-20
+   }
+  },
+  "1-LV-rural2--2-sw": {
+   "counts": {
+    "bus": 97,
+    "line": 95,
+    "trafo": 1,
+    "load": 118,
+    "sgen": 11,
+    "gen": 0,
+    "storage": 8,
+    "switch": 192,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.25
+   ],
+   "trafo_std_type": [
+    "0.25 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/LS": 190,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-L": 23,
+    "H0-A": 21,
+    "H0-B": 19,
+    "H0-C": 15,
+    "H0-G": 14,
+    "Air_Semi-Parallel_1": 5,
+    "HLS_A_3.7": 3,
+    "HLS_C_3.7": 3,
+    "G1-C": 1,
+    "G3-A": 1,
+    "G5-A": 1,
+    "G1-B": 1,
+    "G6-A": 1,
+    "G4-A": 1,
+    "G2-A": 1,
+    "HLS_B_3.7": 1,
+    "Air_Alternative_1": 1,
+    "APLS_B_11.0": 1,
+    "HLS_A_11.0": 1,
+    "HLS_B_11.0": 1,
+    "HLS_A_22.0": 1,
+    "Air_Parallel_1": 1,
+    "Soil_Alternative_1": 1
+   },
+   "sgen_profiles": {
+    "PV3": 5,
+    "PV4": 3,
+    "PV7": 2,
+    "PV1": 1
+   },
+   "sgen_types": {
+    "PV": 11
+   },
+   "sgen_installed_kw": 233.5,
+   "load_ref_p_kw": {
+    "min": 1.0,
+    "max": 21.8
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     118
+    ],
+    "sgen_p": [
+     35136,
+     11
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 293490.35498075,
+   "annual_pv_kwh": 153889.6162369429,
+   "feeders": 4,
+   "loads_per_feeder": [
+    52,
+    27,
+    24,
+    15
+   ],
+   "candidate_zones_distinct": 95,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    29,
+    30,
+    31,
+    32,
+    34,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52
+   ],
+   "diversity": {
+    "loads_nonconstant": 118,
+    "distinct_normalised_shapes": 23,
+    "max_abs_dev_within_same_profile_name_normalised": 1.1102230246251565e-16,
+    "pairwise_corr_mean": 0.2572146241270621,
+    "pairwise_corr_share_above_0.999": 0.12255541069100391
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.002991539643692323
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 15.50964532153947,
+    "vm_min_pu": 1.0138113653266208,
+    "vm_max_pu": 1.0429036666162566,
+    "trafo_loading_max_pct": 68.84470694298986,
+    "energy_kwh": {
+     "load": 11540.5585305,
+     "pv": 4383.202370600725,
+     "lv_delivered": -23964.770225909833,
+     "line_losses": 125.87373225762832,
+     "storage": -31247.999999999996,
+     "trafo_losses": 408.51949138970656
+    },
+    "line_losses_share_of_load": 0.01090707455145802,
+    "trafo_losses_share_of_load": 0.03539858927191865,
+    "reverse_flow_steps": 1344,
+    "balance_resid_lv_max_abs_mw": 3.10702143770103e-08,
+    "balance_resid_hv_max_abs_mw": 0.0
+   }
+  },
+  "1-LV-rural3--0-sw": {
+   "counts": {
+    "bus": 129,
+    "line": 127,
+    "trafo": 1,
+    "load": 118,
+    "sgen": 17,
+    "gen": 0,
+    "storage": 0,
+    "switch": 256,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.4
+   ],
+   "trafo_std_type": [
+    "0.4 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/CB": 6,
+    "l/LS": 248,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-A": 31,
+    "H0-B": 23,
+    "H0-L": 22,
+    "H0-C": 20,
+    "H0-G": 17,
+    "G1-C": 2,
+    "G6-A": 1,
+    "G5-A": 1,
+    "G4-A": 1
+   },
+   "sgen_profiles": {
+    "PV3": 5,
+    "PV7": 4,
+    "PV4": 4,
+    "PV1": 4
+   },
+   "sgen_types": {
+    "PV": 17
+   },
+   "sgen_installed_kw": 190.36999999999998,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 14.0
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     118
+    ],
+    "sgen_p": [
+     35136,
+     17
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 349030.24491275003,
+   "annual_pv_kwh": 125063.95710852028,
+   "feeders": 9,
+   "loads_per_feeder": [
+    28,
+    24,
+    22,
+    21,
+    10,
+    5,
+    5,
+    2,
+    1
+   ],
+   "candidate_zones_distinct": 127,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+   ],
+   "diversity": {
+    "loads_nonconstant": 118,
+    "distinct_normalised_shapes": 9,
+    "max_abs_dev_within_same_profile_name_normalised": 1.1102230246251565e-16,
+    "pairwise_corr_mean": 0.34941914030543586,
+    "pairwise_corr_share_above_0.999": 0.18484716789801536
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.14256061765213107
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 15.158638712905702,
+    "vm_min_pu": 1.0012488241491595,
+    "vm_max_pu": 1.0317366533887657,
+    "trafo_loading_max_pct": 32.74189552195582,
+    "energy_kwh": {
+     "load": 13818.29692575,
+     "pv": 3587.2069993210025,
+     "lv_delivered": 10258.522347094553,
+     "line_losses": 27.43379536537631,
+     "storage": 0.0,
+     "trafo_losses": 440.7607151040967
+    },
+    "line_losses_share_of_load": 0.0019853239160213887,
+    "trafo_losses_share_of_load": 0.0318968913081287,
+    "reverse_flow_steps": 124,
+    "balance_resid_lv_max_abs_mw": 5.798303513715464e-08,
+    "balance_resid_hv_max_abs_mw": 2.168404344971009e-19
+   }
+  },
+  "1-LV-rural3--1-sw": {
+   "counts": {
+    "bus": 129,
+    "line": 127,
+    "trafo": 1,
+    "load": 145,
+    "sgen": 25,
+    "gen": 0,
+    "storage": 14,
+    "switch": 256,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.4
+   ],
+   "trafo_std_type": [
+    "0.4 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/CB": 6,
+    "l/LS": 248,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-A": 31,
+    "H0-B": 23,
+    "H0-L": 22,
+    "H0-C": 20,
+    "H0-G": 17,
+    "Air_Semi-Parallel_1": 6,
+    "Air_Alternative_1": 4,
+    "HLS_A_3.7": 4,
+    "Soil_Alternative_1": 3,
+    "G1-C": 2,
+    "Air_Parallel_1": 2,
+    "HLS_C_3.7": 2,
+    "HLS_B_3.7": 2,
+    "HLS_A_11.0": 2,
+    "APLS_A_3.7": 2,
+    "G4-A": 1,
+    "G6-A": 1,
+    "G5-A": 1
+   },
+   "sgen_profiles": {
+    "PV3": 7,
+    "PV1": 7,
+    "PV4": 6,
+    "PV7": 5
+   },
+   "sgen_types": {
+    "PV": 25
+   },
+   "sgen_installed_kw": 242.2,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 27.900000000000002
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     145
+    ],
+    "sgen_p": [
+     35136,
+     25
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 438421.4067689,
+   "annual_pv_kwh": 158655.08269707768,
+   "feeders": 9,
+   "loads_per_feeder": [
+    32,
+    30,
+    29,
+    25,
+    12,
+    7,
+    6,
+    2,
+    2
+   ],
+   "candidate_zones_distinct": 127,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "diversity": {
+    "loads_nonconstant": 145,
+    "distinct_normalised_shapes": 18,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.2722372172355764,
+    "pairwise_corr_share_above_0.999": 0.12557471264367817
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.1664228663402792
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 19.54634789200056,
+    "vm_min_pu": 1.003645466403592,
+    "vm_max_pu": 1.0502811216258996,
+    "trafo_loading_max_pct": 39.19248296983861,
+    "energy_kwh": {
+     "load": 17146.43513395,
+     "pv": 4557.377569573875,
+     "lv_delivered": -13332.454081320057,
+     "line_losses": 152.08924026931072,
+     "storage": -26073.6,
+     "trafo_losses": 456.5690211952308
+    },
+    "line_losses_share_of_load": 0.008870021032428689,
+    "trafo_losses_share_of_load": 0.026627635285612378,
+    "reverse_flow_steps": 1137,
+    "balance_resid_lv_max_abs_mw": 3.240876698604178e-08,
+    "balance_resid_hv_max_abs_mw": 1.0842021724855044e-19
+   }
+  },
+  "1-LV-rural3--2-sw": {
+   "counts": {
+    "bus": 129,
+    "line": 127,
+    "trafo": 1,
+    "load": 153,
+    "sgen": 27,
+    "gen": 0,
+    "storage": 16,
+    "switch": 256,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.4
+   ],
+   "trafo_std_type": [
+    "0.4 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/CB": 6,
+    "l/LS": 248,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-A": 31,
+    "H0-B": 23,
+    "H0-L": 22,
+    "H0-C": 20,
+    "H0-G": 17,
+    "HLS_A_3.7": 7,
+    "Air_Semi-Parallel_1": 6,
+    "Air_Parallel_1": 4,
+    "Air_Alternative_1": 4,
+    "Soil_Alternative_1": 4,
+    "HLS_A_11.0": 2,
+    "G1-C": 2,
+    "HLS_B_3.7": 2,
+    "APLS_A_3.7": 2,
+    "HLS_C_3.7": 2,
+    "G6-A": 1,
+    "G4-A": 1,
+    "G5-A": 1,
+    "APLS_A_11.0": 1,
+    "HLS_A_22.0": 1
+   },
+   "sgen_profiles": {
+    "PV1": 9,
+    "PV3": 7,
+    "PV4": 6,
+    "PV7": 5
+   },
+   "sgen_types": {
+    "PV": 27
+   },
+   "sgen_installed_kw": 252.3,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 27.599999999999998
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     153
+    ],
+    "sgen_p": [
+     35136,
+     27
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 468451.26564357505,
+   "annual_pv_kwh": 165231.21474160787,
+   "feeders": 9,
+   "loads_per_feeder": [
+    32,
+    32,
+    30,
+    27,
+    13,
+    7,
+    7,
+    3,
+    2
+   ],
+   "candidate_zones_distinct": 127,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "diversity": {
+    "loads_nonconstant": 153,
+    "distinct_normalised_shapes": 20,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.25600826773139346,
+    "pairwise_corr_share_above_0.999": 0.11472308221534228
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.21451665988980975
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 19.054639197531202,
+    "vm_min_pu": 0.9993505181431817,
+    "vm_max_pu": 1.0508078051839067,
+    "trafo_loading_max_pct": 44.195709708685115,
+    "energy_kwh": {
+     "load": 18298.380359749997,
+     "pv": 4738.743756560525,
+     "lv_delivered": -17508.670131595874,
+     "line_losses": 179.693960690244,
+     "storage": -31247.999999999996,
+     "trafo_losses": 472.93934222652985
+    },
+    "line_losses_share_of_load": 0.009820211251347006,
+    "trafo_losses_share_of_load": 0.02584596739866825,
+    "reverse_flow_steps": 1167,
+    "balance_resid_lv_max_abs_mw": 3.574936498218495e-08,
+    "balance_resid_hv_max_abs_mw": 1.0842021724855044e-19
+   }
+  },
+  "1-LV-semiurb4--0-sw": {
+   "counts": {
+    "bus": 44,
+    "line": 42,
+    "trafo": 1,
+    "load": 41,
+    "sgen": 1,
+    "gen": 0,
+    "storage": 0,
+    "switch": 86,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.4
+   ],
+   "trafo_std_type": [
+    "0.4 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/LS": 84,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-B": 10,
+    "H0-L": 8,
+    "H0-G": 8,
+    "H0-A": 6,
+    "G1-A": 2,
+    "G4-A": 2,
+    "G2-A": 2,
+    "G6-A": 1,
+    "G4-B": 1,
+    "G1-C": 1
+   },
+   "sgen_profiles": {
+    "PV5": 1
+   },
+   "sgen_types": {
+    "PV": 1
+   },
+   "sgen_installed_kw": 6.4799999999999995,
+   "load_ref_p_kw": {
+    "min": 3.0,
+    "max": 18.0
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     41
+    ],
+    "sgen_p": [
+     35136,
+     1
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 387609.27316075005,
+   "annual_pv_kwh": 4380.17747185908,
+   "feeders": 3,
+   "loads_per_feeder": [
+    27,
+    8,
+    6
+   ],
+   "candidate_zones_distinct": 42,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    23,
+    24,
+    25,
+    27
+   ],
+   "diversity": {
+    "loads_nonconstant": 41,
+    "distinct_normalised_shapes": 10,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.29677429480430223,
+    "pairwise_corr_share_above_0.999": 0.14512195121951219
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.23971266846132852
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 16.78810783085369,
+    "vm_min_pu": 1.0049155960647402,
+    "vm_max_pu": 1.0241462390561222,
+    "trafo_loading_max_pct": 26.090580560050615,
+    "energy_kwh": {
+     "load": 16195.6363605,
+     "pv": 134.8342763355,
+     "lv_delivered": 16142.638460156299,
+     "line_losses": 81.83753452475106,
+     "storage": 0.0,
+     "trafo_losses": 451.10608170943544
+    },
+    "line_losses_share_of_load": 0.0050530607568065045,
+    "trafo_losses_share_of_load": 0.027853557073536855,
+    "reverse_flow_steps": 0,
+    "balance_resid_lv_max_abs_mw": 3.898514366884598e-08,
+    "balance_resid_hv_max_abs_mw": 0.0
+   }
+  },
+  "1-LV-semiurb4--1-sw": {
+   "counts": {
+    "bus": 44,
+    "line": 42,
+    "trafo": 1,
+    "load": 44,
+    "sgen": 1,
+    "gen": 0,
+    "storage": 1,
+    "switch": 86,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.4
+   ],
+   "trafo_std_type": [
+    "0.4 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/LS": 84,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-B": 10,
+    "H0-G": 8,
+    "H0-L": 8,
+    "H0-A": 6,
+    "G1-A": 2,
+    "G4-A": 2,
+    "G2-A": 2,
+    "G6-A": 1,
+    "G4-B": 1,
+    "G1-C": 1,
+    "Air_Semi-Parallel_2": 1,
+    "Soil_Alternative_2": 1,
+    "HLS_B_3.7": 1
+   },
+   "sgen_profiles": {
+    "PV5": 1
+   },
+   "sgen_types": {
+    "PV": 1
+   },
+   "sgen_installed_kw": 6.5,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 17.9
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     44
+    ],
+    "sgen_p": [
+     35136,
+     1
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 391881.742526,
+   "annual_pv_kwh": 4393.69653813025,
+   "feeders": 3,
+   "loads_per_feeder": [
+    28,
+    10,
+    6
+   ],
+   "candidate_zones_distinct": 42,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    24,
+    25,
+    26,
+    28
+   ],
+   "diversity": {
+    "loads_nonconstant": 44,
+    "distinct_normalised_shapes": 13,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.27196463124493464,
+    "pairwise_corr_share_above_0.999": 0.12579281183932348
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.23436113015764187
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 20.15389608485358,
+    "vm_min_pu": 1.004830514282548,
+    "vm_max_pu": 1.0253612652649664,
+    "trafo_loading_max_pct": 23.500946280511624,
+    "energy_kwh": {
+     "load": 16343.830209975004,
+     "pv": 135.250431509375,
+     "lv_delivered": 11687.466351589215,
+     "line_losses": 82.0878139193179,
+     "storage": -4603.2,
+     "trafo_losses": 440.6195094712829
+    },
+    "line_losses_share_of_load": 0.005022556699666268,
+    "trafo_losses_share_of_load": 0.026959378787621217,
+    "reverse_flow_steps": 19,
+    "balance_resid_lv_max_abs_mw": 3.443228265009868e-08,
+    "balance_resid_hv_max_abs_mw": 1.0842021724855044e-19
+   }
+  },
+  "1-LV-semiurb4--2-sw": {
+   "counts": {
+    "bus": 44,
+    "line": 42,
+    "trafo": 1,
+    "load": 58,
+    "sgen": 6,
+    "gen": 0,
+    "storage": 4,
+    "switch": 86,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.4
+   ],
+   "trafo_std_type": [
+    "0.4 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/LS": 84,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-B": 10,
+    "H0-G": 8,
+    "H0-L": 8,
+    "H0-A": 6,
+    "Air_Parallel_2": 4,
+    "Air_Semi-Parallel_2": 3,
+    "G1-A": 2,
+    "Soil_Alternative_2": 2,
+    "G4-A": 2,
+    "G2-A": 2,
+    "G4-B": 1,
+    "G1-C": 1,
+    "G6-A": 1,
+    "HLS_B_3.7": 1,
+    "APLS_A_3.7": 1,
+    "HLS_A_3.7": 1,
+    "Air_Alternative_2": 1,
+    "HLS_A_22.0": 1,
+    "APLS_A_11.0": 1,
+    "APLS_B_11.0": 1,
+    "HLS_B_11.0": 1
+   },
+   "sgen_profiles": {
+    "PV5": 6
+   },
+   "sgen_types": {
+    "PV": 6
+   },
+   "sgen_installed_kw": 172.20000000000002,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 21.8
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     58
+    ],
+    "sgen_p": [
+     35136,
+     6
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 413377.6464613,
+   "annual_pv_kwh": 116399.1605947737,
+   "feeders": 3,
+   "loads_per_feeder": [
+    36,
+    13,
+    9
+   ],
+   "candidate_zones_distinct": 42,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    16,
+    17,
+    19,
+    21,
+    31,
+    32,
+    33,
+    36
+   ],
+   "diversity": {
+    "loads_nonconstant": 58,
+    "distinct_normalised_shapes": 21,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.20905759923719278,
+    "pairwise_corr_share_above_0.999": 0.0780399274047187
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": 0.05190482268223853
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 17.93893018648738,
+    "vm_min_pu": 1.0197003588652769,
+    "vm_max_pu": 1.065193262585214,
+    "trafo_loading_max_pct": 62.67435283266093,
+    "energy_kwh": {
+     "load": 17101.707778224998,
+     "pv": 3583.0960470637497,
+     "lv_delivered": -60932.71534827862,
+     "line_losses": 1215.872921225332,
+     "storage": -75667.20000000001,
+     "trafo_losses": 744.6268606589524
+    },
+    "line_losses_share_of_load": 0.07109657918336437,
+    "trafo_losses_share_of_load": 0.043541081996913755,
+    "reverse_flow_steps": 1344,
+    "balance_resid_lv_max_abs_mw": 1.932959348138752e-11,
+    "balance_resid_hv_max_abs_mw": 0.0
+   }
+  },
+  "1-LV-semiurb5--0-sw": {
+   "counts": {
+    "bus": 111,
+    "line": 109,
+    "trafo": 1,
+    "load": 104,
+    "sgen": 9,
+    "gen": 0,
+    "storage": 0,
+    "switch": 220,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.63
+   ],
+   "trafo_std_type": [
+    "0.63 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/LS": 218,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-G": 27,
+    "H0-L": 22,
+    "H0-C": 17,
+    "H0-B": 17,
+    "H0-A": 9,
+    "G3-A": 5,
+    "G6-A": 3,
+    "G1-C": 2,
+    "G4-B": 1,
+    "G5-A": 1
+   },
+   "sgen_profiles": {
+    "PV5": 3,
+    "PV2": 2,
+    "PV6": 2,
+    "PV8": 2
+   },
+   "sgen_types": {
+    "PV": 9
+   },
+   "sgen_installed_kw": 137.11,
+   "load_ref_p_kw": {
+    "min": 1.0,
+    "max": 25.0
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     104
+    ],
+    "sgen_p": [
+     35136,
+     9
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 475489.123164,
+   "annual_pv_kwh": 90543.61337437572,
+   "feeders": 6,
+   "loads_per_feeder": [
+    37,
+    34,
+    22,
+    7,
+    3,
+    1
+   ],
+   "candidate_zones_distinct": 109,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37
+   ],
+   "diversity": {
+    "loads_nonconstant": 104,
+    "distinct_normalised_shapes": 10,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.307094716214629,
+    "pairwise_corr_share_above_0.999": 0.16878267363704258
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.2746199325251257
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 16.672651859975996,
+    "vm_min_pu": 1.0063205829376431,
+    "vm_max_pu": 1.0287986170687442,
+    "trafo_loading_max_pct": 23.13236129568195,
+    "energy_kwh": {
+     "load": 17971.783455250003,
+     "pv": 2830.672145717398,
+     "lv_delivered": 15172.482288940499,
+     "line_losses": 31.372360400191507,
+     "storage": 0.0,
+     "trafo_losses": 598.1153500856071
+    },
+    "line_losses_share_of_load": 0.0017456453600339184,
+    "trafo_losses_share_of_load": 0.03328080107213193,
+    "reverse_flow_steps": 62,
+    "balance_resid_lv_max_abs_mw": 4.478164450372191e-08,
+    "balance_resid_hv_max_abs_mw": 1.0842021724855044e-19
+   }
+  },
+  "1-LV-semiurb5--1-sw": {
+   "counts": {
+    "bus": 111,
+    "line": 109,
+    "trafo": 1,
+    "load": 118,
+    "sgen": 14,
+    "gen": 0,
+    "storage": 10,
+    "switch": 220,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.63
+   ],
+   "trafo_std_type": [
+    "0.63 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/LS": 218,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-G": 27,
+    "H0-L": 22,
+    "H0-C": 17,
+    "H0-B": 17,
+    "H0-A": 9,
+    "G3-A": 5,
+    "G6-A": 3,
+    "Air_Semi-Parallel_2": 3,
+    "Air_Alternative_2": 3,
+    "G1-C": 2,
+    "Soil_Alternative_2": 2,
+    "HLS_B_3.7": 2,
+    "G5-A": 1,
+    "G4-B": 1,
+    "HLS_C_3.7": 1,
+    "APLS_B_11.0": 1,
+    "APLS_B_3.7": 1,
+    "Air_Parallel_2": 1
+   },
+   "sgen_profiles": {
+    "PV5": 5,
+    "PV2": 4,
+    "PV8": 3,
+    "PV6": 2
+   },
+   "sgen_types": {
+    "PV": 14
+   },
+   "sgen_installed_kw": 181.8,
+   "load_ref_p_kw": {
+    "min": 1.0,
+    "max": 24.9
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     118
+    ],
+    "sgen_p": [
+     35136,
+     14
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 506051.22096725,
+   "annual_pv_kwh": 119490.78910266163,
+   "feeders": 6,
+   "loads_per_feeder": [
+    42,
+    35,
+    27,
+    10,
+    3,
+    1
+   ],
+   "candidate_zones_distinct": 109,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+   ],
+   "diversity": {
+    "loads_nonconstant": 118,
+    "distinct_normalised_shapes": 18,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.26216893669220737,
+    "pairwise_corr_share_above_0.999": 0.13211647109952196
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.191907344602361
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 16.35893913252013,
+    "vm_min_pu": 1.011480131756772,
+    "vm_max_pu": 1.0389668232090576,
+    "trafo_loading_max_pct": 23.385127448662708,
+    "energy_kwh": {
+     "load": 19070.761949450003,
+     "pv": 3733.350912502925,
+     "lv_delivered": -17608.58845055154,
+     "line_losses": 82.80187990686655,
+     "storage": -33028.8,
+     "trafo_losses": 603.9790426161128
+    },
+    "line_losses_share_of_load": 0.004341823369530054,
+    "trafo_losses_share_of_load": 0.031670420102618474,
+    "reverse_flow_steps": 1277,
+    "balance_resid_lv_max_abs_mw": 3.5730742753425915e-08,
+    "balance_resid_hv_max_abs_mw": 1.0842021724855044e-19
+   }
+  },
+  "1-LV-semiurb5--2-sw": {
+   "counts": {
+    "bus": 111,
+    "line": 109,
+    "trafo": 1,
+    "load": 129,
+    "sgen": 15,
+    "gen": 0,
+    "storage": 15,
+    "switch": 220,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.63
+   ],
+   "trafo_std_type": [
+    "0.63 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/LS": 218,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-G": 27,
+    "H0-L": 22,
+    "H0-C": 17,
+    "H0-B": 17,
+    "H0-A": 9,
+    "G3-A": 5,
+    "Air_Semi-Parallel_2": 5,
+    "Air_Alternative_2": 4,
+    "G6-A": 3,
+    "Air_Parallel_2": 3,
+    "Soil_Alternative_2": 2,
+    "HLS_B_3.7": 2,
+    "APLS_B_11.0": 2,
+    "G1-C": 2,
+    "HLS_B_11.0": 2,
+    "HLS_C_3.7": 1,
+    "G4-B": 1,
+    "G5-A": 1,
+    "APLS_B_3.7": 1,
+    "APLS_A_3.7": 1,
+    "APLS_A_22.0": 1,
+    "HLS_A_3.7": 1
+   },
+   "sgen_profiles": {
+    "PV5": 5,
+    "PV2": 4,
+    "PV8": 4,
+    "PV6": 2
+   },
+   "sgen_types": {
+    "PV": 15
+   },
+   "sgen_installed_kw": 184.70000000000002,
+   "load_ref_p_kw": {
+    "min": 1.0,
+    "max": 24.6
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     129
+    ],
+    "sgen_p": [
+     35136,
+     15
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 525020.4974339,
+   "annual_pv_kwh": 121295.15395764145,
+   "feeders": 6,
+   "loads_per_feeder": [
+    44,
+    40,
+    29,
+    12,
+    3,
+    1
+   ],
+   "candidate_zones_distinct": 109,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+   ],
+   "diversity": {
+    "loads_nonconstant": 129,
+    "distinct_normalised_shapes": 22,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.2350643116011622,
+    "pairwise_corr_share_above_0.999": 0.11228197674418605
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.12465142872345729
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 16.749774238892964,
+    "vm_min_pu": 1.0185076837216438,
+    "vm_max_pu": 1.0608941784893766,
+    "trafo_loading_max_pct": 45.94149814850568,
+    "energy_kwh": {
+     "load": 19727.90097195,
+     "pv": 3786.0748001006,
+     "lv_delivered": -66313.6132371347,
+     "line_losses": 971.7605912307313,
+     "storage": -83227.2,
+     "trafo_losses": 805.3233646709592
+    },
+    "line_losses_share_of_load": 0.04925818477152858,
+    "trafo_losses_share_of_load": 0.04082154334695838,
+    "reverse_flow_steps": 1344,
+    "balance_resid_lv_max_abs_mw": 6.512235195543781e-12,
+    "balance_resid_hv_max_abs_mw": 0.0
+   }
+  },
+  "1-LV-urban6--0-sw": {
+   "counts": {
+    "bus": 59,
+    "line": 57,
+    "trafo": 1,
+    "load": 111,
+    "sgen": 5,
+    "gen": 0,
+    "storage": 0,
+    "switch": 116,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.63
+   ],
+   "trafo_std_type": [
+    "0.63 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/CB": 2,
+    "l/LS": 112,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-B": 25,
+    "H0-A": 24,
+    "H0-L": 20,
+    "H0-C": 20,
+    "H0-G": 13,
+    "G1-B": 2,
+    "G4-A": 2,
+    "G6-A": 2,
+    "G4-B": 1,
+    "G1-A": 1,
+    "G1-C": 1
+   },
+   "sgen_profiles": {
+    "PV8": 2,
+    "PV2": 1,
+    "PV6": 1,
+    "PV5": 1
+   },
+   "sgen_types": {
+    "PV": 5
+   },
+   "sgen_installed_kw": 78.13000000000001,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 31.0
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     111
+    ],
+    "sgen_p": [
+     35136,
+     5
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 536614.9166507501,
+   "annual_pv_kwh": 37700.210437016125,
+   "feeders": 7,
+   "loads_per_feeder": [
+    38,
+    28,
+    16,
+    14,
+    8,
+    6,
+    1
+   ],
+   "candidate_zones_distinct": 57,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    24,
+    25,
+    26,
+    28,
+    35,
+    36,
+    37,
+    38
+   ],
+   "diversity": {
+    "loads_nonconstant": 111,
+    "distinct_normalised_shapes": 11,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.3337319512529516,
+    "pairwise_corr_share_above_0.999": 0.16986076986076987
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.38733288729146326
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 17.77863059015501,
+    "vm_min_pu": 1.0080205476368826,
+    "vm_max_pu": 1.0247089826816025,
+    "trafo_loading_max_pct": 26.898985783644513,
+    "energy_kwh": {
+     "load": 21962.25673825,
+     "pv": 1169.66007897828,
+     "lv_delivered": 20829.068376881954,
+     "line_losses": 36.47297803871332,
+     "storage": 0.0,
+     "trafo_losses": 610.9906237705613
+    },
+    "line_losses_share_of_load": 0.0016607117598798988,
+    "trafo_losses_share_of_load": 0.027820029200662483,
+    "reverse_flow_steps": 0,
+    "balance_resid_lv_max_abs_mw": 3.6194446689785664e-08,
+    "balance_resid_hv_max_abs_mw": 0.0
+   }
+  },
+  "1-LV-urban6--1-sw": {
+   "counts": {
+    "bus": 59,
+    "line": 57,
+    "trafo": 1,
+    "load": 112,
+    "sgen": 7,
+    "gen": 0,
+    "storage": 0,
+    "switch": 116,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.63
+   ],
+   "trafo_std_type": [
+    "0.63 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/CB": 2,
+    "l/LS": 112,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-B": 25,
+    "H0-A": 24,
+    "H0-C": 20,
+    "H0-L": 20,
+    "H0-G": 13,
+    "G1-B": 2,
+    "G6-A": 2,
+    "G4-A": 2,
+    "G4-B": 1,
+    "G1-A": 1,
+    "G1-C": 1,
+    "Soil_Alternative_2": 1
+   },
+   "sgen_profiles": {
+    "PV8": 3,
+    "PV5": 2,
+    "PV2": 1,
+    "PV6": 1
+   },
+   "sgen_types": {
+    "PV": 7
+   },
+   "sgen_installed_kw": 140.0,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 30.900000000000002
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     112
+    ],
+    "sgen_p": [
+     35136,
+     7
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 540609.38014075,
+   "annual_pv_kwh": 89486.89391623558,
+   "feeders": 7,
+   "loads_per_feeder": [
+    38,
+    29,
+    16,
+    14,
+    8,
+    6,
+    1
+   ],
+   "candidate_zones_distinct": 57,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    24,
+    25,
+    27,
+    28,
+    29,
+    35,
+    36,
+    37,
+    38
+   ],
+   "diversity": {
+    "loads_nonconstant": 112,
+    "distinct_normalised_shapes": 12,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.330838587000921,
+    "pairwise_corr_share_above_0.999": 0.16682754182754184
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.30589911997336666
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 16.144387423992157,
+    "vm_min_pu": 1.0078429061025,
+    "vm_max_pu": 1.0282719357511432,
+    "trafo_loading_max_pct": 27.345720476501707,
+    "energy_kwh": {
+     "load": 22108.712250725,
+     "pv": 2687.237035214925,
+     "lv_delivered": 19454.163890987496,
+     "line_losses": 32.689686924312994,
+     "storage": 0.0,
+     "trafo_losses": 608.999812268493
+    },
+    "line_losses_share_of_load": 0.0014785884656507312,
+    "trafo_losses_share_of_load": 0.027545693542079655,
+    "reverse_flow_steps": 15,
+    "balance_resid_lv_max_abs_mw": 2.7654900147666694e-08,
+    "balance_resid_hv_max_abs_mw": 1.0842021724855044e-19
+   }
+  },
+  "1-LV-urban6--2-sw": {
+   "counts": {
+    "bus": 59,
+    "line": 57,
+    "trafo": 1,
+    "load": 135,
+    "sgen": 12,
+    "gen": 0,
+    "storage": 7,
+    "switch": 116,
+    "ext_grid": 1
+   },
+   "trafo_sn_mva": [
+    0.63
+   ],
+   "trafo_std_type": [
+    "0.63 MVA 20/0.4 kV Dyn5 ASEA"
+   ],
+   "switch_types": {
+    "l/CB": 2,
+    "l/LS": 112,
+    "t/CB": 2
+   },
+   "open_switches": 0,
+   "load_profiles": {
+    "H0-B": 25,
+    "H0-A": 24,
+    "H0-C": 20,
+    "H0-L": 20,
+    "H0-G": 13,
+    "Soil_Alternative_2": 5,
+    "Air_Semi-Parallel_2": 4,
+    "Air_Alternative_2": 4,
+    "HLS_A_11.0": 3,
+    "G1-B": 2,
+    "G4-A": 2,
+    "G6-A": 2,
+    "HLS_C_3.7": 2,
+    "G4-B": 1,
+    "G1-C": 1,
+    "G1-A": 1,
+    "APLS_A_50.0": 1,
+    "APLS_B_11.0": 1,
+    "HLS_B_11.0": 1,
+    "Air_Parallel_2": 1,
+    "HLS_A_3.7": 1,
+    "HLS_B_3.7": 1
+   },
+   "sgen_profiles": {
+    "PV8": 7,
+    "PV2": 2,
+    "PV5": 2,
+    "PV6": 1
+   },
+   "sgen_types": {
+    "PV": 12
+   },
+   "sgen_installed_kw": 171.20000000000002,
+   "load_ref_p_kw": {
+    "min": 2.0,
+    "max": 49.4
+   },
+   "profile_steps": 35136,
+   "profile_array_dims": {
+    "load_p": [
+     35136,
+     135
+    ],
+    "sgen_p": [
+     35136,
+     12
+    ]
+   },
+   "profile_time_first_last": [
+    "01.01.2016 00:00",
+    "31.12.2016 23:45"
+   ],
+   "annual_load_kwh": 591539.1702403,
+   "annual_pv_kwh": 108982.48211864181,
+   "feeders": 7,
+   "loads_per_feeder": [
+    45,
+    34,
+    20,
+    17,
+    11,
+    7,
+    1
+   ],
+   "candidate_zones_distinct": 57,
+   "candidate_zone_sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    22,
+    23,
+    24,
+    25,
+    28,
+    29,
+    31,
+    33,
+    34,
+    42,
+    43,
+    44,
+    45
+   ],
+   "diversity": {
+    "loads_nonconstant": 135,
+    "distinct_normalised_shapes": 22,
+    "max_abs_dev_within_same_profile_name_normalised": 2.220446049250313e-16,
+    "pairwise_corr_mean": 0.26539300426032725,
+    "pairwise_corr_share_above_0.999": 0.11752349364289663
+   },
+   "first_pf": {
+    "converged": true,
+    "trafo_p_lv_mw": -0.40224322998541756
+   },
+   "result_columns": {
+    "res_bus": [
+     "vm_pu",
+     "va_degree",
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_line": [
+     "p_from_mw",
+     "q_from_mvar",
+     "p_to_mw",
+     "q_to_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_from_ka",
+     "i_to_ka",
+     "i_ka",
+     "vm_from_pu",
+     "va_from_degree",
+     "vm_to_pu",
+     "va_to_degree",
+     "loading_percent"
+    ],
+    "res_trafo": [
+     "p_hv_mw",
+     "q_hv_mvar",
+     "p_lv_mw",
+     "q_lv_mvar",
+     "pl_mw",
+     "ql_mvar",
+     "i_hv_ka",
+     "i_lv_ka",
+     "vm_hv_pu",
+     "va_hv_degree",
+     "vm_lv_pu",
+     "va_lv_degree",
+     "loading_percent"
+    ],
+    "res_load": [
+     "p_mw",
+     "q_mvar"
+    ],
+    "res_sgen": [
+     "p_mw",
+     "q_mvar"
+    ]
+   },
+   "timeseries": {
+    "steps": 1344,
+    "converged": 1344,
+    "ms_per_step": 16.485571506477537,
+    "vm_min_pu": 1.0063195484471301,
+    "vm_max_pu": 1.0307364813128794,
+    "trafo_loading_max_pct": 24.600879078621492,
+    "energy_kwh": {
+     "load": 23957.373083299997,
+     "pv": 3273.4178630764495,
+     "lv_delivered": 3643.897813092591,
+     "line_losses": 28.743422663021793,
+     "storage": -17068.8,
+     "trafo_losses": 594.0105459822576
+    },
+    "line_losses_share_of_load": 0.0011997735545996907,
+    "trafo_losses_share_of_load": 0.024794477421079417,
+    "reverse_flow_steps": 666,
+    "balance_resid_lv_max_abs_mw": 2.6037947090107316e-08,
+    "balance_resid_hv_max_abs_mw": 1.0842021724855044e-19
+   }
+  }
+ }
+}

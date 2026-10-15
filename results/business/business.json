@@ -1,0 +1,748 @@
+{
+ "stamp": {
+  "commit": "f114880",
+  "config_hash": "f3c45bfa00e6",
+  "config": {
+   "business": {
+    "facts": {
+     "steg_avg_selling_price_2025": {
+      "value": 290.7,
+      "unit": "millimes per kWh",
+      "currency": "TND",
+      "tag": "FACT",
+      "source": "Managers, 29 June 2026, 'Steg : l'\u00e9lectricit\u00e9 est vendue 290,7 millimes, mais co\u00fbte 456,3 millimes \u00e0 produire', https://managers.tn/2026/06/29/steg-lelectricite-est-vendue-2907-millimes-mais-coute-4563-millimes-a-produire/ (accessed 2026-10-14)",
+      "note": "press source; average over 2025"
+     },
+     "steg_avg_production_cost_2025": {
+      "value": 456.3,
+      "unit": "millimes per kWh",
+      "currency": "TND",
+      "tag": "FACT",
+      "source": "same article as steg_avg_selling_price_2025",
+      "note": "STEG sells below its average production cost"
+     },
+     "steg_network_losses": {
+      "value": 19.7,
+      "unit": "percent",
+      "currency": null,
+      "tag": "FACT",
+      "source": "same article as steg_avg_selling_price_2025",
+      "note": "network losses as reported; SHAHID does not address losses or theft"
+     },
+     "douz_customers": {
+      "value": 24400,
+      "unit": "customers",
+      "currency": null,
+      "tag": "FACT",
+      "source": "Managers, 15 July 2026, '\u00c0 Douz, la Steg renforce un r\u00e9seau \u00e9lectrique de 913 km', https://managers.tn/2026/07/15/a-douz-la-steg-renforce-un-reseau-electrique-de-913-km/ (accessed 2026-10-14)",
+      "note": "'pr\u00e8s de 24 400 clients'"
+     },
+     "douz_transformer_substations": {
+      "value": 149,
+      "unit": "transformer substations",
+      "currency": null,
+      "tag": "FACT",
+      "source": "same article as douz_customers",
+      "note": "'un parc de 149 postes de transformation \u00e9lectrique'"
+     },
+     "douz_staff": {
+      "value": 17,
+      "unit": "staff",
+      "currency": null,
+      "tag": "FACT",
+      "source": "same article as douz_customers",
+      "note": "'un effectif de 17 agents et cadres'"
+     },
+     "douz_lv_line_km": {
+      "value": 639,
+      "unit": "km",
+      "currency": null,
+      "tag": "FACT",
+      "source": "same article as douz_customers",
+      "note": "'639 km de lignes basse tension'"
+     },
+     "steg_subscribers": {
+      "value": 4700000,
+      "unit": "subscribers",
+      "currency": null,
+      "tag": "FACT",
+      "source": "La Presse, 18 February 2025, 'STEG et SONEDE : Les dettes clients d\u00e9passent 4,8 milliards de dinars', https://www.lapresse.tn/2025/02/18/steg-et-sonede-les-dettes-clients-depassent-48-milliards-de-dinars/ (accessed 2026-10-14)",
+      "note": "'environ 4,7 millions d'abonn\u00e9s', mostly residential low-voltage connections"
+     },
+     "data_protection_draft_law_articles": {
+      "value": 132,
+      "unit": "articles",
+      "currency": null,
+      "tag": "FACT",
+      "source": "Business News, 18 February 2026, 'ARP : audition autour du projet de loi sur la protection des donn\u00e9es personnelles', https://businessnews.com.tn/?p=1388983 (accessed 2026-10-14)",
+      "note": "draft organic law heard on 17 February 2026; motivated by the limits of Organic Law 2004-63 and names AI data processing"
+     },
+     "bct_tnd_per_usd": {
+      "value": 3.0085,
+      "unit": "TND per USD",
+      "currency": "TND",
+      "tag": "FACT",
+      "source": "La Presse, 11 October 2026, citing the Central Bank of Tunisia (interbank average rate of 8 October 2026), https://www.lapresse.tn/?p=4364398 (accessed 2026-10-14)",
+      "note": "the only exchange rate used; update here"
+     }
+    },
+    "design": {
+     "days_per_year": {
+      "value": 365,
+      "unit": "days",
+      "currency": null,
+      "tag": "DESIGN CHOICE",
+      "source": null,
+      "note": "converts per transformer-day rates to per transformer-year"
+     },
+     "review_minutes_per_item": {
+      "value": [
+       2,
+       5,
+       10
+      ],
+      "unit": "minutes per human item",
+      "currency": null,
+      "tag": "DESIGN CHOICE",
+      "source": null,
+      "note": "grid of review times; no operator has been timed"
+     },
+     "pilot_district_substations": {
+      "value": 149,
+      "unit": "transformer substations",
+      "currency": null,
+      "tag": "ESTIMATE",
+      "source": "douz_transformer_substations",
+      "note": "example pilot district of the size of one STEG agency; assumes the per-transformer rates of the simulated grids transfer"
+     },
+     "recalibration_interval_days": {
+      "value": 90,
+      "unit": "days",
+      "currency": null,
+      "tag": "DESIGN CHOICE",
+      "source": null,
+      "note": "detect.fit on each transformer's own fault-free data, and after every topology change"
+     },
+     "timing_budget_seconds": {
+      "value": 300,
+      "unit": "seconds",
+      "currency": null,
+      "tag": "DESIGN CHOICE",
+      "source": null,
+      "note": "upper bound on the compute benchmark"
+     }
+    },
+    "unit_costs": {
+     "transformer_lv_meter_unit": {
+      "value": null,
+      "unit": "per substation",
+      "currency": "TND",
+      "tag": "ESTIMATE",
+      "source": null,
+      "note": "LV energy meter with current transformers and its communication module; needs a STEG procurement price"
+     },
+     "transformer_lv_meter_install": {
+      "value": null,
+      "unit": "per substation",
+      "currency": "TND",
+      "tag": "ESTIMATE",
+      "source": null,
+      "note": "installation labour; needs STEG labour rates"
+     },
+     "share_substations_without_lv_meter": {
+      "value": null,
+      "unit": "fraction",
+      "currency": null,
+      "tag": "ASSUMPTION",
+      "source": null,
+      "note": "unknown; first question to STEG (ledger TN-H2: without a transformer series the method cannot decide)"
+     },
+     "operator_hourly_cost": {
+      "value": 2.713,
+      "unit": "per hour",
+      "currency": "TND",
+      "tag": "FACT",
+      "source": "Managers, 30 April 2026, 'Voici le nouveau SMIG en Tunisie' (Decree No. 67 of 2026, 40-hour regime, retroactive to 1 January 2026), https://managers.tn/2026/04/30/voici-le-nouveau-smig-en-tunisie/ (accessed 2026-10-14)",
+      "note": "LOWER BOUND: legal wage floor, excludes employer charges and qualification; a grid operator costs more."
+     },
+     "integration_person_days": {
+      "value": null,
+      "unit": "person-days",
+      "currency": null,
+      "tag": "ESTIMATE",
+      "source": null,
+      "note": "head-end export adapter, ticketing or outage-management link, GIS zone register"
+     },
+     "engineer_day_rate": {
+      "value": null,
+      "unit": "per person-day",
+      "currency": "TND",
+      "tag": "ESTIMATE",
+      "source": null,
+      "note": "needs a public tender or salary grid"
+     },
+     "hosting_monthly": {
+      "value": null,
+      "unit": "per month",
+      "currency": "TND",
+      "tag": "ESTIMATE",
+      "source": null,
+      "note": "one on-premise server or virtual machine; compute need is measured below"
+     },
+     "storage_per_gb_month": {
+      "value": null,
+      "unit": "per GB-month",
+      "currency": "TND",
+      "tag": "ESTIMATE",
+      "source": null,
+      "note": "storage of readings and audit logs"
+     },
+     "operator_training_per_person": {
+      "value": null,
+      "unit": "per operator",
+      "currency": "TND",
+      "tag": "ESTIMATE",
+      "source": null,
+      "note": "initial and refresher training"
+     },
+     "pilot_operators": {
+      "value": null,
+      "unit": "operators",
+      "currency": null,
+      "tag": "ESTIMATE",
+      "source": null,
+      "note": "operators reviewing SHAHID items in the pilot district"
+     }
+    }
+   },
+   "source_rows": "P2C-04 (results/p2/confirm.json *.gate)"
+  },
+  "command": "python -m shahid.business_model",
+  "date": "2026-10-14T23:13:29",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "label": "ESTIMATE on SIMULATED rates, except timing (MEASURED); unknown unit costs are formulas",
+ "workload": {
+  "rural2/ff_1pct/v1": {
+   "human_items_per_transformer_day": 9.799180327868852,
+   "human_items_per_transformer_year": 3576.700819672131,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 119.2233606557377,
+     "hours_per_district_year": 17764.280737704918,
+     "hours_per_district_day": 48.669262295081964,
+     "district_cost": {
+      "tnd": 48194.49,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 298.0584016393442,
+     "hours_per_district_year": 44410.70184426229,
+     "hours_per_district_day": 121.67315573770489,
+     "district_cost": {
+      "tnd": 120486.23,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 596.1168032786884,
+     "hours_per_district_year": 88821.40368852457,
+     "hours_per_district_day": 243.34631147540978,
+     "district_cost": {
+      "tnd": 240972.47,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "rural2/ff_1pct/v1+gate-close": {
+   "human_items_per_transformer_day": 0.01092896174863388,
+   "human_items_per_transformer_year": 3.989071038251366,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 0.13296903460837886,
+     "hours_per_district_year": 19.81238615664845,
+     "hours_per_district_day": 0.054280510018214934,
+     "district_cost": {
+      "tnd": 53.75,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 0.3324225865209472,
+     "hours_per_district_year": 49.53096539162113,
+     "hours_per_district_day": 0.13570127504553733,
+     "district_cost": {
+      "tnd": 134.38,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 0.6648451730418944,
+     "hours_per_district_year": 99.06193078324226,
+     "hours_per_district_day": 0.27140255009107467,
+     "district_cost": {
+      "tnd": 268.76,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "rural2/ff_1pct/v1+gate-escalate": {
+   "human_items_per_transformer_day": 4.151639344262295,
+   "human_items_per_transformer_year": 1515.348360655738,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 50.51161202185793,
+     "hours_per_district_year": 7526.230191256831,
+     "hours_per_district_day": 20.6198087431694,
+     "district_cost": {
+      "tnd": 20418.66,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 126.27903005464483,
+     "hours_per_district_year": 18815.57547814208,
+     "hours_per_district_day": 51.54952185792351,
+     "district_cost": {
+      "tnd": 51046.66,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 252.55806010928967,
+     "hours_per_district_year": 37631.15095628416,
+     "hours_per_district_day": 103.09904371584702,
+     "district_cost": {
+      "tnd": 102093.31,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "rural2/loss10/v1": {
+   "human_items_per_transformer_day": 64.31967213114754,
+   "human_items_per_transformer_year": 23476.680327868853,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 782.5560109289618,
+     "hours_per_district_year": 116600.8456284153,
+     "hours_per_district_day": 319.45437158469946,
+     "district_cost": {
+      "tnd": 316338.09,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 1956.3900273224042,
+     "hours_per_district_year": 291502.1140710382,
+     "hours_per_district_day": 798.6359289617485,
+     "district_cost": {
+      "tnd": 790845.24,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 3912.7800546448084,
+     "hours_per_district_year": 583004.2281420764,
+     "hours_per_district_day": 1597.271857923497,
+     "district_cost": {
+      "tnd": 1581690.47,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "rural2/loss10/v1+gate-close": {
+   "human_items_per_transformer_day": 11.918032786885245,
+   "human_items_per_transformer_year": 4350.081967213115,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 145.00273224043715,
+     "hours_per_district_year": 21605.407103825135,
+     "hours_per_district_day": 59.192896174863385,
+     "district_cost": {
+      "tnd": 58615.47,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 362.5068306010929,
+     "hours_per_district_year": 54013.51775956284,
+     "hours_per_district_day": 147.98224043715848,
+     "district_cost": {
+      "tnd": 146538.67,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 725.0136612021857,
+     "hours_per_district_year": 108027.03551912568,
+     "hours_per_district_day": 295.96448087431696,
+     "district_cost": {
+      "tnd": 293077.35,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "rural2/loss10/v1+gate-escalate": {
+   "human_items_per_transformer_day": 61.08469945355191,
+   "human_items_per_transformer_year": 22295.915300546447,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 743.1971766848816,
+     "hours_per_district_year": 110736.37932604736,
+     "hours_per_district_day": 303.38734061930785,
+     "district_cost": {
+      "tnd": 300427.8,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 1857.992941712204,
+     "hours_per_district_year": 276840.9483151184,
+     "hours_per_district_day": 758.4683515482695,
+     "district_cost": {
+      "tnd": 751069.49,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 3715.985883424408,
+     "hours_per_district_year": 553681.8966302368,
+     "hours_per_district_day": 1516.936703096539,
+     "district_cost": {
+      "tnd": 1502138.99,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "semiurb4/ff_1pct/v1": {
+   "human_items_per_transformer_day": 4.027322404371585,
+   "human_items_per_transformer_year": 1469.9726775956285,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 48.99908925318762,
+     "hours_per_district_year": 7300.864298724955,
+     "hours_per_district_day": 20.002367941712205,
+     "district_cost": {
+      "tnd": 19807.24,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 122.49772313296904,
+     "hours_per_district_year": 18252.160746812388,
+     "hours_per_district_day": 50.00591985428051,
+     "district_cost": {
+      "tnd": 49518.11,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 244.99544626593809,
+     "hours_per_district_year": 36504.321493624775,
+     "hours_per_district_day": 100.01183970856103,
+     "district_cost": {
+      "tnd": 99036.22,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "semiurb4/ff_1pct/v1+gate-close": {
+   "human_items_per_transformer_day": 0.0,
+   "human_items_per_transformer_year": 0.0,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 0.0,
+     "hours_per_district_year": 0.0,
+     "hours_per_district_day": 0.0,
+     "district_cost": {
+      "tnd": 0.0,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 0.0,
+     "hours_per_district_year": 0.0,
+     "hours_per_district_day": 0.0,
+     "district_cost": {
+      "tnd": 0.0,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 0.0,
+     "hours_per_district_year": 0.0,
+     "hours_per_district_day": 0.0,
+     "district_cost": {
+      "tnd": 0.0,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "semiurb4/ff_1pct/v1+gate-escalate": {
+   "human_items_per_transformer_day": 1.7868852459016393,
+   "human_items_per_transformer_year": 652.2131147540983,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 21.740437158469945,
+     "hours_per_district_year": 3239.3251366120217,
+     "hours_per_district_day": 8.874863387978142,
+     "district_cost": {
+      "tnd": 8788.29,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 54.35109289617487,
+     "hours_per_district_year": 8098.312841530055,
+     "hours_per_district_day": 22.187158469945356,
+     "district_cost": {
+      "tnd": 21970.72,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 108.70218579234974,
+     "hours_per_district_year": 16196.62568306011,
+     "hours_per_district_day": 44.37431693989071,
+     "district_cost": {
+      "tnd": 43941.45,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "semiurb4/loss10/v1": {
+   "human_items_per_transformer_day": 35.58196721311475,
+   "human_items_per_transformer_year": 12987.418032786883,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 432.91393442622945,
+     "hours_per_district_year": 64504.176229508186,
+     "hours_per_district_day": 176.72377049180324,
+     "district_cost": {
+      "tnd": 174999.83,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 1082.2848360655737,
+     "hours_per_district_year": 161260.4405737705,
+     "hours_per_district_day": 441.8094262295082,
+     "district_cost": {
+      "tnd": 437499.58,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 2164.5696721311474,
+     "hours_per_district_year": 322520.881147541,
+     "hours_per_district_day": 883.6188524590164,
+     "district_cost": {
+      "tnd": 874999.15,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "semiurb4/loss10/v1+gate-close": {
+   "human_items_per_transformer_day": 1.2622950819672132,
+   "human_items_per_transformer_year": 460.7377049180328,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 15.35792349726776,
+     "hours_per_district_year": 2288.3306010928964,
+     "hours_per_district_day": 6.269398907103826,
+     "district_cost": {
+      "tnd": 6208.24,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 38.3948087431694,
+     "hours_per_district_year": 5720.82650273224,
+     "hours_per_district_day": 15.673497267759563,
+     "district_cost": {
+      "tnd": 15520.6,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 76.7896174863388,
+     "hours_per_district_year": 11441.65300546448,
+     "hours_per_district_day": 31.346994535519126,
+     "district_cost": {
+      "tnd": 31041.2,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  },
+  "semiurb4/loss10/v1+gate-escalate": {
+   "human_items_per_transformer_day": 34.330601092896174,
+   "human_items_per_transformer_year": 12530.669398907103,
+   "by_review_minutes": {
+    "2": {
+     "hours_per_transformer_year": 417.6889799635701,
+     "hours_per_district_year": 62235.65801457194,
+     "hours_per_district_day": 170.50865209471766,
+     "district_cost": {
+      "tnd": 168845.34,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "5": {
+     "hours_per_transformer_year": 1044.2224499089252,
+     "hours_per_district_year": 155589.14503642987,
+     "hours_per_district_day": 426.2716302367941,
+     "district_cost": {
+      "tnd": 422113.35,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    },
+    "10": {
+     "hours_per_transformer_year": 2088.4448998178505,
+     "hours_per_district_year": 311178.29007285973,
+     "hours_per_district_day": 852.5432604735882,
+     "district_cost": {
+      "tnd": 844226.7,
+      "formula": "hours_per_district_year x operator_hourly_cost"
+     }
+    }
+   }
+  }
+ },
+ "false_outage_verdicts": {
+  "rural2/ff_1pct": {
+   "v1": {
+    "false_outage_verdicts_per_transformer_year": 14.959016393442623,
+    "avoided_vs_v1": 0.0
+   },
+   "v1+gate-close": {
+    "false_outage_verdicts_per_transformer_year": 0.49863387978142076,
+    "avoided_vs_v1": 14.460382513661202
+   },
+   "v1+gate-escalate": {
+    "false_outage_verdicts_per_transformer_year": 0.49863387978142076,
+    "avoided_vs_v1": 14.460382513661202
+   }
+  },
+  "rural2/loss10": {
+   "v1": {
+    "false_outage_verdicts_per_transformer_year": 38.893442622950815,
+    "avoided_vs_v1": 0.0
+   },
+   "v1+gate-close": {
+    "false_outage_verdicts_per_transformer_year": 15.956284153005464,
+    "avoided_vs_v1": 22.937158469945352
+   },
+   "v1+gate-escalate": {
+    "false_outage_verdicts_per_transformer_year": 15.956284153005464,
+    "avoided_vs_v1": 22.937158469945352
+   }
+  },
+  "semiurb4/ff_1pct": {
+   "v1": {
+    "false_outage_verdicts_per_transformer_year": 9.972677595628415,
+    "avoided_vs_v1": 0.0
+   },
+   "v1+gate-close": {
+    "false_outage_verdicts_per_transformer_year": 0.0,
+    "avoided_vs_v1": 9.972677595628415
+   },
+   "v1+gate-escalate": {
+    "false_outage_verdicts_per_transformer_year": 0.0,
+    "avoided_vs_v1": 9.972677595628415
+   }
+  },
+  "semiurb4/loss10": {
+   "v1": {
+    "false_outage_verdicts_per_transformer_year": 22.937158469945356,
+    "avoided_vs_v1": 0.0
+   },
+   "v1+gate-close": {
+    "false_outage_verdicts_per_transformer_year": 1.994535519125683,
+    "avoided_vs_v1": 20.942622950819672
+   },
+   "v1+gate-escalate": {
+    "false_outage_verdicts_per_transformer_year": 1.994535519125683,
+    "avoided_vs_v1": 20.942622950819672
+   }
+  }
+ },
+ "compute": {
+  "status": "MEASURED",
+  "dataset": "dataset/episodes_semiurb5_seed101",
+  "meters": 104,
+  "simulated_days": 366.0,
+  "silent_groups_scored": 4488,
+  "wall_seconds": 13.35834549998981,
+  "seconds_per_transformer_year": 13.321847288241203,
+  "cpu": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+  "logical_cpus": 24,
+  "os": "Windows-10-10.0.26200-SP0",
+  "note": "single process; includes evidence and decision for every silent group of the year"
+ },
+ "storage": {
+  "status": "ESTIMATE",
+  "basis": "committed parquet sizes (energy, arrival time, voltage per reading)",
+  "bytes_meter_readings_per_meter_year": 107459.96413934426,
+  "mb_per_1000_meter_years": 107.45996413934427,
+  "bytes_transformer_series_per_transformer_year": 391817.5273224044,
+  "bytes_per_decision_log_entry": 1603.0,
+  "hosting_cost": {
+   "tnd": null,
+   "formula": "hosting_monthly x 12"
+  }
+ },
+ "costs": {
+  "currency": "TND",
+  "usd_rate_tnd_per_usd": 3.0085,
+  "usd_lines": "none: no cost has a USD source",
+  "one_off": {
+   "transformer_lv_meters": {
+    "tnd": null,
+    "formula": "substations x share_without_lv_meter x (meter_unit + install)"
+   },
+   "integration": {
+    "tnd": null,
+    "formula": "integration_person_days x engineer_day_rate"
+   },
+   "operator_training": {
+    "tnd": null,
+    "formula": "pilot_operators x operator_training_per_person"
+   }
+  },
+  "recurring_per_year": {
+   "operator_review_time": {
+    "tnd": null,
+    "formula": "hours_per_district_year x operator_hourly_cost (main recurring cost; hours in workload)"
+   },
+   "hosting": {
+    "tnd": null,
+    "formula": "12 x hosting_monthly"
+   },
+   "storage": {
+    "tnd": null,
+    "formula": "GB stored x 12 x storage_per_gb_month (size in storage)"
+   },
+   "recalibration_review": {
+    "tnd": null,
+    "formula": "(days_per_year / recalibration_interval_days) x review person-days x engineer_day_rate"
+   },
+   "operator_refresher_training": {
+    "tnd": null,
+    "formula": "pilot_operators x operator_training_per_person x refresher share"
+   }
+  }
+ }
+}

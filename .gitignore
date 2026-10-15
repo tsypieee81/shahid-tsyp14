@@ -1,0 +1,36 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+cache/
+results/**/raw/
+data/
+results/*.log
+dataset/**/truth/
+results/records/*__groups.parquet
+*.log
+.ipynb_checkpoints/
+.kilo/
+*.tmp
+scratch/
+results/studies/classifier_comparison/features/
+# LaTeX build artefacts
+proposal/build/
+proposal/buildmode.tex
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.toc
+*.xdv
+ui/operator_log.jsonl
+results/p2/cache/
+# submission hygiene: caches and tool folders never enter the repo
+*.pkl
+.vscode/
+*mailmap*
+docs/process/people_study/answers/*.csv
+docs/build/

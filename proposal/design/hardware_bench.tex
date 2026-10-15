@@ -1,0 +1,23 @@
+% Optional low-voltage DC bench (PROPOSED, not built). Every element is from proposal Section 5.5.
+\begin{tikzpicture}[font=\scriptsize, x=0.88mm, y=1mm,
+  b/.style={draw, rounded corners=1pt, align=center, inner sep=1.5pt, fill=white},
+  w/.style={semithick}, d/.style={dashed, gray!70!black}]
+\node[b, text width=11mm] (dc) at (0,22) {Low-voltage DC supply};
+\node[b, text width=15mm] (s0) at (19,22) {sensor + node with buffer (stands in for the transformer meter)};
+\draw[w] (dc) -- (s0);
+% dashed bus: interval energy from every node to the laptop
+\draw[d, -{Stealth[length=1.5mm]}] (40,22) -- (75,22);
+\draw[d] (s0.south) |- (40,13) -- (40,22);
+\foreach \f/\y/\side/\lab in {1/36/south/north, 2/8/north/south} {
+  \node[b] (r\f) at (37,\y) {relay};
+  \draw[w] (s0.east) -- ++(1.5,0) |- (r\f);
+  \node[b, text width=10mm] (l\f a) at (52,\y) {load a\\sensor\\node with\\buffer};
+  \node[b, text width=10mm] (l\f b) at (66,\y) {load b\\sensor\\node with\\buffer};
+  \draw[w] (r\f) -- (l\f a) -- (l\f b);
+  \draw[d] (l\f a.\side) -- (l\f a.\side |- 0,22);
+  \draw[d] (l\f b.\side) -- (l\f b.\side |- 0,22);
+  \node[anchor=\side, font=\scriptsize\itshape] at (r\f.\lab) {feeder \f};
+}
+\node[b, text width=13mm] (pc) at (84,22) {Laptop: records arrival times; unchanged detector};
+\node[anchor=north, gray!70!black] at (52,0.5) {dashed: interval energy sent over Wi-Fi};
+\end{tikzpicture}

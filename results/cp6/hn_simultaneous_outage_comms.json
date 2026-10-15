@@ -1,0 +1,331 @@
+{
+ "stamp": {
+  "commit": "6f9d9e0",
+  "config_hash": "1eb91f73fd6b",
+  "config": {
+   "cell": "hn_simultaneous_outage_comms",
+   "overrides": {
+    "generator": {
+     "mix": {
+      "outage_plus_comms": 1.0
+     }
+    }
+   },
+   "seeds": [
+    201,
+    202
+   ],
+   "base": "configs/cp6_base.yaml"
+  },
+  "command": "python -m shahid.cp6_sweep hn_simultaneous_outage_comms",
+  "date": "2026-10-06T21:26:13",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "methods": {
+  "bayes": {
+   "n_outage": 373,
+   "n_comms": 364,
+   "outage_recall": 0.3351206434316354,
+   "comms_recall": 0.4642857142857143,
+   "precision_outage": 0.9541984732824428,
+   "precision_comms": 0.845,
+   "false_outage_rate": 0.016483516483516484,
+   "missed_outage_rate": 0.3726541554959786,
+   "abstention_rate": 0.23880597014925373,
+   "correct_cause_rate": 0.3989145183175034,
+   "balanced_correct": 0.39970317885867485,
+   "accuracy_when_decided": 0.8882175226586103,
+   "latency_median": 2.0,
+   "unlabelled_false_outages_per_meter_day": 0.0007867132867132868,
+   "ci95": {
+    "balanced_correct": [
+     0.3645490233626963,
+     0.4316970730342044
+    ],
+    "outage_recall": [
+     0.2868632707774799,
+     0.3821045576407506
+    ],
+    "comms_recall": [
+     0.41208791208791207,
+     0.5164835164835165
+    ],
+    "false_outage_rate": [
+     0.005494505494505495,
+     0.028914835164835104
+    ],
+    "abstention_rate": [
+     0.2123134328358209,
+     0.2714382632293079
+    ]
+   }
+  },
+  "count": {
+   "n_outage": 373,
+   "n_comms": 364,
+   "outage_recall": 0.32171581769436997,
+   "comms_recall": 0.36538461538461536,
+   "precision_outage": 0.5240174672489083,
+   "precision_comms": 0.4784172661870504,
+   "false_outage_rate": 0.29945054945054944,
+   "missed_outage_rate": 0.67828418230563,
+   "abstention_rate": 0.0,
+   "correct_cause_rate": 0.34328358208955223,
+   "balanced_correct": 0.3435502165394927,
+   "accuracy_when_decided": 0.4990138067061144,
+   "latency_median": 4.0,
+   "unlabelled_false_outages_per_meter_day": 0.013006993006993007,
+   "ci95": {
+    "balanced_correct": [
+     0.3115770372389005,
+     0.381453281972719
+    ],
+    "outage_recall": [
+     0.2761394101876676,
+     0.3713806970509383
+    ],
+    "comms_recall": [
+     0.31868131868131866,
+     0.41483516483516486
+    ],
+    "false_outage_rate": [
+     0.2540521978021978,
+     0.3489010989010989
+    ],
+    "abstention_rate": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "lr": {
+   "n_outage": 373,
+   "n_comms": 364,
+   "outage_recall": 0.4477211796246649,
+   "comms_recall": 0.4697802197802198,
+   "precision_outage": 0.8835978835978836,
+   "precision_comms": 0.7953488372093023,
+   "false_outage_rate": 0.06043956043956044,
+   "missed_outage_rate": 0.4075067024128686,
+   "abstention_rate": 0.13975576662143827,
+   "correct_cause_rate": 0.45861601085481685,
+   "balanced_correct": 0.4587506997024423,
+   "accuracy_when_decided": 0.8366336633663366,
+   "latency_median": 2.0,
+   "unlabelled_false_outages_per_meter_day": 0.004335664335664336,
+   "ci95": {
+    "balanced_correct": [
+     0.4261971356391598,
+     0.492827865833898
+    ],
+    "outage_recall": [
+     0.3941018766756032,
+     0.49865951742627346
+    ],
+    "comms_recall": [
+     0.4216346153846154,
+     0.5164835164835165
+    ],
+    "false_outage_rate": [
+     0.038461538461538464,
+     0.08516483516483517
+    ],
+    "abstention_rate": [
+     0.11533242876526459,
+     0.1655359565807327
+    ]
+   }
+  },
+  "naive": {
+   "n_outage": 373,
+   "n_comms": 364,
+   "outage_recall": 0.5067024128686327,
+   "comms_recall": 0.5,
+   "precision_outage": 0.8253275109170306,
+   "precision_comms": 0.7913043478260869,
+   "false_outage_rate": 0.10989010989010989,
+   "missed_outage_rate": 0.41823056300268097,
+   "abstention_rate": 0.06512890094979647,
+   "correct_cause_rate": 0.5033921302578019,
+   "balanced_correct": 0.5033512064343164,
+   "accuracy_when_decided": 0.8082788671023965,
+   "latency_median": 4.0,
+   "unlabelled_false_outages_per_meter_day": 0.011381118881118882,
+   "ci95": {
+    "balanced_correct": [
+     0.46865563223639634,
+     0.5445213298765578
+    ],
+    "outage_recall": [
+     0.4516756032171582,
+     0.5549597855227882
+    ],
+    "comms_recall": [
+     0.44505494505494503,
+     0.5563873626373625
+    ],
+    "false_outage_rate": [
+     0.07692307692307693,
+     0.14155219780219774
+    ],
+    "abstention_rate": [
+     0.048846675712347354,
+     0.08412483039348712
+    ]
+   }
+  },
+  "share": {
+   "n_outage": 373,
+   "n_comms": 364,
+   "outage_recall": 0.514745308310992,
+   "comms_recall": 0.42857142857142855,
+   "precision_outage": 0.8384279475982532,
+   "precision_comms": 0.8914285714285715,
+   "false_outage_rate": 0.10164835164835165,
+   "missed_outage_rate": 0.34048257372654156,
+   "abstention_rate": 0.13975576662143827,
+   "correct_cause_rate": 0.47218453188602444,
+   "balanced_correct": 0.47165836844121023,
+   "accuracy_when_decided": 0.8613861386138614,
+   "latency_median": 2.0,
+   "unlabelled_false_outages_per_meter_day": 0.0048951048951048955,
+   "ci95": {
+    "balanced_correct": [
+     0.43508169946675307,
+     0.5063522854491354
+    ],
+    "outage_recall": [
+     0.46776139410187667,
+     0.5656836461126006
+    ],
+    "comms_recall": [
+     0.3791208791208791,
+     0.47527472527472525
+    ],
+    "false_outage_rate": [
+     0.07142857142857142,
+     0.13605769230769224
+    ],
+    "abstention_rate": [
+     0.11668928086838534,
+     0.16689280868385345
+    ]
+   }
+  },
+  "step": {
+   "n_outage": 373,
+   "n_comms": 364,
+   "outage_recall": 0.4155495978552279,
+   "comms_recall": 0.41208791208791207,
+   "precision_outage": 0.6275303643724697,
+   "precision_comms": 0.5769230769230769,
+   "false_outage_rate": 0.25274725274725274,
+   "missed_outage_rate": 0.5844504021447721,
+   "abstention_rate": 0.0,
+   "correct_cause_rate": 0.41383989145183175,
+   "balanced_correct": 0.41381875497156995,
+   "accuracy_when_decided": 0.6015779092702169,
+   "latency_median": 4.0,
+   "unlabelled_false_outages_per_meter_day": 0.05199300699300699,
+   "ci95": {
+    "balanced_correct": [
+     0.3792482986182718,
+     0.44788514936805823
+    ],
+    "outage_recall": [
+     0.36856568364611264,
+     0.4691689008042895
+    ],
+    "comms_recall": [
+     0.36119505494505494,
+     0.4642857142857143
+    ],
+    "false_outage_rate": [
+     0.21153846153846154,
+     0.29945054945054944
+    ],
+    "abstention_rate": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "structure": {
+   "n_outage": 373,
+   "n_comms": 364,
+   "outage_recall": 0.30563002680965146,
+   "comms_recall": 0.36538461538461536,
+   "precision_outage": 0.5377358490566038,
+   "precision_comms": 0.4784172661870504,
+   "false_outage_rate": 0.2692307692307692,
+   "missed_outage_rate": 0.67828418230563,
+   "abstention_rate": 0.023066485753052916,
+   "correct_cause_rate": 0.33514246947082765,
+   "balanced_correct": 0.33550732109713344,
+   "accuracy_when_decided": 0.5040816326530613,
+   "latency_median": 4.0,
+   "unlabelled_false_outages_per_meter_day": 0.01222027972027972,
+   "ci95": {
+    "balanced_correct": [
+     0.3030150730636656,
+     0.3666118566420175
+    ],
+    "outage_recall": [
+     0.26273458445040215,
+     0.3512064343163539
+    ],
+    "comms_recall": [
+     0.3159340659340659,
+     0.41483516483516486
+    ],
+    "false_outage_rate": [
+     0.22527472527472528,
+     0.3131868131868132
+    ],
+    "abstention_rate": [
+     0.013568521031207599,
+     0.035278154681139755
+    ]
+   }
+  },
+  "ztest": {
+   "n_outage": 373,
+   "n_comms": 364,
+   "outage_recall": 0.30563002680965146,
+   "comms_recall": 0.44505494505494503,
+   "precision_outage": 0.9344262295081968,
+   "precision_comms": 0.8804347826086957,
+   "false_outage_rate": 0.02197802197802198,
+   "missed_outage_rate": 0.3485254691689008,
+   "abstention_rate": 0.2727272727272727,
+   "correct_cause_rate": 0.37449118046132973,
+   "balanced_correct": 0.37534248593229824,
+   "accuracy_when_decided": 0.9019607843137255,
+   "latency_median": 4.0,
+   "unlabelled_false_outages_per_meter_day": 0.0011363636363636363,
+   "ci95": {
+    "balanced_correct": [
+     0.3406709409893056,
+     0.41316683484076244
+    ],
+    "outage_recall": [
+     0.257372654155496,
+     0.3526139410187667
+    ],
+    "comms_recall": [
+     0.3956043956043956,
+     0.4945054945054945
+    ],
+    "false_outage_rate": [
+     0.008241758241758242,
+     0.04120879120879121
+    ],
+    "abstention_rate": [
+     0.24559023066485752,
+     0.3019335142469471
+    ]
+   }
+  }
+ }
+}

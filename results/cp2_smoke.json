@@ -1,0 +1,79 @@
+{
+ "stamp": {
+  "commit": "a1be338",
+  "config_hash": "c4e97238145a",
+  "config": {
+   "world": {
+    "grid": "1-LV-semiurb5--0-sw",
+    "start_day": 160,
+    "days": 15,
+    "diversity": 0.5,
+    "pv_scale": 1.0,
+    "seed": 0,
+    "unmetered": {
+     "kind": "none",
+     "kw": 0.0
+    }
+   },
+   "meter": {
+    "gain_sd": 0.005,
+    "noise_rel_sd": 0.002,
+    "noise_abs_kwh": 0.0005,
+    "quant_kwh": 0.001
+   },
+   "tmeter": {
+    "gain_sd": 0.002,
+    "noise_rel_sd": 0.001,
+    "quant_kwh": 0.01
+   },
+   "comms": {
+    "concentrators": "aligned",
+    "p_missing": 0.01,
+    "p_delay": 0.03,
+    "delay_mean_intervals": 4,
+    "backlog": true,
+    "backlog_spread": 4,
+    "outage_backfill": false,
+    "last_gasp": false,
+    "voltage": true
+   },
+   "seed": 1,
+   "events": [
+    {
+     "type": "outage",
+     "feeder": 1,
+     "start_step": 1384,
+     "duration_steps": 8
+    },
+    {
+     "type": "comms_failure",
+     "concentrator": 0,
+     "start_step": 1416,
+     "duration_steps": 8
+    }
+   ]
+  },
+  "command": "python -m shahid.smoke configs/smoke.yaml",
+  "date": "2026-10-05T16:33:36",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "runtime_s": 6.286144018173218,
+ "detected_episodes": 166,
+ "episodes": [
+  {
+   "truth": "OUTAGE",
+   "start": "2016-06-23 10:00:00",
+   "n_meters": "7",
+   "verdict": "OUTAGE",
+   "visible_share": "0.383"
+  },
+  {
+   "truth": "COMMS_FAILURE",
+   "start": "2016-06-23 18:00:00",
+   "n_meters": "34",
+   "verdict": "COMMS_FAILURE",
+   "visible_share": "1.149"
+  }
+ ]
+}

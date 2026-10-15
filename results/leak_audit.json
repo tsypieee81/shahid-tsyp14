@@ -1,0 +1,107 @@
+{
+ "stamp": {
+  "commit": "03afc74",
+  "config_hash": "f98ce6c2769e",
+  "config": {
+   "grid": "1-LV-urban6--0-sw",
+   "seed": 301,
+   "episodes_config": "configs/cp5_episodes.yaml",
+   "other_seed": 999,
+   "shift_days": 7,
+   "test_week": 3
+  },
+  "command": "python -m shahid.leak_audit",
+  "date": "2026-10-07T09:54:10",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "inputs": {
+  "readings": [
+   "meter_id",
+   "interval_start",
+   "energy_kwh",
+   "arrival_ts",
+   "voltage_v"
+  ],
+  "trafo": [
+   "interval_start",
+   "energy_kwh"
+  ],
+  "meters": [
+   "meter_id",
+   "concentrator_id",
+   "pv_kw"
+  ],
+  "zones": [
+   "zone_id",
+   "meter_id"
+  ]
+ },
+ "input_tables_from": {
+  "readings": "observed",
+  "trafo": "observed",
+  "meters": "context",
+  "zones": "context"
+ },
+ "overlap_with_truth_or_label_columns": [],
+ "actual": {
+  "n_outage": 39,
+  "n_comms": 49,
+  "outage_recall": 0.6410256410256411,
+  "comms_recall": 0.7755102040816326,
+  "precision_outage": 1.0,
+  "precision_comms": 1.0,
+  "false_outage_rate": 0.0,
+  "missed_outage_rate": 0.0,
+  "abstention_rate": 0.2840909090909091,
+  "correct_cause_rate": 0.7159090909090909,
+  "balanced_correct": 0.7082679225536368,
+  "accuracy_when_decided": 1.0,
+  "latency_median": 2.0,
+  "accuracy_when_decided_wilson95": [
+   0.9425268096514744,
+   0.9999999999999999
+  ],
+  "n_decided": 63
+ },
+ "transformer_shifted": {
+  "n_outage": 39,
+  "n_comms": 49,
+  "outage_recall": 0.10256410256410256,
+  "comms_recall": 0.673469387755102,
+  "precision_outage": 0.6666666666666666,
+  "precision_comms": 0.6226415094339622,
+  "false_outage_rate": 0.04081632653061224,
+  "missed_outage_rate": 0.5128205128205128,
+  "abstention_rate": 0.32954545454545453,
+  "correct_cause_rate": 0.42045454545454547,
+  "balanced_correct": 0.38801674515960227,
+  "accuracy_when_decided": 0.6271186440677966,
+  "latency_median": 2.5,
+  "accuracy_when_decided_wilson95": [
+   0.49953356682142136,
+   0.7391618196741485
+  ],
+  "n_decided": 59
+ },
+ "transformer_from_other_seed": {
+  "n_outage": 39,
+  "n_comms": 49,
+  "outage_recall": 0.02564102564102564,
+  "comms_recall": 0.7551020408163265,
+  "precision_outage": 1.0,
+  "precision_comms": 0.6065573770491803,
+  "false_outage_rate": 0.0,
+  "missed_outage_rate": 0.6153846153846154,
+  "abstention_rate": 0.29545454545454547,
+  "correct_cause_rate": 0.4318181818181818,
+  "balanced_correct": 0.39037153322867607,
+  "accuracy_when_decided": 0.6129032258064516,
+  "latency_median": 2.0,
+  "accuracy_when_decided_wilson95": [
+   0.48847616205780997,
+   0.7241553657300932
+  ],
+  "n_decided": 62
+ }
+}

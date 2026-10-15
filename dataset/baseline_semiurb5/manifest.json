@@ -1,0 +1,46 @@
+{
+ "commit": "aacc5a9",
+ "config_hash": "1fe8f9a34a75",
+ "config": {
+  "world": {
+   "grid": "1-LV-semiurb5--0-sw",
+   "start_day": 0,
+   "days": 366,
+   "diversity": 0.5,
+   "pv_scale": 1.0,
+   "seed": 0,
+   "unmetered": {
+    "kind": "none",
+    "kw": 0.0
+   }
+  },
+  "meter": {
+   "gain_sd": 0.005,
+   "noise_rel_sd": 0.002,
+   "noise_abs_kwh": 0.0005,
+   "quant_kwh": 0.001
+  },
+  "tmeter": {
+   "gain_sd": 0.002,
+   "noise_rel_sd": 0.001,
+   "quant_kwh": 0.01
+  },
+  "comms": {
+   "concentrators": "aligned",
+   "p_missing": 0.01,
+   "p_delay": 0.03,
+   "delay_mean_intervals": 4,
+   "backlog": true,
+   "backlog_spread": 4,
+   "outage_backfill": false,
+   "last_gasp": false,
+   "voltage": true
+  },
+  "seed": 1,
+  "events": []
+ },
+ "command": "python -m shahid.scenario configs/baseline.yaml",
+ "date": "2026-10-07T10:03:12",
+ "python": "3.11.7",
+ "platform": "Windows-10-10.0.26200-SP0"
+}

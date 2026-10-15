@@ -1,0 +1,31 @@
+# Defaults merged under every scenario config. Every value is an ASSUMPTION or DESIGN CHOICE
+# (docs/ASSUMPTIONS.md). Units: kWh per 15-min interval unless stated.
+world:
+  grid: 1-LV-semiurb5--0-sw
+  start_day: 0
+  days: 366
+  diversity: 0.5          # A-DIV, nominal
+  pv_scale: 1.0
+  seed: 0                 # world seed (diversity draw)
+  unmetered: {kind: none, kw: 0.0}   # none | constant | profile
+meter:                    # A-METERERR
+  gain_sd: 0.005          # fixed per-meter gain error, sd
+  noise_rel_sd: 0.002
+  noise_abs_kwh: 0.0005
+  quant_kwh: 0.001        # 1 Wh register resolution
+tmeter:                   # A-TMETERERR, transformer LV meter
+  gain_sd: 0.002
+  noise_rel_sd: 0.001
+  quant_kwh: 0.01
+comms:                    # A-COMMS
+  concentrators: aligned  # aligned (one per feeder) | random (same sizes, shuffled)
+  p_missing: 0.01         # reading never arrives
+  p_delay: 0.03           # reading arrives late
+  delay_mean_intervals: 4
+  backlog: true           # concentrator failure: readings delivered after link returns
+  backlog_spread: 4
+  outage_backfill: false  # meters upload zero intervals after restoration (off)
+  last_gasp: false        # power-fail message at outage onset (off)
+  voltage: true           # interval voltage column
+seed: 1                   # observation and event seed
+events: []

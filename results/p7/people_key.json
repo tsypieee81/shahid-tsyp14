@@ -1,0 +1,128 @@
+{
+ "stamp": {
+  "commit": "d3c2d57",
+  "config_hash": "305dc2764e2b",
+  "config": {
+   "seed": 7,
+   "draw": {
+    "OUTAGE": 4,
+    "COMMS_FAILURE": 4,
+    "UNCERTAIN": 3
+   }
+  },
+  "command": "python -m shahid.p7_people booklets",
+  "date": "2026-10-14T09:05:27",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "items": [
+  {
+   "item": 1,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-04-19 20:30:00",
+   "verdict": "COMMS_FAILURE",
+   "intended_cause": "communication",
+   "intended_action": "data_link",
+   "confident_wrong": false
+  },
+  {
+   "item": 2,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-01-24 10:00:00",
+   "verdict": "COMMS_FAILURE",
+   "intended_cause": "communication",
+   "intended_action": "data_link",
+   "confident_wrong": false
+  },
+  {
+   "item": 3,
+   "scenario": "feeder_outage",
+   "onset": "2016-06-09 10:00:00",
+   "verdict": "COMMS_FAILURE",
+   "intended_cause": "communication",
+   "intended_action": "data_link",
+   "confident_wrong": true
+  },
+  {
+   "item": 4,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-10-06 12:45:00",
+   "verdict": "OUTAGE",
+   "intended_cause": "outage",
+   "intended_action": "crew",
+   "confident_wrong": false
+  },
+  {
+   "item": 5,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-06-12 12:15:00",
+   "verdict": "UNCERTAIN",
+   "intended_cause": "cannot_tell",
+   "intended_action": "supervisor_or_wait",
+   "confident_wrong": false
+  },
+  {
+   "item": 6,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-10-03 07:15:00",
+   "verdict": "OUTAGE",
+   "intended_cause": "outage",
+   "intended_action": "crew",
+   "confident_wrong": false
+  },
+  {
+   "item": 7,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-02-25 04:00:00",
+   "verdict": "UNCERTAIN",
+   "intended_cause": "cannot_tell",
+   "intended_action": "supervisor_or_wait",
+   "confident_wrong": false
+  },
+  {
+   "item": 8,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-11-30 11:15:00",
+   "verdict": "OUTAGE",
+   "intended_cause": "outage",
+   "intended_action": "crew",
+   "confident_wrong": false
+  },
+  {
+   "item": 9,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-12-26 07:15:00",
+   "verdict": "OUTAGE",
+   "intended_cause": "outage",
+   "intended_action": "crew",
+   "confident_wrong": false
+  },
+  {
+   "item": 10,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-04-15 03:45:00",
+   "verdict": "COMMS_FAILURE",
+   "intended_cause": "communication",
+   "intended_action": "data_link",
+   "confident_wrong": false
+  },
+  {
+   "item": 11,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-10-04 20:15:00",
+   "verdict": "UNCERTAIN",
+   "intended_cause": "cannot_tell",
+   "intended_action": "supervisor_or_wait",
+   "confident_wrong": false
+  },
+  {
+   "item": 12,
+   "scenario": "heldout_urban6_301",
+   "onset": "2016-04-19 04:45:00",
+   "verdict": "COMMS_FAILURE",
+   "intended_cause": "communication",
+   "intended_action": "data_link",
+   "confident_wrong": false
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+# G3 escalation table. DESIGN CHOICE: written by the team, NOT validated with operators or STEG.
+# First matching rule wins. "handled_by: AUTOMATED" means the statistical detector may act alone
+# (it is a likelihood-ratio test, not a learned "AI" model); the actions are
+# limited to annotating data and notifying. Dispatching a crew or contacting customers always
+# needs a human.
+rules:
+  - id: R1-large-outage
+    when: {cause: OUTAGE, min_meters: 20}
+    action: "Alert the control-room operator at once; operator confirms and decides on dispatch."
+    handled_by: HUMAN
+  - id: R2-confident-outage
+    when: {cause: OUTAGE, min_probability: 0.95}
+    action: "Raise an outage alert with the evidence; operator confirms before any dispatch."
+    handled_by: HUMAN
+  # R3 (version 1, SUPERSEDED in CP10): {cause: COMMS_FAILURE, min_probability: 0.95,
+  # max_meters: 40} -> AUTOMATED close as data-quality event. Unsafe: it closed real
+  # outages without a human nominally (0.9-1.8%), 4.6% at 2% transformer-meter gain error, 8.3% for
+  # simultaneous outage + comms, 24% with 10 kW load-shaped unmetered energy
+  # (results/cp10.json -> r3). Corrected rule below (DESIGN CHOICE, not operator-validated):
+  # the automated action is provisional and re-checked against the backlog of readings.
+  - id: R3-confident-comms-provisional
+    when: {cause: COMMS_FAILURE, min_probability: 0.95, max_meters: 40}
+    action: "Provisional: flag the missing readings as a data-quality event and open a communications ticket; do not raise an outage. Re-check automatically: if fewer than half of the silent meters have delivered their backlog of readings within 8 hours (32 intervals) of the silence onset, send the case to a human as a possible outage."
+    handled_by: AUTOMATED
+    recheck_after_intervals: 32
+  - id: R4-comms-other
+    when: {cause: COMMS_FAILURE}
+    action: "Open a communications ticket; operator reviews within the shift."
+    handled_by: HUMAN
+  - id: R5-uncertain
+    when: {cause: UNCERTAIN}
+    action: "Send to operator review with the evidence; re-check when late readings arrive."
+    handled_by: HUMAN
+default:
+  action: "Send to operator review."
+  handled_by: HUMAN

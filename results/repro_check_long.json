@@ -1,0 +1,32 @@
+{
+ "stamp": {
+  "commit": "dac48a2",
+  "config_hash": "a009044ca611",
+  "config": {
+   "long": [
+    "cp5_compare",
+    "cp6_sweep",
+    "cp7_heldout",
+    "leak_audit"
+   ]
+  },
+  "command": "python -m shahid.verify_repro --long",
+  "date": "2026-10-07T10:34:00",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "checks": {
+  "cp5_compare.json": true,
+  "detector_params.json": true,
+  "cp6/nominal.json": true,
+  "cp7_heldout.json": true,
+  "leak_audit.json": true
+ },
+ "runtime_s": {
+  "cp5_compare": 518,
+  "cp6_sweep": 170,
+  "cp7_heldout": 906,
+  "leak_audit": 88
+ },
+ "all_identical": true
+}

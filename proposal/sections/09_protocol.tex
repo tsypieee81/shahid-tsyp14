@@ -1,0 +1,28 @@
+\section{Evaluation Protocol}\label{sec:protocol}
+\textbf{Networks and splits.} Thresholds were chosen on one semi-urban development network (104
+customers). Each network is split by week into training, validation and test weeks. A held-out urban
+network (111 customers) was evaluated once after the method and thresholds were frozen and the
+protocol committed; an untouched rural network (118 customers) once later; and two networks never
+used before (rural, 99 customers; semi-urban, 41 customers) once in a confirmatory batch
+whose protocol was committed before the run. Events occur about once per day, an artificial rate
+chosen to obtain enough events, not a field frequency.
+
+\textbf{Metrics in the brief's terms.}
+\begin{itemize}
+\item \emph{Recall:} outage recall and communication recall, the share of each cause called correctly.
+\item \emph{False-positive rate:} the false-outage rate (communication failures called outages), and
+false outage verdicts per meter-day on fault-free data.
+\item \emph{Missed detections:} the missed-outage rate (outages called communication failures or never
+detected).
+\item \emph{Coverage:} the share of events that receive a verdict. Accuracy when deciding is never
+reported without it.
+\item \emph{Latency:} intervals from silence to verdict. \emph{Explanation quality:} faithfulness by
+test; usefulness by a registered people study (pending).
+\end{itemize}
+A labelled event matches a silent group with the same onset and a meter-set overlap (Jaccard index)
+of at least 0.5; otherwise it is missed.
+
+\textbf{Integrity.} Every number in this paper has a row in a claims ledger naming its result file,
+command, commit and configuration hash; a checker compares the paper with the ledger and the result
+files, and every table number must appear verbatim in a generated results document. The checker
+cannot catch a wrong two-decimal rate between 0 and 1, and we say so.

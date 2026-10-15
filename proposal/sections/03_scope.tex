@@ -1,0 +1,24 @@
+\section{Scope and Objectives}\label{sec:scope}
+\textbf{Scope.} One LV neighbourhood under one MV/LV transformer, about 100 customers. Inputs:
+15-min energy per customer meter with its arrival time, 15-min energy from one meter on the
+transformer's LV side, and static context (which meters share a line section or a data concentrator,
+installed photovoltaic (PV) power per customer). Output per silent group: OUTAGE, COMMUNICATION
+FAILURE or UNCERTAIN, with a probability, an explanation and a log entry.
+
+\textbf{Non-goals in Phase 1.} No real data, no hardware, no deployed or real-time operation, no
+control action on the grid, no claim that the data represents Tunisia. Faults inside a single meter
+are tested but outside the validated scope (Section~\ref{sec:singlemeter}). Current and power quality
+are out of scope: 15-min energy readings carry no waveform quantities.
+
+\textbf{Objectives, mapped to the brief.}
+\begin{itemize}
+\item \textbf{G1, anomaly detection:} tell a genuine grid event from a data problem for silent groups;
+measure where this stops working (Sections~\ref{sec:method}, \ref{sec:results}).
+\item \textbf{G2, confidence and explanation:} a probability, a plain-language explanation and an
+auditable record for every verdict (Section~\ref{sec:explain}).
+\item \textbf{G3, escalation and governance:} rules for what the system may do alone, measured
+against their harm and their operator load (Section~\ref{sec:governance}).
+\item \textbf{G4, shared learning across nodes:} what is shared, what stays local and why, with a
+measured proof of concept (Section~\ref{sec:shared}).
+\end{itemize}
+Appendix~\ref{app:coverage} maps every item of the brief to its status and evidence.

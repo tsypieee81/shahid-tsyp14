@@ -1,0 +1,123 @@
+{
+ "label": "NOT PRE-SPECIFIED, added after results",
+ "denominator_per_condition": {
+  "episodes": 2040,
+  "outages": 796,
+  "comms": 1244
+ },
+ "mechanism_counts": {
+  "C15": {
+   "comms called outage": {
+    "late own readings in window": 1,
+    "other": 1,
+    "undetected, observable": 0
+   },
+   "outage called comms": {
+    "late own readings in window": 0,
+    "other": 3,
+    "undetected, observable": 0
+   },
+   "outage undetected": {
+    "late own readings in window": 0,
+    "other": 0,
+    "undetected, observable": 2
+   }
+  },
+  "C30": {
+   "comms called outage": {
+    "late own readings in window": 13,
+    "late-onset partial energy": 0,
+    "other": 2,
+    "undetected, observable": 0
+   },
+   "outage called comms": {
+    "late own readings in window": 2,
+    "late-onset partial energy": 20,
+    "other": 1,
+    "undetected, observable": 0
+   },
+   "outage undetected": {
+    "late own readings in window": 0,
+    "late-onset partial energy": 0,
+    "other": 0,
+    "undetected, observable": 6
+   }
+  },
+  "C60": {
+   "comms called outage": {
+    "late own readings in window": 26,
+    "late-onset partial energy": 0,
+    "undetected, observable": 0,
+    "undetected, unobservable": 0
+   },
+   "outage called comms": {
+    "late own readings in window": 0,
+    "late-onset partial energy": 34,
+    "undetected, observable": 0,
+    "undetected, unobservable": 0
+   },
+   "outage undetected": {
+    "late own readings in window": 0,
+    "late-onset partial energy": 0,
+    "undetected, observable": 1,
+    "undetected, unobservable": 160
+   }
+  }
+ },
+ "mechanism_totals": {
+  "C15": {
+   "other": 4,
+   "undetected, observable": 2,
+   "late own readings in window": 1
+  },
+  "C30": {
+   "late-onset partial energy": 20,
+   "late own readings in window": 15,
+   "undetected, observable": 6,
+   "other": 3
+  },
+  "C60": {
+   "undetected, unobservable": 160,
+   "late-onset partial energy": 34,
+   "late own readings in window": 26,
+   "undetected, observable": 1
+  }
+ },
+ "onset_alignment": {
+  "n_events": 2040,
+  "minutes_seen": [
+   0,
+   15,
+   30,
+   45
+  ],
+  "all_seconds_zero": true,
+  "all_on_15_min_boundary": true
+ },
+ "faultfree": {
+  "C15": {
+   "transformer_years": 2.891170431211499,
+   "silent_groups": 13163,
+   "silent_groups_per_transformer_year": 4552.827414772727,
+   "false_outage_verdicts": 93,
+   "false_outage_verdicts_per_transformer_year": 32.16690340909091,
+   "false_outage_verdicts_per_1000_silent_groups": 7.0652586796323025
+  },
+  "C30": {
+   "transformer_years": 2.891170431211499,
+   "silent_groups": 6659,
+   "silent_groups_per_transformer_year": 2303.2194602272725,
+   "false_outage_verdicts": 28,
+   "false_outage_verdicts_per_transformer_year": 9.68465909090909,
+   "false_outage_verdicts_per_1000_silent_groups": 4.204835560895029
+  },
+  "C60": {
+   "transformer_years": 2.891170431211499,
+   "silent_groups": 3108,
+   "silent_groups_per_transformer_year": 1074.997159090909,
+   "false_outage_verdicts": 9,
+   "false_outage_verdicts_per_transformer_year": 3.1129261363636362,
+   "false_outage_verdicts_per_1000_silent_groups": 2.8957528957528957
+  }
+ }
+}

@@ -1,0 +1,23 @@
+\begin{abstract}
+SHAHID is a probabilistic artificial intelligence trust layer between smart-meter data and dispatch
+decisions. When a group of meters under one distribution transformer stops reporting, it decides
+whether the customers lost power or whether only their data stopped. A meter on the low-voltage side
+of the transformer still sees the energy of customers whose data stopped, but not the energy of
+customers who lost power. SHAHID compares that unexplained energy with the consumption it expects
+from the silent customers, scores both causes with heavy-tailed likelihoods, and decides only when
+the evidence is decisive; otherwise it abstains and hands the case to a person with the evidence, a
+plain-language explanation and a tamper-evident log entry. All evidence is simulated on public German
+benchmark networks. With thresholds frozen on one network and each evaluation run once, the method
+called no labelled communication failure an outage on four other networks, missed at most one outage
+in a hundred, and decided about half to three quarters of the events. On data with no events, random
+single-meter data losses still produced about 15 to 33 false outage verdicts per transformer-year under the
+registered configuration; a post-hoc gate reduced this to 0.2 to 1.0. The evaluations also measure
+where the method fails: small silent groups, unmetered energy that follows the load, simultaneous
+events and hourly readings. The method requires an energy meter at each transformer and does not
+detect faults inside a single meter.
+\end{abstract}
+
+\begin{IEEEkeywords}
+abstention, advanced metering infrastructure, communication failure, distribution networks, energy
+balance, explainability, human oversight, outage detection, selective prediction, smart meters
+\end{IEEEkeywords}

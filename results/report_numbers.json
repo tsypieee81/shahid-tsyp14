@@ -1,0 +1,27 @@
+{
+ "stamp": {
+  "commit": "be0c737",
+  "config_hash": "b75630480e00",
+  "config": {
+   "sources": [
+    "results/p2/confirm.json",
+    "results/studies/reporting_interval/summary.json"
+   ]
+  },
+  "command": "python -m shahid.report_numbers",
+  "date": "2026-10-14T12:20:08",
+  "python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0"
+ },
+ "confirmatory_coverage_v1": {
+  "rural2": 0.6705,
+  "semiurb4": 0.5265
+ },
+ "reporting_interval_30min_missed": {
+  "rate": 0.0364321608040201,
+  "ci95": [
+   0.025484278211923967,
+   0.05183303061522379
+  ]
+ }
+}

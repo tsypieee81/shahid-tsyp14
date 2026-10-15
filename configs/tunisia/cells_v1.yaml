@@ -1,0 +1,21 @@
+# Tunisia-oriented sensitivity cells, version tn-v1 (docs/eval_protocol.md addendum E).
+# Overrides on configs/cp5_episodes.yaml. EVERY value is an ASSUMPTION (sensitivity range), not a
+# measured Tunisian value; provenance in docs/tunisia/TUNISIA_PARAMETER_PROVENANCE.md.
+# Load shapes and topology stay SimBench (German benchmark); nothing is reshaped to "look Tunisian".
+version: tn-v1
+cells:
+  nominal: {}
+  pv0: {world: {pv_scale: 0.0}}                         # no rooftop PV (P3: national PV share small)
+  pv2: {world: {pv_scale: 2.0}}                         # PV cluster (local clustering unknown)
+  loss5: {comms: {p_missing: 0.05}}                     # U2/U4 unknown
+  loss10: {comms: {p_missing: 0.10}}
+  comms_long: {generator: {duration_steps: [4, 96]}}    # events last 1-24 h (A-COMMS-DURATION)
+  unmet_const2: {world: {unmetered: {kind: constant, kw: 2.0}}}   # E7: losses/fraud, size unknown
+  unmet_profile5: {world: {unmetered: {kind: profile, kw: 5.0}}}
+modes: [A, B_lat4, B_lat96, C, D_batch16, D_batch96]    # applied to the nominal cell only
+families:
+  dev: {grids: [1-LV-semiurb5--0-sw], seeds: [601], cells: [nominal]}
+  val: {grids: [1-LV-semiurb5--0-sw], seeds: [611, 612]}
+  heldout:
+    - {grids: [1-LV-urban6--0-sw], seeds: [621, 622]}
+    - {grids: [1-LV-rural3--0-sw], seeds: [631, 632]}
